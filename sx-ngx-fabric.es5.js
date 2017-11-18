@@ -94,26 +94,29 @@ var ToggleComponent = (function () {
      */
     function ToggleComponent(changeDetectorRef) {
         this.changeDetectorRef = changeDetectorRef;
-        this._selected = false;
+        this._checked = false;
         this.disabled = false;
+        this.offText = 'Off';
+        this.onText = 'On';
+        this.textLeft = false;
         this.inputId = Guid.uniqueid();
         this._onChange = function (_) { };
         this._onTouched = function () { };
     }
-    Object.defineProperty(ToggleComponent.prototype, "selected", {
+    Object.defineProperty(ToggleComponent.prototype, "checked", {
         /**
          * @return {?}
          */
         get: function () {
-            return this._selected;
+            return this._checked;
         },
         /**
-         * @param {?} selected
+         * @param {?} checked
          * @return {?}
          */
-        set: function (selected) {
-            if (selected !== this.selected) {
-                this._selected = selected;
+        set: function (checked) {
+            if (checked !== this.checked) {
+                this._checked = checked;
                 this.changeDetectorRef.markForCheck();
             }
         },
@@ -125,6 +128,14 @@ var ToggleComponent = (function () {
          * @return {?}
          */
         get: function () { return this.disabled; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ToggleComponent.prototype, "classTextLeft", {
+        /**
+         * @return {?}
+         */
+        get: function () { return this.textLeft; },
         enumerable: true,
         configurable: true
     });
@@ -140,8 +151,8 @@ var ToggleComponent = (function () {
      * @return {?}
      */
     ToggleComponent.prototype.toggle = function () {
-        this.selected = !this.selected;
-        this._onChange(this.selected);
+        this.checked = !this.checked;
+        this._onChange(this.checked);
     };
     /**
      * @param {?} isDisabled
@@ -156,7 +167,7 @@ var ToggleComponent = (function () {
      * @return {?}
      */
     ToggleComponent.prototype.writeValue = function (val) {
-        this.selected = val;
+        this.checked = val;
     };
     /**
      * @param {?} fn
@@ -173,8 +184,8 @@ var ToggleComponent = (function () {
 ToggleComponent.decorators = [
     { type: Component, args: [{
                 selector: 'sx-ngx-fabric-toggle',
-                template: "\n    <span class=\"ms-Toggle-description\"><ng-content></ng-content></span>\n    <input type=\"checkbox\" [attr.id]=\"inputId\" [checked]=\"checked\" (click)=\"onInputClick($event)\" [disabled]=\"disabled\" class=\"ms-Toggle-input\" />\n    <label [attr.for]=\"inputId\" class=\"ms-Toggle-field\" [class.is-selected]=\"selected\">\n      <span class=\"ms-Label ms-Label--off\">Off</span>\n      <span class=\"ms-Label ms-Label--on\">On</span>\n    </label>\n  ",
-                styles: ["\n    :host.ms-Toggle {\n      font-family: Segoe UI WestEuropean,Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;\n      -webkit-font-smoothing: antialiased;\n      font-size: 14px;\n      font-weight: 400;\n      -webkit-box-sizing: border-box;\n              box-sizing: border-box;\n      margin: 0;\n      padding: 0;\n      -webkit-box-shadow: none;\n              box-shadow: none;\n      position: relative;\n      display: block;\n      margin-bottom: 26px; }\n\n    .ms-Toggle-description {\n      color: #333333;\n      -webkit-box-sizing: border-box;\n              box-sizing: border-box;\n      -webkit-box-shadow: none;\n              box-shadow: none;\n      margin-top: 0px;\n      margin-right: 0px;\n      margin-bottom: 0px;\n      margin-left: 0px;\n      display: block;\n      padding-top: 5px;\n      padding-right: 0px;\n      padding-bottom: 5px;\n      padding-left: 0px;\n      word-wrap: break-word;\n      overflow-wrap: break-word; }\n\n    .ms-Toggle-input {\n      display: none; }\n\n    .ms-Toggle-field {\n      position: relative;\n      display: inline-block;\n      width: 45px;\n      height: 20px;\n      -webkit-box-sizing: border-box;\n              box-sizing: border-box;\n      border: 1px solid #a6a6a6;\n      border-radius: 20px;\n      cursor: pointer;\n      -webkit-transition: all 0.1s ease;\n      transition: all 0.1s ease;\n      outline: 0; }\n\n    :host.ms-Toggle .ms-Toggle-field:before {\n      position: absolute;\n      top: 4px;\n      width: 10px;\n      height: 10px;\n      border-radius: 10px;\n      content: '';\n      left: 4px;\n      background-color: #333333;\n      outline: 1px solid transparent;\n      -webkit-transition: all 0.1s ease;\n      transition: all 0.1s ease; }\n\n    :host.ms-Toggle .ms-Label {\n      position: relative;\n      padding: 0 0 0 50px; }\n\n    :host.ms-Toggle .ms-Toggle-field .ms-Label {\n      color: #000;\n      -webkit-user-select: none;\n      -moz-user-select: none;\n      -ms-user-select: none;\n      user-select: none; }\n\n    :host.ms-Toggle .ms-Toggle-field .ms-Label--off {\n      display: block; }\n\n    :host.ms-Toggle .ms-Toggle-field.is-selected .ms-Label--off {\n      display: none; }\n\n    :host.ms-Toggle .ms-Toggle-field .ms-Label--on {\n      display: none; }\n\n    :host.ms-Toggle .ms-Toggle-field.is-selected .ms-Label--on {\n      display: block; }\n\n    :host.ms-Toggle .ms-Toggle-field.is-selected {\n      background-color: #0078d7;\n      border-color: #0078d7; }\n\n    :host.ms-Toggle .ms-Toggle-field.is-selected:focus, :host.ms-Toggle .ms-Toggle-field.is-selected:hover {\n      background-color: #106ebe;\n      border-color: #106ebe; }\n\n    :host.ms-Toggle .ms-Toggle-field.is-selected:before {\n      background-color: #fff;\n      left: 28px; }\n\n    :host.ms-Toggle.is-disabled .ms-Toggle-field {\n      background-color: #fff;\n      border-color: #c8c8c8;\n      pointer-events: none;\n      cursor: default; }\n\n    :host.ms-Toggle.is-disabled .ms-Toggle-field.is-selected {\n      background-color: #c8c8c8; }\n\n    :host.ms-Toggle.is-disabled .ms-Toggle-field:before {\n      background-color: #fff; }\n\n    :host.ms-Toggle.is-disabled .ms-Label {\n      color: #a6a6a6; }\n  "],
+                template: "\n    <span class=\"ms-Toggle-description\"><ng-content></ng-content></span>\n    <input type=\"checkbox\" [attr.id]=\"inputId\" [checked]=\"checked\" (click)=\"onInputClick($event)\" [disabled]=\"disabled\" class=\"ms-Toggle-input\" />\n    <label [attr.for]=\"inputId\" class=\"ms-Toggle-field\" [class.is-selected]=\"checked\">\n      <span class=\"ms-Label ms-Label--off\">{{ offText }}</span>\n      <span class=\"ms-Label ms-Label--on\">{{ onText }}</span>\n    </label>\n  ",
+                styles: ["\n    :host.ms-Toggle {\n      font-family: Segoe UI WestEuropean,Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;\n      -webkit-font-smoothing: antialiased;\n      font-size: 14px;\n      font-weight: 400;\n      -webkit-box-sizing: border-box;\n              box-sizing: border-box;\n      margin: 0;\n      padding: 0;\n      -webkit-box-shadow: none;\n              box-shadow: none;\n      position: relative;\n      display: block;\n      margin-bottom: 8px; }\n\n    .ms-Toggle-description {\n      color: #333333;\n      -webkit-box-sizing: border-box;\n              box-sizing: border-box;\n      -webkit-box-shadow: none;\n              box-shadow: none;\n      margin-top: 0px;\n      margin-right: 0px;\n      margin-bottom: 0px;\n      margin-left: 0px;\n      display: block;\n      padding-top: 5px;\n      padding-right: 0px;\n      padding-bottom: 5px;\n      padding-left: 0px;\n      word-wrap: break-word;\n      overflow-wrap: break-word; }\n\n    .ms-Toggle-input {\n      display: none; }\n\n    .ms-Toggle-field {\n      position: relative;\n      display: inline-block;\n      width: 45px;\n      height: 20px;\n      -webkit-box-sizing: border-box;\n              box-sizing: border-box;\n      border: 1px solid #a6a6a6;\n      border-radius: 20px;\n      cursor: pointer;\n      -webkit-transition: all 0.1s ease;\n      transition: all 0.1s ease;\n      outline: 0; }\n\n    :host.ms-Toggle .ms-Toggle-field:before {\n      position: absolute;\n      top: 4px;\n      width: 10px;\n      height: 10px;\n      border-radius: 10px;\n      content: '';\n      left: 4px;\n      background-color: #333333;\n      outline: 1px solid transparent;\n      -webkit-transition: all 0.1s ease;\n      transition: all 0.1s ease; }\n\n    :host.ms-Toggle .ms-Label {\n      position: relative;\n      padding: 0 0 0 50px; }\n\n    :host.ms-Toggle .ms-Toggle-field .ms-Label {\n      color: #000;\n      -webkit-user-select: none;\n      -moz-user-select: none;\n      -ms-user-select: none;\n      user-select: none; }\n\n    :host.ms-Toggle .ms-Toggle-field .ms-Label--off {\n      display: block; }\n\n    :host.ms-Toggle .ms-Toggle-field.is-selected .ms-Label--off {\n      display: none; }\n\n    :host.ms-Toggle .ms-Toggle-field .ms-Label--on {\n      display: none; }\n\n    :host.ms-Toggle .ms-Toggle-field.is-selected .ms-Label--on {\n      display: block; }\n\n    :host.ms-Toggle .ms-Toggle-field.is-selected {\n      background-color: #0078d7;\n      border-color: #0078d7; }\n\n    :host.ms-Toggle .ms-Toggle-field.is-selected:focus, :host.ms-Toggle .ms-Toggle-field.is-selected:hover {\n      background-color: #106ebe;\n      border-color: #106ebe; }\n\n    :host.ms-Toggle .ms-Toggle-field.is-selected:before {\n      background-color: #fff;\n      left: 28px; }\n\n    :host.ms-Toggle.is-disabled .ms-Toggle-field {\n      background-color: #fff;\n      border-color: #c8c8c8;\n      pointer-events: none;\n      cursor: default; }\n\n    :host.ms-Toggle.is-disabled .ms-Toggle-field.is-selected {\n      background-color: #c8c8c8; }\n\n    :host.ms-Toggle.is-disabled .ms-Toggle-field:before {\n      background-color: #fff; }\n\n    :host.ms-Toggle.is-disabled .ms-Label {\n      color: #a6a6a6; }\n\n    :host.ms-Toggle.ms-Toggle--textLeft {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex; }\n\n    :host.ms-Toggle.ms-Toggle--textLeft .ms-Toggle-field {\n      margin-right: 24px; }\n\n    :host.ms-Toggle.ms-Toggle--textLeft .ms-Toggle-description {\n      -webkit-box-flex: 1;\n          -ms-flex: auto;\n              flex: auto; }\n  "],
                 providers: [{
                         provide: NG_VALUE_ACCESSOR,
                         useExisting: forwardRef(function () { return ToggleComponent; }),
@@ -194,9 +205,13 @@ ToggleComponent.ctorParameters = function () { return [
     { type: ChangeDetectorRef, },
 ]; };
 ToggleComponent.propDecorators = {
-    'selected': [{ type: Input },],
+    'checked': [{ type: Input },],
     'disabled': [{ type: Input },],
+    'offText': [{ type: Input },],
+    'onText': [{ type: Input },],
+    'textLeft': [{ type: Input },],
     'classIsDisabled': [{ type: HostBinding, args: ['class.is-disabled',] },],
+    'classTextLeft': [{ type: HostBinding, args: ['class.ms-Toggle--textLeft',] },],
 };
 var ToggleModule = (function () {
     function ToggleModule() {

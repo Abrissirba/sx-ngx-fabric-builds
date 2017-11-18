@@ -155,8 +155,11 @@ class ToggleComponent {
      */
     constructor(changeDetectorRef) {
         this.changeDetectorRef = changeDetectorRef;
-        this._selected = false;
+        this._checked = false;
         this.disabled = false;
+        this.offText = 'Off';
+        this.onText = 'On';
+        this.textLeft = false;
         this.inputId = Guid.uniqueid();
         this._onChange = (_) => { };
         this._onTouched = () => { };
@@ -164,16 +167,16 @@ class ToggleComponent {
     /**
      * @return {?}
      */
-    get selected() {
-        return this._selected;
+    get checked() {
+        return this._checked;
     }
     /**
-     * @param {?} selected
+     * @param {?} checked
      * @return {?}
      */
-    set selected(selected) {
-        if (selected !== this.selected) {
-            this._selected = selected;
+    set checked(checked) {
+        if (checked !== this.checked) {
+            this._checked = checked;
             this.changeDetectorRef.markForCheck();
         }
     }
@@ -181,6 +184,10 @@ class ToggleComponent {
      * @return {?}
      */
     get classIsDisabled() { return this.disabled; }
+    /**
+     * @return {?}
+     */
+    get classTextLeft() { return this.textLeft; }
     /**
      * @param {?} evt
      * @return {?}
@@ -193,8 +200,8 @@ class ToggleComponent {
      * @return {?}
      */
     toggle() {
-        this.selected = !this.selected;
-        this._onChange(this.selected);
+        this.checked = !this.checked;
+        this._onChange(this.checked);
     }
     /**
      * @param {?} isDisabled
@@ -209,7 +216,7 @@ class ToggleComponent {
      * @return {?}
      */
     writeValue(val) {
-        this.selected = val;
+        this.checked = val;
     }
     /**
      * @param {?} fn
@@ -228,9 +235,9 @@ ToggleComponent.decorators = [
                 template: `
     <span class="ms-Toggle-description"><ng-content></ng-content></span>
     <input type="checkbox" [attr.id]="inputId" [checked]="checked" (click)="onInputClick($event)" [disabled]="disabled" class="ms-Toggle-input" />
-    <label [attr.for]="inputId" class="ms-Toggle-field" [class.is-selected]="selected">
-      <span class="ms-Label ms-Label--off">Off</span>
-      <span class="ms-Label ms-Label--on">On</span>
+    <label [attr.for]="inputId" class="ms-Toggle-field" [class.is-selected]="checked">
+      <span class="ms-Label ms-Label--off">{{ offText }}</span>
+      <span class="ms-Label ms-Label--on">{{ onText }}</span>
     </label>
   `,
                 styles: [`
@@ -247,7 +254,7 @@ ToggleComponent.decorators = [
               box-shadow: none;
       position: relative;
       display: block;
-      margin-bottom: 26px; }
+      margin-bottom: 8px; }
 
     .ms-Toggle-description {
       color: #333333;
@@ -346,6 +353,19 @@ ToggleComponent.decorators = [
 
     :host.ms-Toggle.is-disabled .ms-Label {
       color: #a6a6a6; }
+
+    :host.ms-Toggle.ms-Toggle--textLeft {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+
+    :host.ms-Toggle.ms-Toggle--textLeft .ms-Toggle-field {
+      margin-right: 24px; }
+
+    :host.ms-Toggle.ms-Toggle--textLeft .ms-Toggle-description {
+      -webkit-box-flex: 1;
+          -ms-flex: auto;
+              flex: auto; }
   `],
                 providers: [{
                         provide: NG_VALUE_ACCESSOR,
@@ -366,9 +386,13 @@ ToggleComponent.ctorParameters = () => [
     { type: ChangeDetectorRef, },
 ];
 ToggleComponent.propDecorators = {
-    'selected': [{ type: Input },],
+    'checked': [{ type: Input },],
     'disabled': [{ type: Input },],
+    'offText': [{ type: Input },],
+    'onText': [{ type: Input },],
+    'textLeft': [{ type: Input },],
     'classIsDisabled': [{ type: HostBinding, args: ['class.is-disabled',] },],
+    'classTextLeft': [{ type: HostBinding, args: ['class.ms-Toggle--textLeft',] },],
 };
 
 class ToggleModule {

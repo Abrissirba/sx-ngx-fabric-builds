@@ -1,10 +1,14 @@
 import { ChangeDetectorRef } from '@angular/core';
 export declare class ToggleComponent {
     private changeDetectorRef;
-    private _selected;
-    selected: boolean;
+    private _checked;
+    checked: boolean;
     disabled: boolean;
+    offText: string;
+    onText: string;
+    textLeft: boolean;
     readonly classIsDisabled: boolean;
+    readonly classTextLeft: boolean;
     inputId: string;
     constructor(changeDetectorRef: ChangeDetectorRef);
     onInputClick(evt: MouseEvent): void;
