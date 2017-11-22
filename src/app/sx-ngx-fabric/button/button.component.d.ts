@@ -1,7 +1,7 @@
 import { OnInit } from '@angular/core';
 export declare class ButtonComponent implements OnInit {
     primary: boolean;
-    classes: string;
+    classes: boolean;
     readonly classPrimary: boolean;
     constructor();
     ngOnInit(): void;
