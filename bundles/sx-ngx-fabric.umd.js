@@ -9320,6 +9320,9 @@ SxNgxFabricModule.decorators = [
 SxNgxFabricModule.ctorParameters = function () { return []; };
 
 exports.SxNgxFabricModule = SxNgxFabricModule;
+exports.SxNgxFabricDialogService = SxNgxFabricDialogService;
+exports.SxNgxFabricDialogRef = SxNgxFabricDialogRef;
+exports.SX_NGX_FABRIC_DIALOG_DATA = SX_NGX_FABRIC_DIALOG_DATA;
 exports.ɵr = BreadcrumbComponent;
 exports.ɵq = BreadcrumbModule;
 exports.ɵd = ButtonComponent;
