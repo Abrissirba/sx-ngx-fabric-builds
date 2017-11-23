@@ -561,6 +561,7 @@ class TextFieldComponent {
      */
     writeValue(val) {
         this.value = val;
+        this.changeDetectorRef.markForCheck();
     }
     /**
      * @param {?} fn
@@ -614,7 +615,8 @@ TextFieldComponent.decorators = [
       color: #333333;
       font-size: 14px;
       font-weight: 400;
-      margin-bottom: 8px; }
+      margin-bottom: 8px;
+      width: 100%; }
 
     .ms-Label {
       font-size: 14px;

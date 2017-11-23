@@ -9,6 +9,6 @@ export declare class SxNgxFabricDialogRef<T> {
     componentInstance: T;
     constructor(overlayRef: OverlayRef);
     close(value?: any): void;
-    afterClosed(): Observable<void>;
-    beforeClose(): Observable<void>;
+    afterClosed(): Observable<any>;
+    beforeClose(): Observable<any>;
 }
