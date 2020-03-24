@@ -1,14 +1,28 @@
-/**
- * @fileoverview added by tsickle
- * Generated from: lib/text-field/text-field.component.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 import { Component, HostBinding, Input, forwardRef, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
+import * as i0 from "@angular/core";
+import * as i1 from "@angular/common";
+function TextFieldComponent_input_2_Template(rf, ctx) { if (rf & 1) {
+    const _r7 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "input", 2);
+    i0.ɵɵlistener("blur", function TextFieldComponent_input_2_Template_input_blur_0_listener($event) { i0.ɵɵrestoreView(_r7); const ctx_r6 = i0.ɵɵnextContext(); return ctx_r6.onTouched($event); })("change", function TextFieldComponent_input_2_Template_input_change_0_listener($event) { i0.ɵɵrestoreView(_r7); const ctx_r8 = i0.ɵɵnextContext(); return ctx_r8.onChange($event); })("keyup", function TextFieldComponent_input_2_Template_input_keyup_0_listener($event) { i0.ɵɵrestoreView(_r7); const ctx_r9 = i0.ɵɵnextContext(); return ctx_r9.onChange($event); });
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r4 = i0.ɵɵnextContext();
+    i0.ɵɵproperty("value", ctx_r4.value)("disabled", ctx_r4.disabled);
+    i0.ɵɵattribute("type", ctx_r4.type)("placeholder", ctx_r4.placeholder);
+} }
+function TextFieldComponent_textarea_3_Template(rf, ctx) { if (rf & 1) {
+    const _r11 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "textarea", 2);
+    i0.ɵɵlistener("blur", function TextFieldComponent_textarea_3_Template_textarea_blur_0_listener($event) { i0.ɵɵrestoreView(_r11); const ctx_r10 = i0.ɵɵnextContext(); return ctx_r10.onTouched($event); })("change", function TextFieldComponent_textarea_3_Template_textarea_change_0_listener($event) { i0.ɵɵrestoreView(_r11); const ctx_r12 = i0.ɵɵnextContext(); return ctx_r12.onChange($event); })("keyup", function TextFieldComponent_textarea_3_Template_textarea_keyup_0_listener($event) { i0.ɵɵrestoreView(_r11); const ctx_r13 = i0.ɵɵnextContext(); return ctx_r13.onChange($event); });
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r5 = i0.ɵɵnextContext();
+    i0.ɵɵproperty("value", ctx_r5.value)("disabled", ctx_r5.disabled);
+    i0.ɵɵattribute("type", ctx_r5.type)("placeholder", ctx_r5.placeholder)("rows", ctx_r5.rows);
+} }
 export class TextFieldComponent {
-    /**
-     * @param {?} changeDetectorRef
-     */
     constructor(changeDetectorRef) {
         this.changeDetectorRef = changeDetectorRef;
         this.multiline = false;
@@ -18,134 +32,90 @@ export class TextFieldComponent {
         this.required = false;
         this.value = null;
         this.classes = 'ms-TextField';
-        this._onChange = (/**
-         * @param {?} _
-         * @return {?}
-         */
-        (_) => { });
-        this._onTouched = (/**
-         * @return {?}
-         */
-        () => { });
+        this._onChange = (_) => { };
+        this._onTouched = () => { };
     }
-    /**
-     * @return {?}
-     */
     get classMultiline() { return this.multiline; }
-    /**
-     * @return {?}
-     */
     get classIsDisabled() { return this.disabled; }
-    /**
-     * @param {?} evt
-     * @return {?}
-     */
     onChange(evt) {
         evt.stopPropagation();
         this.value = evt.target.value;
         this._onChange(this.value);
     }
-    /**
-     * @param {?} evt
-     * @return {?}
-     */
     onTouched(evt) {
         this._onTouched();
     }
     // ControlValueAccessor implementation
-    /**
-     * @param {?} isDisabled
-     * @return {?}
-     */
     setDisabledState(isDisabled) {
         this.disabled = isDisabled;
         this.changeDetectorRef.markForCheck();
     }
-    /**
-     * @param {?} val
-     * @return {?}
-     */
     writeValue(val) {
         this.value = val;
         this.changeDetectorRef.markForCheck();
     }
-    /**
-     * @param {?} fn
-     * @return {?}
-     */
     registerOnChange(fn) { this._onChange = fn; }
-    /**
-     * @param {?} fn
-     * @return {?}
-     */
     registerOnTouched(fn) { this._onTouched = fn; }
 }
-TextFieldComponent.decorators = [
-    { type: Component, args: [{
+TextFieldComponent.ɵfac = function TextFieldComponent_Factory(t) { return new (t || TextFieldComponent)(i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+TextFieldComponent.ɵcmp = i0.ɵɵdefineComponent({ type: TextFieldComponent, selectors: [["sx-ngx-fabric-text-field"]], hostVars: 6, hostBindings: function TextFieldComponent_HostBindings(rf, ctx) { if (rf & 2) {
+        i0.ɵɵclassMap(ctx.classes);
+        i0.ɵɵclassProp("ms-TextField--multiline", ctx.classMultiline)("is-disabled", ctx.classIsDisabled);
+    } }, inputs: { label: "label", multiline: "multiline", rows: "rows", type: "type", placeholder: "placeholder", disabled: "disabled", required: "required" }, features: [i0.ɵɵProvidersFeature([{
+                provide: NG_VALUE_ACCESSOR,
+                useExisting: forwardRef(() => TextFieldComponent),
+                multi: true
+            }])], decls: 4, vars: 5, consts: [[1, "ms-Label"], ["class", "ms-TextField-field", 3, "value", "disabled", "blur", "change", "keyup", 4, "ngIf"], [1, "ms-TextField-field", 3, "value", "disabled", "blur", "change", "keyup"]], template: function TextFieldComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "label", 0);
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+        i0.ɵɵtemplate(2, TextFieldComponent_input_2_Template, 1, 4, "input", 1);
+        i0.ɵɵtemplate(3, TextFieldComponent_textarea_3_Template, 1, 5, "textarea", 1);
+    } if (rf & 2) {
+        i0.ɵɵclassProp("is-required", ctx.required);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate(ctx.label);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !ctx.multiline);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx.multiline);
+    } }, directives: [i1.NgIf], styles: [".ms-TextField[_nghost-%COMP%]{font-family:Segoe UI WestEuropean,Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;-webkit-font-smoothing:antialiased;box-sizing:border-box;margin:0 0 8px;padding:0;box-shadow:none;color:#333;font-size:14px;font-weight:400;width:100%}.ms-Label[_ngcontent-%COMP%]{font-size:14px;font-weight:600}.ms-TextField-field[_ngcontent-%COMP%]{box-sizing:border-box;margin:0;padding:6px 12px 7px;box-shadow:none;border:1px solid #c8c8c8;border-radius:0;font-weight:300;font-size:14px;color:#333;height:32px;width:100%;min-width:180px;outline:0;text-overflow:ellipsis}.ms-TextField.ms-TextField--multiline[_nghost-%COMP%]   .ms-TextField-field[_ngcontent-%COMP%]{color:#333;font-size:14px;line-height:17px;min-height:60px;min-width:260px;padding-top:6px;overflow:auto}.ms-TextField.is-disabled[_nghost-%COMP%]   .ms-TextField-field[_ngcontent-%COMP%]{background-color:#f4f4f4;border-color:#f4f4f4;pointer-events:none;cursor:default}.ms-TextField-field[_ngcontent-%COMP%]:hover{border-color:#333}.ms-TextField-field[_ngcontent-%COMP%]:active, .ms-TextField-field[_ngcontent-%COMP%]:focus{border-color:#0078d4}.ms-TextField.ng-invalid.ng-touched[_nghost-%COMP%]   .ms-TextField-field[_ngcontent-%COMP%]{border-color:#a80000}"], changeDetection: 0 });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TextFieldComponent, [{
+        type: Component,
+        args: [{
                 selector: 'sx-ngx-fabric-text-field',
-                template: "<label class=\"ms-Label\" [class.is-required]=\"required\">{{label}}</label>\r\n<input class=\"ms-TextField-field\"\r\n  *ngIf=\"!multiline\"\r\n  [attr.type]=\"type\" \r\n  [attr.placeholder]=\"placeholder\" \r\n  [value]=\"value\" \r\n  [disabled]=\"disabled\" \r\n  (blur)=\"onTouched($event)\"\r\n  (change)=\"onChange($event)\" \r\n  (keyup)=\"onChange($event)\"\r\n/>\r\n\r\n<textarea class=\"ms-TextField-field\"\r\n*ngIf=\"multiline\"\r\n[attr.type]=\"type\" \r\n[attr.placeholder]=\"placeholder\" \r\n[value]=\"value\" \r\n[disabled]=\"disabled\"\r\n[attr.rows]=\"rows\"\r\n(blur)=\"onTouched($event)\"\r\n(change)=\"onChange($event)\" \r\n(keyup)=\"onChange($event)\"\r\n></textarea>",
+                templateUrl: './text-field.component.html',
+                styleUrls: ['./text-field.component.scss'],
                 providers: [{
                         provide: NG_VALUE_ACCESSOR,
-                        useExisting: forwardRef((/**
-                         * @return {?}
-                         */
-                        () => TextFieldComponent)),
+                        useExisting: forwardRef(() => TextFieldComponent),
                         multi: true
                     }],
                 preserveWhitespaces: false,
-                changeDetection: ChangeDetectionStrategy.OnPush,
-                styles: [":host.ms-TextField{font-family:Segoe UI WestEuropean,Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;-webkit-font-smoothing:antialiased;box-sizing:border-box;margin:0 0 8px;padding:0;box-shadow:none;color:#333;font-size:14px;font-weight:400;width:100%}.ms-Label{font-size:14px;font-weight:600}.ms-TextField-field{box-sizing:border-box;margin:0;padding:6px 12px 7px;box-shadow:none;border:1px solid #c8c8c8;border-radius:0;font-weight:300;font-size:14px;color:#333;height:32px;width:100%;min-width:180px;outline:0;text-overflow:ellipsis}:host.ms-TextField.ms-TextField--multiline .ms-TextField-field{color:#333;font-size:14px;line-height:17px;min-height:60px;min-width:260px;padding-top:6px;overflow:auto}:host.ms-TextField.is-disabled .ms-TextField-field{background-color:#f4f4f4;border-color:#f4f4f4;pointer-events:none;cursor:default}.ms-TextField-field:hover{border-color:#333}.ms-TextField-field:active,.ms-TextField-field:focus{border-color:#0078d4}:host.ms-TextField.ng-invalid.ng-touched .ms-TextField-field{border-color:#a80000}"]
-            }] }
-];
-/** @nocollapse */
-TextFieldComponent.ctorParameters = () => [
-    { type: ChangeDetectorRef }
-];
-TextFieldComponent.propDecorators = {
-    label: [{ type: Input }],
-    multiline: [{ type: Input }],
-    rows: [{ type: Input }],
-    type: [{ type: Input }],
-    placeholder: [{ type: Input }],
-    disabled: [{ type: Input }],
-    required: [{ type: Input }],
-    classes: [{ type: HostBinding, args: ['class',] }],
-    classMultiline: [{ type: HostBinding, args: ['class.ms-TextField--multiline',] }],
-    classIsDisabled: [{ type: HostBinding, args: ['class.is-disabled',] }]
-};
-if (false) {
-    /** @type {?} */
-    TextFieldComponent.prototype.label;
-    /** @type {?} */
-    TextFieldComponent.prototype.multiline;
-    /** @type {?} */
-    TextFieldComponent.prototype.rows;
-    /** @type {?} */
-    TextFieldComponent.prototype.type;
-    /** @type {?} */
-    TextFieldComponent.prototype.placeholder;
-    /** @type {?} */
-    TextFieldComponent.prototype.disabled;
-    /** @type {?} */
-    TextFieldComponent.prototype.required;
-    /** @type {?} */
-    TextFieldComponent.prototype.value;
-    /** @type {?} */
-    TextFieldComponent.prototype.classes;
-    /**
-     * @type {?}
-     * @private
-     */
-    TextFieldComponent.prototype._onChange;
-    /**
-     * @type {?}
-     * @private
-     */
-    TextFieldComponent.prototype._onTouched;
-    /**
-     * @type {?}
-     * @private
-     */
-    TextFieldComponent.prototype.changeDetectorRef;
-}
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidGV4dC1maWVsZC5jb21wb25lbnQuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9zeC1uZ3gtZmFicmljLyIsInNvdXJjZXMiOlsibGliL3RleHQtZmllbGQvdGV4dC1maWVsZC5jb21wb25lbnQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7QUFBQSxPQUFPLEVBQUUsU0FBUyxFQUFVLFdBQVcsRUFBRSxLQUFLLEVBQUUsVUFBVSxFQUFFLHVCQUF1QixFQUFFLGlCQUFpQixFQUFZLE1BQU0sZUFBZSxDQUFDO0FBQ3hJLE9BQU8sRUFBRSxpQkFBaUIsRUFBZSxNQUFNLGdCQUFnQixDQUFDO0FBY2hFLE1BQU0sT0FBTyxrQkFBa0I7Ozs7SUEwQjdCLFlBQ1UsaUJBQW9DO1FBQXBDLHNCQUFpQixHQUFqQixpQkFBaUIsQ0FBbUI7UUF2QnJDLGNBQVMsR0FBRyxLQUFLLENBQUM7UUFFbEIsU0FBSSxHQUFHLENBQUMsQ0FBQztRQUVULFNBQUksR0FBRyxNQUFNLENBQUM7UUFJZCxhQUFRLEdBQUcsS0FBSyxDQUFDO1FBRWpCLGFBQVEsR0FBRyxLQUFLLENBQUM7UUFFMUIsVUFBSyxHQUFHLElBQUksQ0FBQztRQUVTLFlBQU8sR0FBRyxjQUFjLENBQUM7UUE0QnZDLGNBQVM7Ozs7UUFBRyxDQUFDLENBQU0sRUFBRSxFQUFFLEdBQUcsQ0FBQyxFQUFDO1FBQzVCLGVBQVU7OztRQUFHLEdBQUcsRUFBRSxHQUFHLENBQUMsRUFBQztJQW5CM0IsQ0FBQzs7OztJQVJMLElBQWtELGNBQWMsS0FBSyxPQUFPLElBQUksQ0FBQyxTQUFTLENBQUMsQ0FBQyxDQUFDOzs7O0lBRTdGLElBQXNDLGVBQWUsS0FBSyxPQUFPLElBQUksQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDOzs7OztJQVFqRixRQUFRLENBQUMsR0FBRztRQUNWLEdBQUcsQ0FBQyxlQUFlLEVBQUUsQ0FBQztRQUN0QixJQUFJLENBQUMsS0FBSyxHQUFHLEdBQUcsQ0FBQyxNQUFNLENBQUMsS0FBSyxDQUFDO1FBQzlCLElBQUksQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLEtBQUssQ0FBQyxDQUFDO0lBQzdCLENBQUM7Ozs7O0lBRUQsU0FBUyxDQUFDLEdBQUc7UUFDWCxJQUFJLENBQUMsVUFBVSxFQUFFLENBQUM7SUFDcEIsQ0FBQzs7Ozs7O0lBR0QsZ0JBQWdCLENBQUMsVUFBbUI7UUFDbEMsSUFBSSxDQUFDLFFBQVEsR0FBRyxVQUFVLENBQUM7UUFDM0IsSUFBSSxDQUFDLGlCQUFpQixDQUFDLFlBQVksRUFBRSxDQUFDO0lBQ3hDLENBQUM7Ozs7O0lBS00sVUFBVSxDQUFDLEdBQVE7UUFDeEIsSUFBSSxDQUFDLEtBQUssR0FBRyxHQUFHLENBQUM7UUFDakIsSUFBSSxDQUFDLGlCQUFpQixDQUFDLFlBQVksRUFBRSxDQUFDO0lBQ3hDLENBQUM7Ozs7O0lBRU0sZ0JBQWdCLENBQUMsRUFBb0IsSUFBVSxJQUFJLENBQUMsU0FBUyxHQUFHLEVBQUUsQ0FBQyxDQUFDLENBQUM7Ozs7O0lBQ3JFLGlCQUFpQixDQUFDLEVBQWMsSUFBVSxJQUFJLENBQUMsVUFBVSxHQUFHLEVBQUUsQ0FBQyxDQUFDLENBQUM7OztZQW5FekUsU0FBUyxTQUFDO2dCQUNULFFBQVEsRUFBRSwwQkFBMEI7Z0JBQ3BDLGlzQkFBMEM7Z0JBRTFDLFNBQVMsRUFBRSxDQUFDO3dCQUNWLE9BQU8sRUFBRSxpQkFBaUI7d0JBQzFCLFdBQVcsRUFBRSxVQUFVOzs7d0JBQUMsR0FBRyxFQUFFLENBQUMsa0JBQWtCLEVBQUM7d0JBQ2pELEtBQUssRUFBRSxJQUFJO3FCQUNaLENBQUM7Z0JBQ0YsbUJBQW1CLEVBQUUsS0FBSztnQkFDMUIsZUFBZSxFQUFFLHVCQUF1QixDQUFDLE1BQU07O2FBQ2hEOzs7O1lBZG9GLGlCQUFpQjs7O29CQWlCbkcsS0FBSzt3QkFFTCxLQUFLO21CQUVMLEtBQUs7bUJBRUwsS0FBSzswQkFFTCxLQUFLO3VCQUVMLEtBQUs7dUJBRUwsS0FBSztzQkFJTCxXQUFXLFNBQUMsT0FBTzs2QkFFbkIsV0FBVyxTQUFDLCtCQUErQjs4QkFFM0MsV0FBVyxTQUFDLG1CQUFtQjs7OztJQXBCaEMsbUNBQWU7O0lBRWYsdUNBQTJCOztJQUUzQixrQ0FBa0I7O0lBRWxCLGtDQUF1Qjs7SUFFdkIseUNBQXFCOztJQUVyQixzQ0FBMEI7O0lBRTFCLHNDQUEwQjs7SUFFMUIsbUNBQWE7O0lBRWIscUNBQStDOzs7OztJQTRCL0MsdUNBQW9DOzs7OztJQUNwQyx3Q0FBK0I7Ozs7O0lBcEI3QiwrQ0FBNEMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBDb21wb25lbnQsIE9uSW5pdCwgSG9zdEJpbmRpbmcsIElucHV0LCBmb3J3YXJkUmVmLCBDaGFuZ2VEZXRlY3Rpb25TdHJhdGVneSwgQ2hhbmdlRGV0ZWN0b3JSZWYsIE9wdGlvbmFsIH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XHJcbmltcG9ydCB7IE5HX1ZBTFVFX0FDQ0VTU09SLCBGb3JtQ29udHJvbCB9IGZyb20gJ0Bhbmd1bGFyL2Zvcm1zJztcclxuXHJcbkBDb21wb25lbnQoe1xyXG4gIHNlbGVjdG9yOiAnc3gtbmd4LWZhYnJpYy10ZXh0LWZpZWxkJyxcclxuICB0ZW1wbGF0ZVVybDogJy4vdGV4dC1maWVsZC5jb21wb25lbnQuaHRtbCcsXHJcbiAgc3R5bGVVcmxzOiBbJy4vdGV4dC1maWVsZC5jb21wb25lbnQuc2NzcyddLFxyXG4gIHByb3ZpZGVyczogW3tcclxuICAgIHByb3ZpZGU6IE5HX1ZBTFVFX0FDQ0VTU09SLFxyXG4gICAgdXNlRXhpc3Rpbmc6IGZvcndhcmRSZWYoKCkgPT4gVGV4dEZpZWxkQ29tcG9uZW50KSxcclxuICAgIG11bHRpOiB0cnVlXHJcbiAgfV0sXHJcbiAgcHJlc2VydmVXaGl0ZXNwYWNlczogZmFsc2UsXHJcbiAgY2hhbmdlRGV0ZWN0aW9uOiBDaGFuZ2VEZXRlY3Rpb25TdHJhdGVneS5PblB1c2hcclxufSlcclxuZXhwb3J0IGNsYXNzIFRleHRGaWVsZENvbXBvbmVudCB7XHJcblxyXG4gIEBJbnB1dCgpIGxhYmVsO1xyXG5cclxuICBASW5wdXQoKSBtdWx0aWxpbmUgPSBmYWxzZTtcclxuXHJcbiAgQElucHV0KCkgcm93cyA9IDM7XHJcblxyXG4gIEBJbnB1dCgpIHR5cGUgPSAndGV4dCc7XHJcblxyXG4gIEBJbnB1dCgpIHBsYWNlaG9sZGVyO1xyXG5cclxuICBASW5wdXQoKSBkaXNhYmxlZCA9IGZhbHNlO1xyXG5cclxuICBASW5wdXQoKSByZXF1aXJlZCA9IGZhbHNlO1xyXG5cclxuICB2YWx1ZSA9IG51bGw7XHJcblxyXG4gIEBIb3N0QmluZGluZygnY2xhc3MnKSBjbGFzc2VzID0gJ21zLVRleHRGaWVsZCc7XHJcblxyXG4gIEBIb3N0QmluZGluZygnY2xhc3MubXMtVGV4dEZpZWxkLS1tdWx0aWxpbmUnKSBnZXQgY2xhc3NNdWx0aWxpbmUoKSB7IHJldHVybiB0aGlzLm11bHRpbGluZTsgfVxyXG5cclxuICBASG9zdEJpbmRpbmcoJ2NsYXNzLmlzLWRpc2FibGVkJykgZ2V0IGNsYXNzSXNEaXNhYmxlZCgpIHsgcmV0dXJuIHRoaXMuZGlzYWJsZWQ7IH1cclxuXHJcblxyXG5cclxuICBjb25zdHJ1Y3RvcihcclxuICAgIHByaXZhdGUgY2hhbmdlRGV0ZWN0b3JSZWY6IENoYW5nZURldGVjdG9yUmVmXHJcbiAgKSB7IH1cclxuXHJcbiAgb25DaGFuZ2UoZXZ0KSB7XHJcbiAgICBldnQuc3RvcFByb3BhZ2F0aW9uKCk7XHJcbiAgICB0aGlzLnZhbHVlID0gZXZ0LnRhcmdldC52YWx1ZTtcclxuICAgIHRoaXMuX29uQ2hhbmdlKHRoaXMudmFsdWUpO1xyXG4gIH1cclxuXHJcbiAgb25Ub3VjaGVkKGV2dCkge1xyXG4gICAgdGhpcy5fb25Ub3VjaGVkKCk7XHJcbiAgfVxyXG5cclxuICAvLyBDb250cm9sVmFsdWVBY2Nlc3NvciBpbXBsZW1lbnRhdGlvblxyXG4gIHNldERpc2FibGVkU3RhdGUoaXNEaXNhYmxlZDogYm9vbGVhbikge1xyXG4gICAgdGhpcy5kaXNhYmxlZCA9IGlzRGlzYWJsZWQ7XHJcbiAgICB0aGlzLmNoYW5nZURldGVjdG9yUmVmLm1hcmtGb3JDaGVjaygpO1xyXG4gIH1cclxuXHJcbiAgcHJpdmF0ZSBfb25DaGFuZ2UgPSAoXzogYW55KSA9PiB7IH07XHJcbiAgcHJpdmF0ZSBfb25Ub3VjaGVkID0gKCkgPT4geyB9O1xyXG5cclxuICBwdWJsaWMgd3JpdGVWYWx1ZSh2YWw6IGFueSkge1xyXG4gICAgdGhpcy52YWx1ZSA9IHZhbDtcclxuICAgIHRoaXMuY2hhbmdlRGV0ZWN0b3JSZWYubWFya0ZvckNoZWNrKCk7XHJcbiAgfVxyXG5cclxuICBwdWJsaWMgcmVnaXN0ZXJPbkNoYW5nZShmbjogKF86IGFueSkgPT4gdm9pZCk6IHZvaWQgeyB0aGlzLl9vbkNoYW5nZSA9IGZuOyB9XHJcbiAgcHVibGljIHJlZ2lzdGVyT25Ub3VjaGVkKGZuOiAoKSA9PiB2b2lkKTogdm9pZCB7IHRoaXMuX29uVG91Y2hlZCA9IGZuOyB9XHJcblxyXG59XHJcbiJdfQ==
+                changeDetection: ChangeDetectionStrategy.OnPush
+            }]
+    }], function () { return [{ type: i0.ChangeDetectorRef }]; }, { label: [{
+            type: Input
+        }], multiline: [{
+            type: Input
+        }], rows: [{
+            type: Input
+        }], type: [{
+            type: Input
+        }], placeholder: [{
+            type: Input
+        }], disabled: [{
+            type: Input
+        }], required: [{
+            type: Input
+        }], classes: [{
+            type: HostBinding,
+            args: ['class']
+        }], classMultiline: [{
+            type: HostBinding,
+            args: ['class.ms-TextField--multiline']
+        }], classIsDisabled: [{
+            type: HostBinding,
+            args: ['class.is-disabled']
+        }] }); })();
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidGV4dC1maWVsZC5jb21wb25lbnQuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9zeC1uZ3gtZmFicmljLyIsInNvdXJjZXMiOlsibGliL3RleHQtZmllbGQvdGV4dC1maWVsZC5jb21wb25lbnQudHMiLCJsaWIvdGV4dC1maWVsZC90ZXh0LWZpZWxkLmNvbXBvbmVudC5odG1sIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sRUFBRSxTQUFTLEVBQVUsV0FBVyxFQUFFLEtBQUssRUFBRSxVQUFVLEVBQUUsdUJBQXVCLEVBQUUsaUJBQWlCLEVBQVksTUFBTSxlQUFlLENBQUM7QUFDeEksT0FBTyxFQUFFLGlCQUFpQixFQUFlLE1BQU0sZ0JBQWdCLENBQUM7Ozs7O0lDQWhFLGdDQVdBO0lBTEUsZ01BQTBCLHNMQUFBLG9MQUFBO0lBTjVCLGlCQVdBOzs7SUFQRSxvQ0FBZSw2QkFBQTtJQUZmLG1DQUFrQixtQ0FBQTs7OztJQVNwQixtQ0FVWTtJQUhaLHlNQUEwQiwrTEFBQSw2TEFBQTtJQUd6QixpQkFBVzs7O0lBTlosb0NBQWUsNkJBQUE7SUFGZixtQ0FBa0IsbUNBQUEscUJBQUE7O0FEQ2xCLE1BQU0sT0FBTyxrQkFBa0I7SUEwQjdCLFlBQ1UsaUJBQW9DO1FBQXBDLHNCQUFpQixHQUFqQixpQkFBaUIsQ0FBbUI7UUF2QnJDLGNBQVMsR0FBRyxLQUFLLENBQUM7UUFFbEIsU0FBSSxHQUFHLENBQUMsQ0FBQztRQUVULFNBQUksR0FBRyxNQUFNLENBQUM7UUFJZCxhQUFRLEdBQUcsS0FBSyxDQUFDO1FBRWpCLGFBQVEsR0FBRyxLQUFLLENBQUM7UUFFMUIsVUFBSyxHQUFHLElBQUksQ0FBQztRQUVTLFlBQU8sR0FBRyxjQUFjLENBQUM7UUE0QnZDLGNBQVMsR0FBRyxDQUFDLENBQU0sRUFBRSxFQUFFLEdBQUcsQ0FBQyxDQUFDO1FBQzVCLGVBQVUsR0FBRyxHQUFHLEVBQUUsR0FBRyxDQUFDLENBQUM7SUFuQjNCLENBQUM7SUFSTCxJQUFrRCxjQUFjLEtBQUssT0FBTyxJQUFJLENBQUMsU0FBUyxDQUFDLENBQUMsQ0FBQztJQUU3RixJQUFzQyxlQUFlLEtBQUssT0FBTyxJQUFJLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQztJQVFqRixRQUFRLENBQUMsR0FBRztRQUNWLEdBQUcsQ0FBQyxlQUFlLEVBQUUsQ0FBQztRQUN0QixJQUFJLENBQUMsS0FBSyxHQUFHLEdBQUcsQ0FBQyxNQUFNLENBQUMsS0FBSyxDQUFDO1FBQzlCLElBQUksQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLEtBQUssQ0FBQyxDQUFDO0lBQzdCLENBQUM7SUFFRCxTQUFTLENBQUMsR0FBRztRQUNYLElBQUksQ0FBQyxVQUFVLEVBQUUsQ0FBQztJQUNwQixDQUFDO0lBRUQsc0NBQXNDO0lBQ3RDLGdCQUFnQixDQUFDLFVBQW1CO1FBQ2xDLElBQUksQ0FBQyxRQUFRLEdBQUcsVUFBVSxDQUFDO1FBQzNCLElBQUksQ0FBQyxpQkFBaUIsQ0FBQyxZQUFZLEVBQUUsQ0FBQztJQUN4QyxDQUFDO0lBS00sVUFBVSxDQUFDLEdBQVE7UUFDeEIsSUFBSSxDQUFDLEtBQUssR0FBRyxHQUFHLENBQUM7UUFDakIsSUFBSSxDQUFDLGlCQUFpQixDQUFDLFlBQVksRUFBRSxDQUFDO0lBQ3hDLENBQUM7SUFFTSxnQkFBZ0IsQ0FBQyxFQUFvQixJQUFVLElBQUksQ0FBQyxTQUFTLEdBQUcsRUFBRSxDQUFDLENBQUMsQ0FBQztJQUNyRSxpQkFBaUIsQ0FBQyxFQUFjLElBQVUsSUFBSSxDQUFDLFVBQVUsR0FBRyxFQUFFLENBQUMsQ0FBQyxDQUFDOztvRkF2RDdELGtCQUFrQjt1REFBbEIsa0JBQWtCOzs7a01BUmxCLENBQUM7Z0JBQ1YsT0FBTyxFQUFFLGlCQUFpQjtnQkFDMUIsV0FBVyxFQUFFLFVBQVUsQ0FBQyxHQUFHLEVBQUUsQ0FBQyxrQkFBa0IsQ0FBQztnQkFDakQsS0FBSyxFQUFFLElBQUk7YUFDWixDQUFDO1FDWEosZ0NBQXVEO1FBQUEsWUFBUztRQUFBLGlCQUFRO1FBQ3hFLHVFQVdBO1FBQUEsNkVBVUM7O1FBdEJ1QiwyQ0FBOEI7UUFBQyxlQUFTO1FBQVQsK0JBQVM7UUFFOUQsZUFBa0I7UUFBbEIscUNBQWtCO1FBV3BCLGVBQWlCO1FBQWpCLG9DQUFpQjs7a0RERUosa0JBQWtCO2NBWjlCLFNBQVM7ZUFBQztnQkFDVCxRQUFRLEVBQUUsMEJBQTBCO2dCQUNwQyxXQUFXLEVBQUUsNkJBQTZCO2dCQUMxQyxTQUFTLEVBQUUsQ0FBQyw2QkFBNkIsQ0FBQztnQkFDMUMsU0FBUyxFQUFFLENBQUM7d0JBQ1YsT0FBTyxFQUFFLGlCQUFpQjt3QkFDMUIsV0FBVyxFQUFFLFVBQVUsQ0FBQyxHQUFHLEVBQUUsQ0FBQyxrQkFBa0IsQ0FBQzt3QkFDakQsS0FBSyxFQUFFLElBQUk7cUJBQ1osQ0FBQztnQkFDRixtQkFBbUIsRUFBRSxLQUFLO2dCQUMxQixlQUFlLEVBQUUsdUJBQXVCLENBQUMsTUFBTTthQUNoRDs7a0JBR0UsS0FBSzs7a0JBRUwsS0FBSzs7a0JBRUwsS0FBSzs7a0JBRUwsS0FBSzs7a0JBRUwsS0FBSzs7a0JBRUwsS0FBSzs7a0JBRUwsS0FBSzs7a0JBSUwsV0FBVzttQkFBQyxPQUFPOztrQkFFbkIsV0FBVzttQkFBQywrQkFBK0I7O2tCQUUzQyxXQUFXO21CQUFDLG1CQUFtQiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENvbXBvbmVudCwgT25Jbml0LCBIb3N0QmluZGluZywgSW5wdXQsIGZvcndhcmRSZWYsIENoYW5nZURldGVjdGlvblN0cmF0ZWd5LCBDaGFuZ2VEZXRlY3RvclJlZiwgT3B0aW9uYWwgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcclxuaW1wb3J0IHsgTkdfVkFMVUVfQUNDRVNTT1IsIEZvcm1Db250cm9sIH0gZnJvbSAnQGFuZ3VsYXIvZm9ybXMnO1xyXG5cclxuQENvbXBvbmVudCh7XHJcbiAgc2VsZWN0b3I6ICdzeC1uZ3gtZmFicmljLXRleHQtZmllbGQnLFxyXG4gIHRlbXBsYXRlVXJsOiAnLi90ZXh0LWZpZWxkLmNvbXBvbmVudC5odG1sJyxcclxuICBzdHlsZVVybHM6IFsnLi90ZXh0LWZpZWxkLmNvbXBvbmVudC5zY3NzJ10sXHJcbiAgcHJvdmlkZXJzOiBbe1xyXG4gICAgcHJvdmlkZTogTkdfVkFMVUVfQUNDRVNTT1IsXHJcbiAgICB1c2VFeGlzdGluZzogZm9yd2FyZFJlZigoKSA9PiBUZXh0RmllbGRDb21wb25lbnQpLFxyXG4gICAgbXVsdGk6IHRydWVcclxuICB9XSxcclxuICBwcmVzZXJ2ZVdoaXRlc3BhY2VzOiBmYWxzZSxcclxuICBjaGFuZ2VEZXRlY3Rpb246IENoYW5nZURldGVjdGlvblN0cmF0ZWd5Lk9uUHVzaFxyXG59KVxyXG5leHBvcnQgY2xhc3MgVGV4dEZpZWxkQ29tcG9uZW50IHtcclxuXHJcbiAgQElucHV0KCkgbGFiZWw7XHJcblxyXG4gIEBJbnB1dCgpIG11bHRpbGluZSA9IGZhbHNlO1xyXG5cclxuICBASW5wdXQoKSByb3dzID0gMztcclxuXHJcbiAgQElucHV0KCkgdHlwZSA9ICd0ZXh0JztcclxuXHJcbiAgQElucHV0KCkgcGxhY2Vob2xkZXI7XHJcblxyXG4gIEBJbnB1dCgpIGRpc2FibGVkID0gZmFsc2U7XHJcblxyXG4gIEBJbnB1dCgpIHJlcXVpcmVkID0gZmFsc2U7XHJcblxyXG4gIHZhbHVlID0gbnVsbDtcclxuXHJcbiAgQEhvc3RCaW5kaW5nKCdjbGFzcycpIGNsYXNzZXMgPSAnbXMtVGV4dEZpZWxkJztcclxuXHJcbiAgQEhvc3RCaW5kaW5nKCdjbGFzcy5tcy1UZXh0RmllbGQtLW11bHRpbGluZScpIGdldCBjbGFzc011bHRpbGluZSgpIHsgcmV0dXJuIHRoaXMubXVsdGlsaW5lOyB9XHJcblxyXG4gIEBIb3N0QmluZGluZygnY2xhc3MuaXMtZGlzYWJsZWQnKSBnZXQgY2xhc3NJc0Rpc2FibGVkKCkgeyByZXR1cm4gdGhpcy5kaXNhYmxlZDsgfVxyXG5cclxuXHJcblxyXG4gIGNvbnN0cnVjdG9yKFxyXG4gICAgcHJpdmF0ZSBjaGFuZ2VEZXRlY3RvclJlZjogQ2hhbmdlRGV0ZWN0b3JSZWZcclxuICApIHsgfVxyXG5cclxuICBvbkNoYW5nZShldnQpIHtcclxuICAgIGV2dC5zdG9wUHJvcGFnYXRpb24oKTtcclxuICAgIHRoaXMudmFsdWUgPSBldnQudGFyZ2V0LnZhbHVlO1xyXG4gICAgdGhpcy5fb25DaGFuZ2UodGhpcy52YWx1ZSk7XHJcbiAgfVxyXG5cclxuICBvblRvdWNoZWQoZXZ0KSB7XHJcbiAgICB0aGlzLl9vblRvdWNoZWQoKTtcclxuICB9XHJcblxyXG4gIC8vIENvbnRyb2xWYWx1ZUFjY2Vzc29yIGltcGxlbWVudGF0aW9uXHJcbiAgc2V0RGlzYWJsZWRTdGF0ZShpc0Rpc2FibGVkOiBib29sZWFuKSB7XHJcbiAgICB0aGlzLmRpc2FibGVkID0gaXNEaXNhYmxlZDtcclxuICAgIHRoaXMuY2hhbmdlRGV0ZWN0b3JSZWYubWFya0ZvckNoZWNrKCk7XHJcbiAgfVxyXG5cclxuICBwcml2YXRlIF9vbkNoYW5nZSA9IChfOiBhbnkpID0+IHsgfTtcclxuICBwcml2YXRlIF9vblRvdWNoZWQgPSAoKSA9PiB7IH07XHJcblxyXG4gIHB1YmxpYyB3cml0ZVZhbHVlKHZhbDogYW55KSB7XHJcbiAgICB0aGlzLnZhbHVlID0gdmFsO1xyXG4gICAgdGhpcy5jaGFuZ2VEZXRlY3RvclJlZi5tYXJrRm9yQ2hlY2soKTtcclxuICB9XHJcblxyXG4gIHB1YmxpYyByZWdpc3Rlck9uQ2hhbmdlKGZuOiAoXzogYW55KSA9PiB2b2lkKTogdm9pZCB7IHRoaXMuX29uQ2hhbmdlID0gZm47IH1cclxuICBwdWJsaWMgcmVnaXN0ZXJPblRvdWNoZWQoZm46ICgpID0+IHZvaWQpOiB2b2lkIHsgdGhpcy5fb25Ub3VjaGVkID0gZm47IH1cclxuXHJcbn1cclxuIiwiPGxhYmVsIGNsYXNzPVwibXMtTGFiZWxcIiBbY2xhc3MuaXMtcmVxdWlyZWRdPVwicmVxdWlyZWRcIj57e2xhYmVsfX08L2xhYmVsPlxyXG48aW5wdXQgY2xhc3M9XCJtcy1UZXh0RmllbGQtZmllbGRcIlxyXG4gICpuZ0lmPVwiIW11bHRpbGluZVwiXHJcbiAgW2F0dHIudHlwZV09XCJ0eXBlXCIgXHJcbiAgW2F0dHIucGxhY2Vob2xkZXJdPVwicGxhY2Vob2xkZXJcIiBcclxuICBbdmFsdWVdPVwidmFsdWVcIiBcclxuICBbZGlzYWJsZWRdPVwiZGlzYWJsZWRcIiBcclxuICAoYmx1cik9XCJvblRvdWNoZWQoJGV2ZW50KVwiXHJcbiAgKGNoYW5nZSk9XCJvbkNoYW5nZSgkZXZlbnQpXCIgXHJcbiAgKGtleXVwKT1cIm9uQ2hhbmdlKCRldmVudClcIlxyXG4vPlxyXG5cclxuPHRleHRhcmVhIGNsYXNzPVwibXMtVGV4dEZpZWxkLWZpZWxkXCJcclxuKm5nSWY9XCJtdWx0aWxpbmVcIlxyXG5bYXR0ci50eXBlXT1cInR5cGVcIiBcclxuW2F0dHIucGxhY2Vob2xkZXJdPVwicGxhY2Vob2xkZXJcIiBcclxuW3ZhbHVlXT1cInZhbHVlXCIgXHJcbltkaXNhYmxlZF09XCJkaXNhYmxlZFwiXHJcblthdHRyLnJvd3NdPVwicm93c1wiXHJcbihibHVyKT1cIm9uVG91Y2hlZCgkZXZlbnQpXCJcclxuKGNoYW5nZSk9XCJvbkNoYW5nZSgkZXZlbnQpXCIgXHJcbihrZXl1cCk9XCJvbkNoYW5nZSgkZXZlbnQpXCJcclxuPjwvdGV4dGFyZWE+Il19

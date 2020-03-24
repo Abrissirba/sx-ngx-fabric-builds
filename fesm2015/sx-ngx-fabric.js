@@ -1,100 +1,114 @@
-import { Injectable, ɵɵdefineInjectable, Component, EventEmitter, Input, Output, NgModule, forwardRef, ChangeDetectionStrategy, ChangeDetectorRef, HostBinding, ElementRef, Optional, Inject, ViewChild, InjectionToken, TemplateRef, Injector, Directive, ViewContainerRef } from '@angular/core';
-import { CommonModule, DOCUMENT } from '@angular/common';
+import { ɵɵdefineInjectable, ɵsetClassMetadata, Injectable, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, Component, ɵɵgetCurrentView, ɵɵlistener, ɵɵrestoreView, ɵɵnextContext, ɵɵelement, ɵɵadvance, ɵɵattribute, ɵɵtextInterpolate, EventEmitter, ɵɵtemplate, ɵɵproperty, Input, Output, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule, ɵɵdirectiveInject, ChangeDetectorRef, ɵɵProvidersFeature, forwardRef, ɵɵprojectionDef, ɵɵprojection, ɵɵclassProp, ChangeDetectionStrategy, HostBinding, ɵɵclassMap, ElementRef, ɵɵstaticViewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ɵɵInheritDefinitionFeature, ɵɵtemplateRefExtractor, Optional, Inject, ViewChild, InjectionToken, TemplateRef, ɵɵinject, Injector, ɵɵdefineDirective, ɵɵNgOnChangesFeature, Directive, ɵɵhostProperty, ɵɵviewQuery, ViewContainerRef } from '@angular/core';
+import { NgForOf, CommonModule, NgIf, DOCUMENT } from '@angular/common';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
-import { BasePortalOutlet, ComponentPortal, TemplatePortal, PortalInjector, PortalModule } from '@angular/cdk/portal';
+import { BasePortalOutlet, CdkPortalOutlet, ComponentPortal, TemplatePortal, PortalInjector, PortalModule } from '@angular/cdk/portal';
 import { OverlayConfig, Overlay, OverlayModule } from '@angular/cdk/overlay';
 import { Subject, Subscription } from 'rxjs';
 import { distinctUntilChanged } from 'rxjs/operators';
 
-/**
- * @fileoverview added by tsickle
- * Generated from: lib/sx-ngx-fabric.service.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 class SxNgxFabricService {
-    constructor() { }
+    constructor() {
+    }
 }
-SxNgxFabricService.decorators = [
-    { type: Injectable, args: [{
+SxNgxFabricService.ɵfac = function SxNgxFabricService_Factory(t) { return new (t || SxNgxFabricService)(); };
+SxNgxFabricService.ɵprov = ɵɵdefineInjectable({ token: SxNgxFabricService, factory: SxNgxFabricService.ɵfac, providedIn: 'root' });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SxNgxFabricService, [{
+        type: Injectable,
+        args: [{
                 providedIn: 'root'
-            },] }
-];
-/** @nocollapse */
-SxNgxFabricService.ctorParameters = () => [];
-/** @nocollapse */ SxNgxFabricService.ngInjectableDef = ɵɵdefineInjectable({ factory: function SxNgxFabricService_Factory() { return new SxNgxFabricService(); }, token: SxNgxFabricService, providedIn: "root" });
+            }]
+    }], function () { return []; }, null); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: lib/sx-ngx-fabric.component.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 class SxNgxFabricComponent {
-    constructor() { }
-    /**
-     * @return {?}
-     */
+    constructor() {
+    }
     ngOnInit() {
     }
 }
-SxNgxFabricComponent.decorators = [
-    { type: Component, args: [{
+SxNgxFabricComponent.ɵfac = function SxNgxFabricComponent_Factory(t) { return new (t || SxNgxFabricComponent)(); };
+SxNgxFabricComponent.ɵcmp = ɵɵdefineComponent({ type: SxNgxFabricComponent, selectors: [["sx-sx-ngx-fabric"]], decls: 2, vars: 0, template: function SxNgxFabricComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "p");
+        ɵɵtext(1, " sx-ngx-fabric works! ");
+        ɵɵelementEnd();
+    } }, encapsulation: 2 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SxNgxFabricComponent, [{
+        type: Component,
+        args: [{
                 selector: 'sx-sx-ngx-fabric',
                 template: `
     <p>
       sx-ngx-fabric works!
     </p>
-  `
-            }] }
-];
-/** @nocollapse */
-SxNgxFabricComponent.ctorParameters = () => [];
+  `,
+                styles: []
+            }]
+    }], function () { return []; }, null); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: lib/breadcrumb/breadcrumb.component.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
+function BreadcrumbComponent_li_7_Template(rf, ctx) { if (rf & 1) {
+    const _r3 = ɵɵgetCurrentView();
+    ɵɵelementStart(0, "li", 8);
+    ɵɵelementStart(1, "a", 9);
+    ɵɵlistener("click", function BreadcrumbComponent_li_7_Template_a_click_1_listener() { ɵɵrestoreView(_r3); const item_r1 = ctx.$implicit; const ctx_r2 = ɵɵnextContext(); return ctx_r2.onClick(item_r1); });
+    ɵɵtext(2);
+    ɵɵelementEnd();
+    ɵɵelement(3, "i", 3);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const item_r1 = ctx.$implicit;
+    ɵɵadvance(1);
+    ɵɵattribute("title", item_r1.text);
+    ɵɵadvance(1);
+    ɵɵtextInterpolate(item_r1.text);
+} }
 class BreadcrumbComponent {
     constructor() {
         this.itemClick = new EventEmitter();
     }
-    /**
-     * @param {?} item
-     * @return {?}
-     */
     onClick(item) {
         this.itemClick.next(item);
     }
 }
-BreadcrumbComponent.decorators = [
-    { type: Component, args: [{
+BreadcrumbComponent.ɵfac = function BreadcrumbComponent_Factory(t) { return new (t || BreadcrumbComponent)(); };
+BreadcrumbComponent.ɵcmp = ɵɵdefineComponent({ type: BreadcrumbComponent, selectors: [["sx-ngx-fabric-breadcrumb"]], inputs: { items: "items" }, outputs: { itemClick: "itemClick" }, decls: 8, vars: 1, consts: [[1, "ms-Breadcrumb"], [1, "ms-Breadcrumb-overflow"], ["tabindex", "1", 1, "ms-Breadcrumb-overflowButton", "ms-Icon", "ms-Icon--ellipsis"], [1, "ms-Breadcrumb-chevron", "ms-Icon", "ms-Icon--ChevronRight"], [1, "ms-Breadcrumb-overflowMenu"], [1, "ms-ContextualMenu", "is-open"], [1, "ms-Breadcrumb-list"], ["class", "ms-Breadcrumb-listItem", 4, "ngFor", "ngForOf"], [1, "ms-Breadcrumb-listItem"], ["tabindex", "2", 1, "ms-Breadcrumb-itemLink", 3, "click"]], template: function BreadcrumbComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "div", 0);
+        ɵɵelementStart(1, "div", 1);
+        ɵɵelement(2, "div", 2);
+        ɵɵelement(3, "i", 3);
+        ɵɵelementStart(4, "div", 4);
+        ɵɵelement(5, "ul", 5);
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(6, "ul", 6);
+        ɵɵtemplate(7, BreadcrumbComponent_li_7_Template, 4, 2, "li", 7);
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵadvance(7);
+        ɵɵproperty("ngForOf", ctx.items);
+    } }, directives: [NgForOf], styles: [".ms-Breadcrumb[_ngcontent-%COMP%]{font-family:Segoe UI WestEuropean,Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;-webkit-font-smoothing:antialiased;margin:23px 0 1px}.ms-Breadcrumb-overflow[_ngcontent-%COMP%]{display:none;position:relative}.ms-Breadcrumb-list[_ngcontent-%COMP%]{white-space:nowrap;padding:0;margin:0;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-align:stretch;-ms-flex-align:stretch;-webkit-align-items:stretch;align-items:stretch}.ms-Breadcrumb-list[_ngcontent-%COMP%]   .ms-Breadcrumb-listItem[_ngcontent-%COMP%]{list-style-type:none;margin:0;padding:0;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;position:relative;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center}.ms-Breadcrumb-itemLink[_ngcontent-%COMP%]{font-size:21px;font-weight:100;color:#333;padding:0 8px 3px;max-width:160px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.ms-Breadcrumb-itemLink[_ngcontent-%COMP%], .ms-Breadcrumb-overflowButton[_ngcontent-%COMP%]{text-decoration:none;outline:transparent}.ms-Breadcrumb-chevron[_ngcontent-%COMP%]{font-size:12px;color:#666}.ms-Icon--ChevronRight[_ngcontent-%COMP%]:before{content:'\\E76C'}.ms-Breadcrumb-itemLink[_ngcontent-%COMP%]:hover, .ms-Breadcrumb-overflowButton[_ngcontent-%COMP%]:hover{background-color:#f8f8f8;cursor:pointer}"] });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(BreadcrumbComponent, [{
+        type: Component,
+        args: [{
                 selector: "sx-ngx-fabric-breadcrumb",
-                template: "<div class=\"ms-Breadcrumb\">\r\n  <div class=\"ms-Breadcrumb-overflow\">\r\n    <div\r\n      class=\"ms-Breadcrumb-overflowButton ms-Icon ms-Icon--ellipsis\"\r\n      tabindex=\"1\"\r\n    ></div>\r\n    <i class=\"ms-Breadcrumb-chevron ms-Icon ms-Icon--ChevronRight\"></i>\r\n    <div class=\"ms-Breadcrumb-overflowMenu\">\r\n      <ul class=\"ms-ContextualMenu is-open\"></ul>\r\n    </div>\r\n  </div>\r\n  <ul class=\"ms-Breadcrumb-list\">\r\n    <li class=\"ms-Breadcrumb-listItem\" *ngFor=\"let item of items\">\r\n      <a\r\n        class=\"ms-Breadcrumb-itemLink\"\r\n        tabindex=\"2\"\r\n        (click)=\"onClick(item)\"\r\n        [attr.title]=\"item.text\"\r\n        >{{ item.text }}</a\r\n      >\r\n      <i class=\"ms-Breadcrumb-chevron ms-Icon ms-Icon--ChevronRight\"></i>\r\n    </li>\r\n  </ul>\r\n</div>\r\n",
-                styles: [".ms-Breadcrumb{font-family:Segoe UI WestEuropean,Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;-webkit-font-smoothing:antialiased;margin:23px 0 1px}.ms-Breadcrumb-overflow{display:none;position:relative}.ms-Breadcrumb-list{white-space:nowrap;padding:0;margin:0;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-align:stretch;-ms-flex-align:stretch;-webkit-align-items:stretch;align-items:stretch}.ms-Breadcrumb-list .ms-Breadcrumb-listItem{list-style-type:none;margin:0;padding:0;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;position:relative;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center}.ms-Breadcrumb-itemLink{font-size:21px;font-weight:100;color:#333;padding:0 8px 3px;max-width:160px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.ms-Breadcrumb-itemLink,.ms-Breadcrumb-overflowButton{text-decoration:none;outline:transparent}.ms-Breadcrumb-chevron{font-size:12px;color:#666}.ms-Icon--ChevronRight:before{content:'\\E76C'}.ms-Breadcrumb-itemLink:hover,.ms-Breadcrumb-overflowButton:hover{background-color:#f8f8f8;cursor:pointer}"]
-            }] }
-];
-/** @nocollapse */
-BreadcrumbComponent.ctorParameters = () => [];
-BreadcrumbComponent.propDecorators = {
-    items: [{ type: Input }],
-    itemClick: [{ type: Output }]
-};
-if (false) {
-    /** @type {?} */
-    BreadcrumbComponent.prototype.items;
-    /** @type {?} */
-    BreadcrumbComponent.prototype.itemClick;
-}
+                templateUrl: "./breadcrumb.component.html",
+                styleUrls: ["./breadcrumb.component.scss"]
+            }]
+    }], function () { return []; }, { items: [{
+            type: Input
+        }], itemClick: [{
+            type: Output
+        }] }); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: lib/breadcrumb/breadcrumb.module.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 class BreadcrumbModule {
 }
-BreadcrumbModule.decorators = [
-    { type: NgModule, args: [{
+BreadcrumbModule.ɵmod = ɵɵdefineNgModule({ type: BreadcrumbModule });
+BreadcrumbModule.ɵinj = ɵɵdefineInjector({ factory: function BreadcrumbModule_Factory(t) { return new (t || BreadcrumbModule)(); }, imports: [[
+            CommonModule
+        ]] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(BreadcrumbModule, { declarations: [BreadcrumbComponent], imports: [CommonModule], exports: [BreadcrumbComponent] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(BreadcrumbModule, [{
+        type: NgModule,
+        args: [{
                 imports: [
                     CommonModule
                 ],
@@ -104,25 +118,15 @@ BreadcrumbModule.decorators = [
                 exports: [
                     BreadcrumbComponent
                 ]
-            },] }
-];
+            }]
+    }], null, null); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: lib/utils/guid.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 class Guid {
-    /**
-     * @return {?}
-     */
     static uniqueid() {
         // always start with a letter (for DOM friendlyness)
-        /** @type {?} */
         let idstr = String.fromCharCode(Math.floor((Math.random() * 25) + 65));
         do {
             // between numbers and characters (48 is 0 and 90 is Z (42-48 = 90)
-            /** @type {?} */
             const ascicode = Math.floor((Math.random() * 42) + 48);
             if (ascicode < 58 || ascicode > 64) {
                 // exclude all chars between : (58) and @ (64)
@@ -133,149 +137,96 @@ class Guid {
     }
 }
 
-/**
- * @fileoverview added by tsickle
- * Generated from: lib/checkbox/checkbox.component.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
+const _c0 = ["*"];
 class CheckboxComponent {
-    /**
-     * @param {?} changeDetectorRef
-     */
     constructor(changeDetectorRef) {
         this.changeDetectorRef = changeDetectorRef;
         this._checked = false;
         this.disabled = false;
         this.inputId = Guid.uniqueid();
-        this._onChange = (/**
-         * @param {?} _
-         * @return {?}
-         */
-        (_) => { });
-        this._onTouched = (/**
-         * @return {?}
-         */
-        () => { });
+        this._onChange = (_) => { };
+        this._onTouched = () => { };
     }
-    /**
-     * @return {?}
-     */
     get checked() {
         return this._checked;
     }
-    /**
-     * @param {?} checked
-     * @return {?}
-     */
     set checked(checked) {
         if (checked !== this.checked) {
             this._checked = checked;
             this.changeDetectorRef.markForCheck();
         }
     }
-    /**
-     * @param {?} evt
-     * @return {?}
-     */
     onInputClick(evt) {
         evt.stopPropagation();
         this.toggle();
     }
-    /**
-     * @return {?}
-     */
     toggle() {
         this.checked = !this.checked;
         this._onChange(this.checked);
     }
     // ControlValueAccessor implementation
-    /**
-     * @param {?} isDisabled
-     * @return {?}
-     */
     setDisabledState(isDisabled) {
         this.disabled = isDisabled;
         this.changeDetectorRef.markForCheck();
     }
-    /**
-     * @param {?} val
-     * @return {?}
-     */
     writeValue(val) {
         this.checked = val;
     }
-    /**
-     * @param {?} fn
-     * @return {?}
-     */
     registerOnChange(fn) { this._onChange = fn; }
-    /**
-     * @param {?} fn
-     * @return {?}
-     */
     registerOnTouched(fn) { this._onTouched = fn; }
 }
-CheckboxComponent.decorators = [
-    { type: Component, args: [{
+CheckboxComponent.ɵfac = function CheckboxComponent_Factory(t) { return new (t || CheckboxComponent)(ɵɵdirectiveInject(ChangeDetectorRef)); };
+CheckboxComponent.ɵcmp = ɵɵdefineComponent({ type: CheckboxComponent, selectors: [["sx-ngx-fabric-checkbox"]], inputs: { checked: "checked", disabled: "disabled" }, features: [ɵɵProvidersFeature([{
+                provide: NG_VALUE_ACCESSOR,
+                useExisting: forwardRef(() => CheckboxComponent),
+                multi: true
+            }])], ngContentSelectors: _c0, decls: 4, vars: 8, consts: [["type", "checkbox", 3, "checked", "disabled", "click"], ["role", "checkbox"], [1, "ms-label"]], template: function CheckboxComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵɵprojectionDef();
+        ɵɵelementStart(0, "input", 0);
+        ɵɵlistener("click", function CheckboxComponent_Template_input_click_0_listener($event) { return ctx.onInputClick($event); });
+        ɵɵelementEnd();
+        ɵɵelementStart(1, "label", 1);
+        ɵɵelementStart(2, "span", 2);
+        ɵɵprojection(3);
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("checked", ctx.checked)("disabled", ctx.disabled);
+        ɵɵattribute("id", ctx.inputId);
+        ɵɵadvance(1);
+        ɵɵclassProp("is-checked", ctx.checked)("disabled", ctx.disabled);
+        ɵɵattribute("for", ctx.inputId);
+    } }, styles: ["[_nghost-%COMP%]{box-sizing:border-box;color:#333;font-family:Segoe UI WestEuropean,Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;font-size:14px;font-weight:400;min-height:36px;position:relative}input[_ngcontent-%COMP%]{position:absolute;opacity:0}label[_ngcontent-%COMP%]{display:inline-block;cursor:pointer;margin-top:8px;position:relative;outline:0;vertical-align:top}label[_ngcontent-%COMP%]:hover{color:#000}label[_ngcontent-%COMP%]:before{content:'';display:inline-block;border:1px solid #a6a6a6;width:20px;height:20px;cursor:pointer;font-weight:400;position:absolute;box-sizing:border-box;-webkit-transition-property:background,border,border-color;transition-property:background,border,border-color;-webkit-transition-duration:.2s;transition-duration:.2s;-webkit-transition-timing-function:cubic-bezier(.4,0,.23,1);transition-timing-function:cubic-bezier(.4,0,.23,1)}label[_ngcontent-%COMP%]:hover:before{border:1px solid #333}label.disabled[_ngcontent-%COMP%]{color:#c8c8c8}label.disabled[_ngcontent-%COMP%]:before, label.disabled[_ngcontent-%COMP%]:hover:before{border:1px solid #c8c8c8}label.is-checked[_ngcontent-%COMP%]:before{border:10px solid #0078d4;background-color:#0078d4}label.is-checked[_ngcontent-%COMP%]:hover:before{border:10px solid #106ebe;background-color:#106ebe}label.disabled.is-checked[_ngcontent-%COMP%]:before, label.disabled.is-checked[_ngcontent-%COMP%]:hover:before{border:10px solid #c8c8c8;background-color:#c8c8c8}label[_ngcontent-%COMP%]:after{content:'\\E73E';font-family:FabricMDL2Icons;display:none;position:absolute;font-weight:900;background-color:transparent;font-size:13px;top:0;color:#fff;line-height:20px;width:20px;text-align:center}label.is-checked[_ngcontent-%COMP%]:after{display:block}.ms-label[_ngcontent-%COMP%]{font-size:14px;padding:0 0 0 26px;cursor:pointer;display:inline-block}"], changeDetection: 0 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CheckboxComponent, [{
+        type: Component,
+        args: [{
                 selector: 'sx-ngx-fabric-checkbox',
-                template: "<input type=\"checkbox\" [attr.id]=\"inputId\" [checked]=\"checked\" (click)=\"onInputClick($event)\" [disabled]=\"disabled\"/>\r\n<label role=\"checkbox\" [attr.for]=\"inputId\" [class.is-checked]=\"checked\" [class.disabled]=\"disabled\">\r\n  <span class=\"ms-label\"><ng-content></ng-content></span>\r\n</label>",
+                templateUrl: './checkbox.component.html',
+                styleUrls: ['./checkbox.component.scss'],
                 providers: [{
                         provide: NG_VALUE_ACCESSOR,
-                        useExisting: forwardRef((/**
-                         * @return {?}
-                         */
-                        () => CheckboxComponent)),
+                        useExisting: forwardRef(() => CheckboxComponent),
                         multi: true
                     }],
                 preserveWhitespaces: false,
-                changeDetection: ChangeDetectionStrategy.OnPush,
-                styles: [":host{box-sizing:border-box;color:#333;font-family:Segoe UI WestEuropean,Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;font-size:14px;font-weight:400;min-height:36px;position:relative}input{position:absolute;opacity:0}label{display:inline-block;cursor:pointer;margin-top:8px;position:relative;outline:0;vertical-align:top}label:hover{color:#000}label:before{content:'';display:inline-block;border:1px solid #a6a6a6;width:20px;height:20px;cursor:pointer;font-weight:400;position:absolute;box-sizing:border-box;-webkit-transition-property:background,border,border-color;transition-property:background,border,border-color;-webkit-transition-duration:.2s;transition-duration:.2s;-webkit-transition-timing-function:cubic-bezier(.4,0,.23,1);transition-timing-function:cubic-bezier(.4,0,.23,1)}label:hover:before{border:1px solid #333}label.disabled{color:#c8c8c8}label.disabled:before,label.disabled:hover:before{border:1px solid #c8c8c8}label.is-checked:before{border:10px solid #0078d4;background-color:#0078d4}label.is-checked:hover:before{border:10px solid #106ebe;background-color:#106ebe}label.disabled.is-checked:before,label.disabled.is-checked:hover:before{border:10px solid #c8c8c8;background-color:#c8c8c8}label:after{content:'\\E73E';font-family:FabricMDL2Icons;display:none;position:absolute;font-weight:900;background-color:transparent;font-size:13px;top:0;color:#fff;line-height:20px;width:20px;text-align:center}label.is-checked:after{display:block}.ms-label{font-size:14px;padding:0 0 0 26px;cursor:pointer;display:inline-block}"]
-            }] }
-];
-/** @nocollapse */
-CheckboxComponent.ctorParameters = () => [
-    { type: ChangeDetectorRef }
-];
-CheckboxComponent.propDecorators = {
-    checked: [{ type: Input }],
-    disabled: [{ type: Input }]
-};
-if (false) {
-    /**
-     * @type {?}
-     * @private
-     */
-    CheckboxComponent.prototype._checked;
-    /** @type {?} */
-    CheckboxComponent.prototype.disabled;
-    /** @type {?} */
-    CheckboxComponent.prototype.inputId;
-    /**
-     * @type {?}
-     * @private
-     */
-    CheckboxComponent.prototype._onChange;
-    /**
-     * @type {?}
-     * @private
-     */
-    CheckboxComponent.prototype._onTouched;
-    /**
-     * @type {?}
-     * @private
-     */
-    CheckboxComponent.prototype.changeDetectorRef;
-}
+                changeDetection: ChangeDetectionStrategy.OnPush
+            }]
+    }], function () { return [{ type: ChangeDetectorRef }]; }, { checked: [{
+            type: Input
+        }], disabled: [{
+            type: Input
+        }] }); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: lib/checkbox/checkbox.module.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 class CheckboxModule {
 }
-CheckboxModule.decorators = [
-    { type: NgModule, args: [{
+CheckboxModule.ɵmod = ɵɵdefineNgModule({ type: CheckboxModule });
+CheckboxModule.ɵinj = ɵɵdefineInjector({ factory: function CheckboxModule_Factory(t) { return new (t || CheckboxModule)(); }, imports: [[
+            CommonModule
+        ]] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CheckboxModule, { declarations: [CheckboxComponent], imports: [CommonModule], exports: [CheckboxComponent] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CheckboxModule, [{
+        type: NgModule,
+        args: [{
                 imports: [
                     CommonModule
                 ],
@@ -285,59 +236,56 @@ CheckboxModule.decorators = [
                 exports: [
                     CheckboxComponent
                 ]
-            },] }
-];
+            }]
+    }], null, null); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: lib/button/button.component.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
+const _c0$1 = ["sx-ngx-fabric-button", ""];
+const _c1 = ["*"];
 class ButtonComponent {
     constructor() {
         this.primary = false;
         this.classes = true;
     }
-    /**
-     * @return {?}
-     */
     get classPrimary() { return this.primary; }
-    /**
-     * @return {?}
-     */
     ngOnInit() {
     }
 }
-ButtonComponent.decorators = [
-    { type: Component, args: [{
+ButtonComponent.ɵfac = function ButtonComponent_Factory(t) { return new (t || ButtonComponent)(); };
+ButtonComponent.ɵcmp = ɵɵdefineComponent({ type: ButtonComponent, selectors: [["button", "sx-ngx-fabric-button", ""], ["a", "sx-ngx-fabric-button", ""]], hostVars: 4, hostBindings: function ButtonComponent_HostBindings(rf, ctx) { if (rf & 2) {
+        ɵɵclassProp("ms-Button", ctx.classes)("ms-Button--primary", ctx.classPrimary);
+    } }, inputs: { primary: "primary" }, attrs: _c0$1, ngContentSelectors: _c1, decls: 2, vars: 0, consts: [[1, "ms-Button-label"]], template: function ButtonComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵɵprojectionDef();
+        ɵɵelementStart(0, "div", 0);
+        ɵɵprojection(1);
+        ɵɵelementEnd();
+    } }, styles: ["[_nghost-%COMP%]:hover{background-color:#eaeaea;border:1px solid #eaeaea}[_nghost-%COMP%], [_nghost-%COMP%]:active{box-sizing:border-box;box-shadow:none;font-family:Segoe UI WestEuropean,Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;-webkit-font-smoothing:antialiased;color:#333;font-size:14px;font-weight:400;background-color:#f4f4f4;border:1px solid #f4f4f4;cursor:pointer;display:inline-block;height:32px;min-width:80px;padding:4px 20px 6px;outline:0;text-align:center}.ms-Button-label[_ngcontent-%COMP%]{color:#333;font-weight:600;font-size:14px}.ms-Button--primary[_nghost-%COMP%]:hover{background-color:#005a9e;border-color:#005a9e}.ms-Button--primary[_nghost-%COMP%], .ms-Button--primary[_nghost-%COMP%]:active{background-color:#0078d4;border-color:#0078d4}.ms-Button--primary[_nghost-%COMP%]   .ms-Button-label[_ngcontent-%COMP%]{color:#fff}[disabled][_nghost-%COMP%], [disabled][_nghost-%COMP%]:active, [disabled][_nghost-%COMP%]:hover{cursor:default;background-color:#f4f4f4;border-color:#f4f4f4}[disabled][_nghost-%COMP%]   .ms-Button-label[_ngcontent-%COMP%]{color:#a6a6a6}"] });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ButtonComponent, [{
+        type: Component,
+        args: [{
                 selector: 'button[sx-ngx-fabric-button], a[sx-ngx-fabric-button]',
-                template: "<div class=\"ms-Button-label\"><ng-content></ng-content></div>",
-                styles: [":host:hover{background-color:#eaeaea;border:1px solid #eaeaea}:host,:host:active{box-sizing:border-box;box-shadow:none;font-family:Segoe UI WestEuropean,Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;-webkit-font-smoothing:antialiased;color:#333;font-size:14px;font-weight:400;background-color:#f4f4f4;border:1px solid #f4f4f4;cursor:pointer;display:inline-block;height:32px;min-width:80px;padding:4px 20px 6px;outline:0;text-align:center}.ms-Button-label{color:#333;font-weight:600;font-size:14px}:host.ms-Button--primary:hover{background-color:#005a9e;border-color:#005a9e}:host.ms-Button--primary,:host.ms-Button--primary:active{background-color:#0078d4;border-color:#0078d4}:host.ms-Button--primary .ms-Button-label{color:#fff}:host[disabled],:host[disabled]:active,:host[disabled]:hover{cursor:default;background-color:#f4f4f4;border-color:#f4f4f4}:host[disabled] .ms-Button-label{color:#a6a6a6}"]
-            }] }
-];
-/** @nocollapse */
-ButtonComponent.ctorParameters = () => [];
-ButtonComponent.propDecorators = {
-    primary: [{ type: Input }],
-    classes: [{ type: HostBinding, args: ['class.ms-Button',] }],
-    classPrimary: [{ type: HostBinding, args: ['class.ms-Button--primary',] }]
-};
-if (false) {
-    /** @type {?} */
-    ButtonComponent.prototype.primary;
-    /** @type {?} */
-    ButtonComponent.prototype.classes;
-}
+                styleUrls: ['./button.component.scss'],
+                templateUrl: './button.component.html',
+            }]
+    }], function () { return []; }, { primary: [{
+            type: Input
+        }], classes: [{
+            type: HostBinding,
+            args: ['class.ms-Button']
+        }], classPrimary: [{
+            type: HostBinding,
+            args: ['class.ms-Button--primary']
+        }] }); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: lib/button/button.module.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 class ButtonModule {
 }
-ButtonModule.decorators = [
-    { type: NgModule, args: [{
+ButtonModule.ɵmod = ɵɵdefineNgModule({ type: ButtonModule });
+ButtonModule.ɵinj = ɵɵdefineInjector({ factory: function ButtonModule_Factory(t) { return new (t || ButtonModule)(); }, imports: [[
+            CommonModule
+        ]] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(ButtonModule, { declarations: [ButtonComponent], imports: [CommonModule], exports: [ButtonComponent] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ButtonModule, [{
+        type: NgModule,
+        args: [{
                 imports: [
                     CommonModule
                 ],
@@ -347,18 +295,30 @@ ButtonModule.decorators = [
                 exports: [
                     ButtonComponent
                 ]
-            },] }
-];
+            }]
+    }], null, null); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: lib/text-field/text-field.component.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
+function TextFieldComponent_input_2_Template(rf, ctx) { if (rf & 1) {
+    const _r7 = ɵɵgetCurrentView();
+    ɵɵelementStart(0, "input", 2);
+    ɵɵlistener("blur", function TextFieldComponent_input_2_Template_input_blur_0_listener($event) { ɵɵrestoreView(_r7); const ctx_r6 = ɵɵnextContext(); return ctx_r6.onTouched($event); })("change", function TextFieldComponent_input_2_Template_input_change_0_listener($event) { ɵɵrestoreView(_r7); const ctx_r8 = ɵɵnextContext(); return ctx_r8.onChange($event); })("keyup", function TextFieldComponent_input_2_Template_input_keyup_0_listener($event) { ɵɵrestoreView(_r7); const ctx_r9 = ɵɵnextContext(); return ctx_r9.onChange($event); });
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r4 = ɵɵnextContext();
+    ɵɵproperty("value", ctx_r4.value)("disabled", ctx_r4.disabled);
+    ɵɵattribute("type", ctx_r4.type)("placeholder", ctx_r4.placeholder);
+} }
+function TextFieldComponent_textarea_3_Template(rf, ctx) { if (rf & 1) {
+    const _r11 = ɵɵgetCurrentView();
+    ɵɵelementStart(0, "textarea", 2);
+    ɵɵlistener("blur", function TextFieldComponent_textarea_3_Template_textarea_blur_0_listener($event) { ɵɵrestoreView(_r11); const ctx_r10 = ɵɵnextContext(); return ctx_r10.onTouched($event); })("change", function TextFieldComponent_textarea_3_Template_textarea_change_0_listener($event) { ɵɵrestoreView(_r11); const ctx_r12 = ɵɵnextContext(); return ctx_r12.onChange($event); })("keyup", function TextFieldComponent_textarea_3_Template_textarea_keyup_0_listener($event) { ɵɵrestoreView(_r11); const ctx_r13 = ɵɵnextContext(); return ctx_r13.onChange($event); });
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r5 = ɵɵnextContext();
+    ɵɵproperty("value", ctx_r5.value)("disabled", ctx_r5.disabled);
+    ɵɵattribute("type", ctx_r5.type)("placeholder", ctx_r5.placeholder)("rows", ctx_r5.rows);
+} }
 class TextFieldComponent {
-    /**
-     * @param {?} changeDetectorRef
-     */
     constructor(changeDetectorRef) {
         this.changeDetectorRef = changeDetectorRef;
         this.multiline = false;
@@ -368,146 +328,103 @@ class TextFieldComponent {
         this.required = false;
         this.value = null;
         this.classes = 'ms-TextField';
-        this._onChange = (/**
-         * @param {?} _
-         * @return {?}
-         */
-        (_) => { });
-        this._onTouched = (/**
-         * @return {?}
-         */
-        () => { });
+        this._onChange = (_) => { };
+        this._onTouched = () => { };
     }
-    /**
-     * @return {?}
-     */
     get classMultiline() { return this.multiline; }
-    /**
-     * @return {?}
-     */
     get classIsDisabled() { return this.disabled; }
-    /**
-     * @param {?} evt
-     * @return {?}
-     */
     onChange(evt) {
         evt.stopPropagation();
         this.value = evt.target.value;
         this._onChange(this.value);
     }
-    /**
-     * @param {?} evt
-     * @return {?}
-     */
     onTouched(evt) {
         this._onTouched();
     }
     // ControlValueAccessor implementation
-    /**
-     * @param {?} isDisabled
-     * @return {?}
-     */
     setDisabledState(isDisabled) {
         this.disabled = isDisabled;
         this.changeDetectorRef.markForCheck();
     }
-    /**
-     * @param {?} val
-     * @return {?}
-     */
     writeValue(val) {
         this.value = val;
         this.changeDetectorRef.markForCheck();
     }
-    /**
-     * @param {?} fn
-     * @return {?}
-     */
     registerOnChange(fn) { this._onChange = fn; }
-    /**
-     * @param {?} fn
-     * @return {?}
-     */
     registerOnTouched(fn) { this._onTouched = fn; }
 }
-TextFieldComponent.decorators = [
-    { type: Component, args: [{
+TextFieldComponent.ɵfac = function TextFieldComponent_Factory(t) { return new (t || TextFieldComponent)(ɵɵdirectiveInject(ChangeDetectorRef)); };
+TextFieldComponent.ɵcmp = ɵɵdefineComponent({ type: TextFieldComponent, selectors: [["sx-ngx-fabric-text-field"]], hostVars: 6, hostBindings: function TextFieldComponent_HostBindings(rf, ctx) { if (rf & 2) {
+        ɵɵclassMap(ctx.classes);
+        ɵɵclassProp("ms-TextField--multiline", ctx.classMultiline)("is-disabled", ctx.classIsDisabled);
+    } }, inputs: { label: "label", multiline: "multiline", rows: "rows", type: "type", placeholder: "placeholder", disabled: "disabled", required: "required" }, features: [ɵɵProvidersFeature([{
+                provide: NG_VALUE_ACCESSOR,
+                useExisting: forwardRef(() => TextFieldComponent),
+                multi: true
+            }])], decls: 4, vars: 5, consts: [[1, "ms-Label"], ["class", "ms-TextField-field", 3, "value", "disabled", "blur", "change", "keyup", 4, "ngIf"], [1, "ms-TextField-field", 3, "value", "disabled", "blur", "change", "keyup"]], template: function TextFieldComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "label", 0);
+        ɵɵtext(1);
+        ɵɵelementEnd();
+        ɵɵtemplate(2, TextFieldComponent_input_2_Template, 1, 4, "input", 1);
+        ɵɵtemplate(3, TextFieldComponent_textarea_3_Template, 1, 5, "textarea", 1);
+    } if (rf & 2) {
+        ɵɵclassProp("is-required", ctx.required);
+        ɵɵadvance(1);
+        ɵɵtextInterpolate(ctx.label);
+        ɵɵadvance(1);
+        ɵɵproperty("ngIf", !ctx.multiline);
+        ɵɵadvance(1);
+        ɵɵproperty("ngIf", ctx.multiline);
+    } }, directives: [NgIf], styles: [".ms-TextField[_nghost-%COMP%]{font-family:Segoe UI WestEuropean,Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;-webkit-font-smoothing:antialiased;box-sizing:border-box;margin:0 0 8px;padding:0;box-shadow:none;color:#333;font-size:14px;font-weight:400;width:100%}.ms-Label[_ngcontent-%COMP%]{font-size:14px;font-weight:600}.ms-TextField-field[_ngcontent-%COMP%]{box-sizing:border-box;margin:0;padding:6px 12px 7px;box-shadow:none;border:1px solid #c8c8c8;border-radius:0;font-weight:300;font-size:14px;color:#333;height:32px;width:100%;min-width:180px;outline:0;text-overflow:ellipsis}.ms-TextField.ms-TextField--multiline[_nghost-%COMP%]   .ms-TextField-field[_ngcontent-%COMP%]{color:#333;font-size:14px;line-height:17px;min-height:60px;min-width:260px;padding-top:6px;overflow:auto}.ms-TextField.is-disabled[_nghost-%COMP%]   .ms-TextField-field[_ngcontent-%COMP%]{background-color:#f4f4f4;border-color:#f4f4f4;pointer-events:none;cursor:default}.ms-TextField-field[_ngcontent-%COMP%]:hover{border-color:#333}.ms-TextField-field[_ngcontent-%COMP%]:active, .ms-TextField-field[_ngcontent-%COMP%]:focus{border-color:#0078d4}.ms-TextField.ng-invalid.ng-touched[_nghost-%COMP%]   .ms-TextField-field[_ngcontent-%COMP%]{border-color:#a80000}"], changeDetection: 0 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TextFieldComponent, [{
+        type: Component,
+        args: [{
                 selector: 'sx-ngx-fabric-text-field',
-                template: "<label class=\"ms-Label\" [class.is-required]=\"required\">{{label}}</label>\r\n<input class=\"ms-TextField-field\"\r\n  *ngIf=\"!multiline\"\r\n  [attr.type]=\"type\" \r\n  [attr.placeholder]=\"placeholder\" \r\n  [value]=\"value\" \r\n  [disabled]=\"disabled\" \r\n  (blur)=\"onTouched($event)\"\r\n  (change)=\"onChange($event)\" \r\n  (keyup)=\"onChange($event)\"\r\n/>\r\n\r\n<textarea class=\"ms-TextField-field\"\r\n*ngIf=\"multiline\"\r\n[attr.type]=\"type\" \r\n[attr.placeholder]=\"placeholder\" \r\n[value]=\"value\" \r\n[disabled]=\"disabled\"\r\n[attr.rows]=\"rows\"\r\n(blur)=\"onTouched($event)\"\r\n(change)=\"onChange($event)\" \r\n(keyup)=\"onChange($event)\"\r\n></textarea>",
+                templateUrl: './text-field.component.html',
+                styleUrls: ['./text-field.component.scss'],
                 providers: [{
                         provide: NG_VALUE_ACCESSOR,
-                        useExisting: forwardRef((/**
-                         * @return {?}
-                         */
-                        () => TextFieldComponent)),
+                        useExisting: forwardRef(() => TextFieldComponent),
                         multi: true
                     }],
                 preserveWhitespaces: false,
-                changeDetection: ChangeDetectionStrategy.OnPush,
-                styles: [":host.ms-TextField{font-family:Segoe UI WestEuropean,Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;-webkit-font-smoothing:antialiased;box-sizing:border-box;margin:0 0 8px;padding:0;box-shadow:none;color:#333;font-size:14px;font-weight:400;width:100%}.ms-Label{font-size:14px;font-weight:600}.ms-TextField-field{box-sizing:border-box;margin:0;padding:6px 12px 7px;box-shadow:none;border:1px solid #c8c8c8;border-radius:0;font-weight:300;font-size:14px;color:#333;height:32px;width:100%;min-width:180px;outline:0;text-overflow:ellipsis}:host.ms-TextField.ms-TextField--multiline .ms-TextField-field{color:#333;font-size:14px;line-height:17px;min-height:60px;min-width:260px;padding-top:6px;overflow:auto}:host.ms-TextField.is-disabled .ms-TextField-field{background-color:#f4f4f4;border-color:#f4f4f4;pointer-events:none;cursor:default}.ms-TextField-field:hover{border-color:#333}.ms-TextField-field:active,.ms-TextField-field:focus{border-color:#0078d4}:host.ms-TextField.ng-invalid.ng-touched .ms-TextField-field{border-color:#a80000}"]
-            }] }
-];
-/** @nocollapse */
-TextFieldComponent.ctorParameters = () => [
-    { type: ChangeDetectorRef }
-];
-TextFieldComponent.propDecorators = {
-    label: [{ type: Input }],
-    multiline: [{ type: Input }],
-    rows: [{ type: Input }],
-    type: [{ type: Input }],
-    placeholder: [{ type: Input }],
-    disabled: [{ type: Input }],
-    required: [{ type: Input }],
-    classes: [{ type: HostBinding, args: ['class',] }],
-    classMultiline: [{ type: HostBinding, args: ['class.ms-TextField--multiline',] }],
-    classIsDisabled: [{ type: HostBinding, args: ['class.is-disabled',] }]
-};
-if (false) {
-    /** @type {?} */
-    TextFieldComponent.prototype.label;
-    /** @type {?} */
-    TextFieldComponent.prototype.multiline;
-    /** @type {?} */
-    TextFieldComponent.prototype.rows;
-    /** @type {?} */
-    TextFieldComponent.prototype.type;
-    /** @type {?} */
-    TextFieldComponent.prototype.placeholder;
-    /** @type {?} */
-    TextFieldComponent.prototype.disabled;
-    /** @type {?} */
-    TextFieldComponent.prototype.required;
-    /** @type {?} */
-    TextFieldComponent.prototype.value;
-    /** @type {?} */
-    TextFieldComponent.prototype.classes;
-    /**
-     * @type {?}
-     * @private
-     */
-    TextFieldComponent.prototype._onChange;
-    /**
-     * @type {?}
-     * @private
-     */
-    TextFieldComponent.prototype._onTouched;
-    /**
-     * @type {?}
-     * @private
-     */
-    TextFieldComponent.prototype.changeDetectorRef;
-}
+                changeDetection: ChangeDetectionStrategy.OnPush
+            }]
+    }], function () { return [{ type: ChangeDetectorRef }]; }, { label: [{
+            type: Input
+        }], multiline: [{
+            type: Input
+        }], rows: [{
+            type: Input
+        }], type: [{
+            type: Input
+        }], placeholder: [{
+            type: Input
+        }], disabled: [{
+            type: Input
+        }], required: [{
+            type: Input
+        }], classes: [{
+            type: HostBinding,
+            args: ['class']
+        }], classMultiline: [{
+            type: HostBinding,
+            args: ['class.ms-TextField--multiline']
+        }], classIsDisabled: [{
+            type: HostBinding,
+            args: ['class.is-disabled']
+        }] }); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: lib/text-field/text-field.module.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 class TextFieldModule {
 }
-TextFieldModule.decorators = [
-    { type: NgModule, args: [{
+TextFieldModule.ɵmod = ɵɵdefineNgModule({ type: TextFieldModule });
+TextFieldModule.ɵinj = ɵɵdefineInjector({ factory: function TextFieldModule_Factory(t) { return new (t || TextFieldModule)(); }, imports: [[
+            CommonModule
+        ]] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(TextFieldModule, { declarations: [TextFieldComponent], imports: [CommonModule], exports: [TextFieldComponent] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TextFieldModule, [{
+        type: NgModule,
+        args: [{
                 imports: [
                     CommonModule
                 ],
@@ -517,107 +434,61 @@ TextFieldModule.decorators = [
                 exports: [
                     TextFieldComponent
                 ]
-            },] }
-];
+            }]
+    }], null, null); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: lib/dialog/dialog-container.component.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
+const _c0$2 = ["portalOutlet"];
+function SxNgxDialogContainerComponent_ng_template_0_Template(rf, ctx) { }
 class SxNgxDialogContainerComponent extends BasePortalOutlet {
-    /**
-     * @param {?} _elementRef
-     * @param {?} _changeDetectorRef
-     * @param {?} _document
-     */
-    constructor(_elementRef, _changeDetectorRef, _document) {
+    constructor(_elementRef, 
+    // private _focusTrapFactory: FocusTrapFactory,
+    _changeDetectorRef, _document) {
         super();
         this._elementRef = _elementRef;
         this._changeDetectorRef = _changeDetectorRef;
         this._document = _document;
     }
-    /**
-     * @template T
-     * @param {?} portal
-     * @return {?}
-     */
     attachComponentPortal(portal) {
         // if (this._portalOutlet.hasAttached()) {
         //   throw new Error('Has already attached')
         // }
         return this._portalOutlet.attachComponentPortal(portal);
     }
-    /**
-     * @template C
-     * @param {?} portal
-     * @return {?}
-     */
     attachTemplatePortal(portal) {
         throw new Error('Method not implemented.');
     }
 }
-SxNgxDialogContainerComponent.decorators = [
-    { type: Component, args: [{
+SxNgxDialogContainerComponent.ɵfac = function SxNgxDialogContainerComponent_Factory(t) { return new (t || SxNgxDialogContainerComponent)(ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(DOCUMENT, 8)); };
+SxNgxDialogContainerComponent.ɵcmp = ɵɵdefineComponent({ type: SxNgxDialogContainerComponent, selectors: [["sx-ngx-fabric-dialog-container"]], viewQuery: function SxNgxDialogContainerComponent_Query(rf, ctx) { if (rf & 1) {
+        ɵɵstaticViewQuery(_c0$2, true);
+    } if (rf & 2) {
+        var _t;
+        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx._portalOutlet = _t.first);
+    } }, features: [ɵɵInheritDefinitionFeature], decls: 2, vars: 0, consts: [["cdkPortalOutlet", ""], ["portalOutlet", "cdkPortalOutlet"]], template: function SxNgxDialogContainerComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵɵtemplate(0, SxNgxDialogContainerComponent_ng_template_0_Template, 0, 0, "ng-template", 0, 1, ɵɵtemplateRefExtractor);
+    } }, directives: [CdkPortalOutlet], encapsulation: 2 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SxNgxDialogContainerComponent, [{
+        type: Component,
+        args: [{
                 selector: 'sx-ngx-fabric-dialog-container',
-                template: "<ng-template #portalOutlet=\"cdkPortalOutlet\" cdkPortalOutlet ></ng-template>"
-            }] }
-];
-/** @nocollapse */
-SxNgxDialogContainerComponent.ctorParameters = () => [
-    { type: ElementRef },
-    { type: ChangeDetectorRef },
-    { type: undefined, decorators: [{ type: Optional }, { type: Inject, args: [DOCUMENT,] }] }
-];
-SxNgxDialogContainerComponent.propDecorators = {
-    _portalOutlet: [{ type: ViewChild, args: ['portalOutlet', { static: true },] }]
-};
-if (false) {
-    /**
-     * The portal outlet inside of this container into which the dialog content will be loaded.
-     * @type {?}
-     */
-    SxNgxDialogContainerComponent.prototype._portalOutlet;
-    /** @type {?} */
-    SxNgxDialogContainerComponent.prototype._config;
-    /**
-     * @type {?}
-     * @private
-     */
-    SxNgxDialogContainerComponent.prototype._elementRef;
-    /**
-     * @type {?}
-     * @private
-     */
-    SxNgxDialogContainerComponent.prototype._changeDetectorRef;
-    /**
-     * @type {?}
-     * @private
-     */
-    SxNgxDialogContainerComponent.prototype._document;
-}
+                templateUrl: './dialog-container.component.html'
+            }]
+    }], function () { return [{ type: ElementRef }, { type: ChangeDetectorRef }, { type: undefined, decorators: [{
+                type: Optional
+            }, {
+                type: Inject,
+                args: [DOCUMENT]
+            }] }]; }, { _portalOutlet: [{
+            type: ViewChild,
+            args: ['portalOutlet', { static: true }]
+        }] }); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: lib/dialog/dialog-ref.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * @template T
- */
 class SxNgxFabricDialogRef {
-    /**
-     * @param {?} overlayRef
-     */
     constructor(overlayRef) {
         this.overlayRef = overlayRef;
         this._beforeClose = new Subject();
         this._afterClosed = new Subject();
     }
-    /**
-     * @param {?=} value
-     * @return {?}
-     */
     close(value) {
         this.overlayRef.dispose();
         this._afterClosed.next(value);
@@ -642,53 +513,16 @@ class SxNgxFabricDialogRef {
         //   });
         // this.componentInstance.startExitAnimation();
     }
-    /**
-     * @return {?}
-     */
     afterClosed() {
         return this._afterClosed.asObservable();
     }
-    /**
-     * @return {?}
-     */
     beforeClose() {
         return this._beforeClose.asObservable();
     }
 }
-if (false) {
-    /**
-     * @type {?}
-     * @private
-     */
-    SxNgxFabricDialogRef.prototype._beforeClose;
-    /**
-     * @type {?}
-     * @private
-     */
-    SxNgxFabricDialogRef.prototype._afterClosed;
-    /** @type {?} */
-    SxNgxFabricDialogRef.prototype.componentInstance;
-    /**
-     * @type {?}
-     * @private
-     */
-    SxNgxFabricDialogRef.prototype.overlayRef;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: lib/dialog/dialog-tokens.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
 const SX_NGX_FABRIC_DIALOG_DATA = new InjectionToken('SX_NGX_FABRIC_DIALOG_DATA');
 
-/**
- * @fileoverview added by tsickle
- * Generated from: lib/dialog/dialog.service.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
 const DEFAULT_CONFIG = {
     hasBackdrop: true,
     backdropClass: 'ms-Overlay--dark',
@@ -699,62 +533,31 @@ const DEFAULT_CONFIG = {
     maxHeight: '80vh'
 };
 class SxNgxFabricDialogService {
-    /**
-     * @param {?} injector
-     * @param {?} overlay
-     */
     constructor(injector, overlay) {
         this.injector = injector;
         this.overlay = overlay;
     }
-    /**
-     * @template T
-     * @param {?} component
-     * @param {?=} config
-     * @return {?}
-     */
     open(component, config = {}) {
         // Override default configuration
-        /** @type {?} */
-        const dialogConfig = Object.assign({}, DEFAULT_CONFIG, config);
+        const dialogConfig = Object.assign(Object.assign({}, DEFAULT_CONFIG), config);
         // Returns an OverlayRef which is a PortalHost
-        /** @type {?} */
         const overlayRef = this.createOverlay(dialogConfig);
-        /** @type {?} */
         const dialogContainer = this._attachDialogContainer(overlayRef, config);
         // Instantiate remote control
-        /** @type {?} */
         const dialogRef = this._attachDialogContent(component, dialogContainer, overlayRef, config);
-        overlayRef.backdropClick().subscribe((/**
-         * @param {?} _
-         * @return {?}
-         */
-        _ => dialogRef.close()));
+        overlayRef.backdropClick().subscribe(_ => dialogRef.close());
         return dialogRef;
     }
-    /**
-     * @private
-     * @param {?} config
-     * @return {?}
-     */
     createOverlay(config) {
-        /** @type {?} */
         const overlayConfig = this.getOverlayConfig(config);
         return this.overlay.create(overlayConfig);
     }
-    /**
-     * @private
-     * @param {?} config
-     * @return {?}
-     */
     getOverlayConfig(config) {
-        /** @type {?} */
         const positionStrategy = this.overlay
             .position()
             .global()
             .centerHorizontally()
             .centerVertically();
-        /** @type {?} */
         const overlayConfig = new OverlayConfig({
             hasBackdrop: config.hasBackdrop,
             backdropClass: config.backdropClass,
@@ -768,75 +571,40 @@ class SxNgxFabricDialogService {
         });
         return overlayConfig;
     }
-    /**
-     * @private
-     * @template T
-     * @param {?} component
-     * @param {?} overlayRef
-     * @param {?} config
-     * @param {?} dialogRef
-     * @return {?}
-     */
     attachDialogContainer(component, overlayRef, config, dialogRef) {
-        /** @type {?} */
         const injector = this.createInjector(config, dialogRef);
-        /** @type {?} */
         const containerPortal = new ComponentPortal(component, null, injector);
-        /** @type {?} */
         const containerRef = overlayRef.attach(containerPortal);
         return containerRef.instance;
     }
-    /**
-     * @private
-     * @param {?} overlay
-     * @param {?} config
-     * @return {?}
-     */
     _attachDialogContainer(overlay, config) {
-        /** @type {?} */
         const containerPortal = new ComponentPortal(SxNgxDialogContainerComponent, null);
-        /** @type {?} */
         const containerRef = overlay.attach(containerPortal);
         containerRef.instance._config = config;
         return containerRef.instance;
     }
-    /**
-     * @private
-     * @template T
-     * @param {?} componentOrTemplateRef
-     * @param {?} dialogContainer
-     * @param {?} overlayRef
-     * @param {?} config
-     * @return {?}
-     */
     _attachDialogContent(componentOrTemplateRef, dialogContainer, overlayRef, config) {
         // Create a reference to the dialog we're creating in order to give the user a handle
         // to modify and close it.
-        /** @type {?} */
         const dialogRef = new SxNgxFabricDialogRef(overlayRef);
         // When the dialog backdrop is clicked, we want to close it.
         if (config.hasBackdrop) {
-            overlayRef.backdropClick().subscribe((/**
-             * @return {?}
-             */
-            () => {
+            overlayRef.backdropClick().subscribe(() => {
                 // if (!dialogRef.disableClose) {
                 dialogRef.close();
                 // }
-            }));
+            });
         }
         // Close when escape keydown event occurs
         // overlayRef.keydownEvents().pipe(
         //   filter(event => event.keyCode === ESCAPE && !dialogRef.disableClose)
         // ).subscribe(() => dialogRef.close());
         if (componentOrTemplateRef instanceof TemplateRef) {
-            dialogContainer.attachTemplatePortal(new TemplatePortal(componentOrTemplateRef, null, (/** @type {?} */ ({ $implicit: config.data, dialogRef }))));
+            dialogContainer.attachTemplatePortal(new TemplatePortal(componentOrTemplateRef, null, { $implicit: config.data, dialogRef }));
         }
         else {
-            /** @type {?} */
             const injector = this.createInjector(config, dialogRef);
-            /** @type {?} */
-            const contentRef = dialogContainer.attachComponentPortal(new ComponentPortal((/** @type {?} */ (componentOrTemplateRef)), undefined, injector));
+            const contentRef = dialogContainer.attachComponentPortal(new ComponentPortal(componentOrTemplateRef, undefined, injector));
             dialogRef.componentInstance = contentRef.instance;
         }
         // dialogRef
@@ -844,80 +612,46 @@ class SxNgxFabricDialogService {
         //   .updatePosition(config.position);
         return dialogRef;
     }
-    /**
-     * @private
-     * @template T
-     * @param {?} config
-     * @param {?} dialogRef
-     * @return {?}
-     */
     createInjector(config, dialogRef) {
-        /** @type {?} */
         const injectionTokens = new WeakMap();
         injectionTokens.set(SxNgxFabricDialogRef, dialogRef);
         injectionTokens.set(SX_NGX_FABRIC_DIALOG_DATA, config.data);
         return new PortalInjector(this.injector, injectionTokens);
     }
 }
-SxNgxFabricDialogService.decorators = [
-    { type: Injectable }
-];
-/** @nocollapse */
-SxNgxFabricDialogService.ctorParameters = () => [
-    { type: Injector },
-    { type: Overlay }
-];
-if (false) {
-    /**
-     * @type {?}
-     * @private
-     */
-    SxNgxFabricDialogService.prototype.injector;
-    /**
-     * @type {?}
-     * @private
-     */
-    SxNgxFabricDialogService.prototype.overlay;
-}
+SxNgxFabricDialogService.ɵfac = function SxNgxFabricDialogService_Factory(t) { return new (t || SxNgxFabricDialogService)(ɵɵinject(Injector), ɵɵinject(Overlay)); };
+SxNgxFabricDialogService.ɵprov = ɵɵdefineInjectable({ token: SxNgxFabricDialogService, factory: SxNgxFabricDialogService.ɵfac });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SxNgxFabricDialogService, [{
+        type: Injectable
+    }], function () { return [{ type: Injector }, { type: Overlay }]; }, null); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: lib/dialog/dialog-content.directive.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * Counter used to generate unique IDs for dialog elements.
- * @type {?}
- */
+/** Counter used to generate unique IDs for dialog elements. */
 let dialogElementUid = 0;
 /**
  * Button that will close the current dialog.
  */
 class SxNgxFabricDialogClose {
-    /**
-     * @param {?} dialogRef
-     */
     constructor(dialogRef) {
         this.dialogRef = dialogRef;
-        /**
-         * Screenreader label for the button.
-         */
+        /** Screenreader label for the button. */
         this.ariaLabel = 'Close dialog';
     }
-    /**
-     * @param {?} changes
-     * @return {?}
-     */
     ngOnChanges(changes) {
-        /** @type {?} */
         const proxiedChange = changes._sxNgxFabricDialogClose || changes._sxNgxFabricDialogCloseResult;
         if (proxiedChange) {
             this.dialogResult = proxiedChange.currentValue;
         }
     }
 }
-SxNgxFabricDialogClose.decorators = [
-    { type: Directive, args: [{
+SxNgxFabricDialogClose.ɵfac = function SxNgxFabricDialogClose_Factory(t) { return new (t || SxNgxFabricDialogClose)(ɵɵdirectiveInject(SxNgxFabricDialogRef)); };
+SxNgxFabricDialogClose.ɵdir = ɵɵdefineDirective({ type: SxNgxFabricDialogClose, selectors: [["button", "sx-ngx-fabric-dialog-close", ""], ["button", "sxNgxFabricDialogClose", ""]], hostAttrs: ["type", "button"], hostVars: 1, hostBindings: function SxNgxFabricDialogClose_HostBindings(rf, ctx) { if (rf & 1) {
+        ɵɵlistener("click", function SxNgxFabricDialogClose_click_HostBindingHandler() { return ctx.dialogRef.close(ctx.dialogResult); });
+    } if (rf & 2) {
+        ɵɵattribute("aria-label", ctx.ariaLabel);
+    } }, inputs: { ariaLabel: ["aria-label", "ariaLabel"], dialogResult: ["sx-ngx-fabric-dialog-close", "dialogResult"], dialogClose: ["sxNgxFabricDialogClose", "dialogClose"] }, exportAs: ["sxNgxFabricDialogClose"], features: [ɵɵNgOnChangesFeature] });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SxNgxFabricDialogClose, [{
+        type: Directive,
+        args: [{
                 selector: `button[sx-ngx-fabric-dialog-close], button[sxNgxFabricDialogClose]`,
                 exportAs: 'sxNgxFabricDialogClose',
                 host: {
@@ -925,104 +659,76 @@ SxNgxFabricDialogClose.decorators = [
                     '[attr.aria-label]': 'ariaLabel',
                     'type': 'button',
                 }
-            },] }
-];
-/** @nocollapse */
-SxNgxFabricDialogClose.ctorParameters = () => [
-    { type: SxNgxFabricDialogRef }
-];
-SxNgxFabricDialogClose.propDecorators = {
-    ariaLabel: [{ type: Input, args: ['aria-label',] }],
-    dialogResult: [{ type: Input, args: ['sx-ngx-fabric-dialog-close',] }],
-    dialogClose: [{ type: Input, args: ['sxNgxFabricDialogClose',] }]
-};
-if (false) {
-    /**
-     * Screenreader label for the button.
-     * @type {?}
-     */
-    SxNgxFabricDialogClose.prototype.ariaLabel;
-    /**
-     * Dialog close input.
-     * @type {?}
-     */
-    SxNgxFabricDialogClose.prototype.dialogResult;
-    /** @type {?} */
-    SxNgxFabricDialogClose.prototype.dialogClose;
-    /** @type {?} */
-    SxNgxFabricDialogClose.prototype.dialogRef;
-}
+            }]
+    }], function () { return [{ type: SxNgxFabricDialogRef }]; }, { ariaLabel: [{
+            type: Input,
+            args: ['aria-label']
+        }], dialogResult: [{
+            type: Input,
+            args: ['sx-ngx-fabric-dialog-close']
+        }], dialogClose: [{
+            type: Input,
+            args: ['sxNgxFabricDialogClose']
+        }] }); })();
 /**
  * Title of a dialog element. Stays fixed to the top of the dialog when scrolling.
  */
 class SxNgxFabricDialogTitle {
-    /**
-     * @param {?} _container
-     */
     constructor(_container) {
         this._container = _container;
         this.id = `sx-ngx-fabric-dialog-title-${dialogElementUid++}`;
     }
 }
-SxNgxFabricDialogTitle.decorators = [
-    { type: Directive, args: [{
+SxNgxFabricDialogTitle.ɵfac = function SxNgxFabricDialogTitle_Factory(t) { return new (t || SxNgxFabricDialogTitle)(ɵɵdirectiveInject(SxNgxDialogContainerComponent, 8)); };
+SxNgxFabricDialogTitle.ɵdir = ɵɵdefineDirective({ type: SxNgxFabricDialogTitle, selectors: [["", "sx-ngx-fabric-dialog-title", ""], ["", "sxNgxFabricDialogTitle", ""]], hostAttrs: [1, "ms-Dialog-title"], hostVars: 1, hostBindings: function SxNgxFabricDialogTitle_HostBindings(rf, ctx) { if (rf & 2) {
+        ɵɵhostProperty("id", ctx.id);
+    } }, inputs: { id: "id" }, exportAs: ["sxNgxFabricDialogTitle"] });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SxNgxFabricDialogTitle, [{
+        type: Directive,
+        args: [{
                 selector: '[sx-ngx-fabric-dialog-title], [sxNgxFabricDialogTitle]',
                 exportAs: 'sxNgxFabricDialogTitle',
                 host: {
                     'class': 'ms-Dialog-title',
                     '[id]': 'id',
                 },
-            },] }
-];
-/** @nocollapse */
-SxNgxFabricDialogTitle.ctorParameters = () => [
-    { type: SxNgxDialogContainerComponent, decorators: [{ type: Optional }] }
-];
-SxNgxFabricDialogTitle.propDecorators = {
-    id: [{ type: Input }]
-};
-if (false) {
-    /** @type {?} */
-    SxNgxFabricDialogTitle.prototype.id;
-    /**
-     * @type {?}
-     * @private
-     */
-    SxNgxFabricDialogTitle.prototype._container;
-}
+            }]
+    }], function () { return [{ type: SxNgxDialogContainerComponent, decorators: [{
+                type: Optional
+            }] }]; }, { id: [{
+            type: Input
+        }] }); })();
 /**
  * Scrollable content container of a dialog.
  */
 class SxNgxFabricDialogContent {
 }
-SxNgxFabricDialogContent.decorators = [
-    { type: Directive, args: [{
+SxNgxFabricDialogContent.ɵfac = function SxNgxFabricDialogContent_Factory(t) { return new (t || SxNgxFabricDialogContent)(); };
+SxNgxFabricDialogContent.ɵdir = ɵɵdefineDirective({ type: SxNgxFabricDialogContent, selectors: [["", "sx-ngx-fabric-dialog-content", ""], ["sx-ngx-fabric-dialog-content"], ["", "sxNgxFabricDialogContent", ""]], hostAttrs: [1, "ms-Dialog-content"] });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SxNgxFabricDialogContent, [{
+        type: Directive,
+        args: [{
                 selector: `[sx-ngx-fabric-dialog-content], sx-ngx-fabric-dialog-content, [sxNgxFabricDialogContent]`,
                 host: { 'class': 'ms-Dialog-content' }
-            },] }
-];
+            }]
+    }], null, null); })();
 /**
  * Container for the bottom action buttons in a dialog.
  * Stays fixed to the bottom when scrolling.
  */
 class SxNgxFabricDialogActions {
 }
-SxNgxFabricDialogActions.decorators = [
-    { type: Directive, args: [{
+SxNgxFabricDialogActions.ɵfac = function SxNgxFabricDialogActions_Factory(t) { return new (t || SxNgxFabricDialogActions)(); };
+SxNgxFabricDialogActions.ɵdir = ɵɵdefineDirective({ type: SxNgxFabricDialogActions, selectors: [["", "sx-ngx-fabric-dialog-actions", ""], ["sx-ngx-fabric-dialog-actions"], ["", "sxNgxFabricDialogActions", ""]], hostAttrs: [1, "ms-Dialog-actions"] });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SxNgxFabricDialogActions, [{
+        type: Directive,
+        args: [{
                 selector: `[sx-ngx-fabric-dialog-actions], sx-ngx-fabric-dialog-actions, [sxNgxFabricDialogActions]`,
                 host: { 'class': 'ms-Dialog-actions' }
-            },] }
-];
+            }]
+    }], null, null); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: lib/dialog/dialog.module.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 class DialogModule {
-    /**
-     * @return {?}
-     */
     static forRoot() {
         return {
             ngModule: DialogModule,
@@ -1030,13 +736,17 @@ class DialogModule {
         };
     }
 }
-DialogModule.decorators = [
-    { type: NgModule, args: [{
-                imports: [
-                    CommonModule,
-                    OverlayModule,
-                    PortalModule
-                ],
+DialogModule.ɵmod = ɵɵdefineNgModule({ type: DialogModule });
+DialogModule.ɵinj = ɵɵdefineInjector({ factory: function DialogModule_Factory(t) { return new (t || DialogModule)(); }, providers: [SxNgxFabricDialogService], imports: [[CommonModule, OverlayModule, PortalModule]] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(DialogModule, { declarations: [SxNgxDialogContainerComponent,
+        SxNgxFabricDialogClose,
+        SxNgxFabricDialogTitle,
+        SxNgxFabricDialogContent,
+        SxNgxFabricDialogActions], imports: [CommonModule, OverlayModule, PortalModule], exports: [SxNgxFabricDialogClose, SxNgxFabricDialogTitle, SxNgxFabricDialogContent, SxNgxFabricDialogActions] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DialogModule, [{
+        type: NgModule,
+        args: [{
+                imports: [CommonModule, OverlayModule, PortalModule],
                 declarations: [
                     SxNgxDialogContainerComponent,
                     SxNgxFabricDialogClose,
@@ -1044,30 +754,14 @@ DialogModule.decorators = [
                     SxNgxFabricDialogContent,
                     SxNgxFabricDialogActions
                 ],
-                entryComponents: [
-                    SxNgxDialogContainerComponent
-                ],
-                exports: [
-                    SxNgxFabricDialogClose,
-                    SxNgxFabricDialogTitle,
-                    SxNgxFabricDialogContent,
-                    SxNgxFabricDialogActions
-                ],
-                providers: [
-                    SxNgxFabricDialogService
-                ]
-            },] }
-];
+                entryComponents: [SxNgxDialogContainerComponent],
+                exports: [SxNgxFabricDialogClose, SxNgxFabricDialogTitle, SxNgxFabricDialogContent, SxNgxFabricDialogActions],
+                providers: [SxNgxFabricDialogService]
+            }]
+    }], null, null); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: lib/toggle/toggle.component.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
+const _c0$3 = ["*"];
 class ToggleComponent {
-    /**
-     * @param {?} changeDetectorRef
-     */
     constructor(changeDetectorRef) {
         this.changeDetectorRef = changeDetectorRef;
         this._checked = false;
@@ -1076,157 +770,119 @@ class ToggleComponent {
         this.onText = 'On';
         this.textLeft = false;
         this.inputId = Guid.uniqueid();
-        this._onChange = (/**
-         * @param {?} _
-         * @return {?}
-         */
-        (_) => { });
-        this._onTouched = (/**
-         * @return {?}
-         */
-        () => { });
+        this._onChange = (_) => { };
+        this._onTouched = () => { };
     }
-    /**
-     * @return {?}
-     */
     get checked() {
         return this._checked;
     }
-    /**
-     * @param {?} checked
-     * @return {?}
-     */
     set checked(checked) {
         if (checked !== this.checked) {
             this._checked = checked;
             this.changeDetectorRef.markForCheck();
         }
     }
-    /**
-     * @return {?}
-     */
     get classIsDisabled() { return this.disabled; }
-    /**
-     * @return {?}
-     */
     get classTextLeft() { return this.textLeft; }
-    /**
-     * @param {?} evt
-     * @return {?}
-     */
     onInputClick(evt) {
         evt.stopPropagation();
         this.toggle();
     }
-    /**
-     * @return {?}
-     */
     toggle() {
         this.checked = !this.checked;
         this._onChange(this.checked);
     }
     // ControlValueAccessor implementation
-    /**
-     * @param {?} isDisabled
-     * @return {?}
-     */
     setDisabledState(isDisabled) {
         this.disabled = isDisabled;
         this.changeDetectorRef.markForCheck();
     }
-    /**
-     * @param {?} val
-     * @return {?}
-     */
     writeValue(val) {
         this.checked = val;
     }
-    /**
-     * @param {?} fn
-     * @return {?}
-     */
     registerOnChange(fn) { this._onChange = fn; }
-    /**
-     * @param {?} fn
-     * @return {?}
-     */
     registerOnTouched(fn) { this._onTouched = fn; }
 }
-ToggleComponent.decorators = [
-    { type: Component, args: [{
+ToggleComponent.ɵfac = function ToggleComponent_Factory(t) { return new (t || ToggleComponent)(ɵɵdirectiveInject(ChangeDetectorRef)); };
+ToggleComponent.ɵcmp = ɵɵdefineComponent({ type: ToggleComponent, selectors: [["sx-ngx-fabric-toggle"]], hostAttrs: [1, "ms-Toggle"], hostVars: 4, hostBindings: function ToggleComponent_HostBindings(rf, ctx) { if (rf & 2) {
+        ɵɵclassProp("is-disabled", ctx.classIsDisabled)("ms-Toggle--textLeft", ctx.classTextLeft);
+    } }, inputs: { checked: "checked", disabled: "disabled", offText: "offText", onText: "onText", textLeft: "textLeft" }, features: [ɵɵProvidersFeature([{
+                provide: NG_VALUE_ACCESSOR,
+                useExisting: forwardRef(() => ToggleComponent),
+                multi: true
+            }])], ngContentSelectors: _c0$3, decls: 8, vars: 8, consts: [[1, "ms-Toggle-description"], ["type", "checkbox", 1, "ms-Toggle-input", 3, "checked", "disabled", "click"], [1, "ms-Toggle-field"], [1, "ms-Label", "ms-Label--off"], [1, "ms-Label", "ms-Label--on"]], template: function ToggleComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵɵprojectionDef();
+        ɵɵelementStart(0, "span", 0);
+        ɵɵprojection(1);
+        ɵɵelementEnd();
+        ɵɵelementStart(2, "input", 1);
+        ɵɵlistener("click", function ToggleComponent_Template_input_click_2_listener($event) { return ctx.onInputClick($event); });
+        ɵɵelementEnd();
+        ɵɵelementStart(3, "label", 2);
+        ɵɵelementStart(4, "span", 3);
+        ɵɵtext(5);
+        ɵɵelementEnd();
+        ɵɵelementStart(6, "span", 4);
+        ɵɵtext(7);
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵadvance(2);
+        ɵɵproperty("checked", ctx.checked)("disabled", ctx.disabled);
+        ɵɵattribute("id", ctx.inputId);
+        ɵɵadvance(1);
+        ɵɵclassProp("is-selected", ctx.checked);
+        ɵɵattribute("for", ctx.inputId);
+        ɵɵadvance(2);
+        ɵɵtextInterpolate(ctx.offText);
+        ɵɵadvance(2);
+        ɵɵtextInterpolate(ctx.onText);
+    } }, styles: [".ms-Toggle[_nghost-%COMP%]{font-family:Segoe UI WestEuropean,Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;-webkit-font-smoothing:antialiased;font-size:14px;font-weight:400;box-sizing:border-box;margin:0 0 8px;padding:0;box-shadow:none;position:relative;display:block}.ms-Toggle-description[_ngcontent-%COMP%]{color:#333;box-sizing:border-box;box-shadow:none;display:block;word-wrap:break-word;overflow-wrap:break-word;margin:0;padding:5px 0}.ms-Toggle-input[_ngcontent-%COMP%]{display:none}.ms-Toggle-field[_ngcontent-%COMP%]{position:relative;display:inline-block;width:45px;height:20px;box-sizing:border-box;border:1px solid #a6a6a6;border-radius:20px;cursor:pointer;-webkit-transition:.1s;transition:.1s;outline:0}.ms-Toggle[_nghost-%COMP%]   .ms-Toggle-field[_ngcontent-%COMP%]:before{position:absolute;top:4px;width:10px;height:10px;border-radius:10px;content:'';left:4px;background-color:#333;outline:transparent solid 1px;-webkit-transition:.1s;transition:.1s}.ms-Toggle[_nghost-%COMP%]   .ms-Label[_ngcontent-%COMP%]{position:relative;padding:0 0 0 50px}.ms-Toggle[_nghost-%COMP%]   .ms-Toggle-field[_ngcontent-%COMP%]   .ms-Label[_ngcontent-%COMP%]{color:#000;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.ms-Toggle[_nghost-%COMP%]   .ms-Toggle-field[_ngcontent-%COMP%]   .ms-Label--off[_ngcontent-%COMP%]{display:block}.ms-Toggle[_nghost-%COMP%]   .ms-Toggle-field.is-selected[_ngcontent-%COMP%]   .ms-Label--off[_ngcontent-%COMP%]{display:none}.ms-Toggle[_nghost-%COMP%]   .ms-Toggle-field[_ngcontent-%COMP%]   .ms-Label--on[_ngcontent-%COMP%]{display:none}.ms-Toggle[_nghost-%COMP%]   .ms-Toggle-field.is-selected[_ngcontent-%COMP%]   .ms-Label--on[_ngcontent-%COMP%]{display:block}.ms-Toggle[_nghost-%COMP%]   .ms-Toggle-field.is-selected[_ngcontent-%COMP%]{background-color:#0078d4;border-color:#0078d4}.ms-Toggle[_nghost-%COMP%]   .ms-Toggle-field.is-selected[_ngcontent-%COMP%]:focus, .ms-Toggle[_nghost-%COMP%]   .ms-Toggle-field.is-selected[_ngcontent-%COMP%]:hover{background-color:#106ebe;border-color:#106ebe}.ms-Toggle[_nghost-%COMP%]   .ms-Toggle-field.is-selected[_ngcontent-%COMP%]:before{background-color:#fff;left:28px}.ms-Toggle.is-disabled[_nghost-%COMP%]   .ms-Toggle-field[_ngcontent-%COMP%]{background-color:#fff;border-color:#c8c8c8;pointer-events:none;cursor:default}.ms-Toggle.is-disabled[_nghost-%COMP%]   .ms-Toggle-field.is-selected[_ngcontent-%COMP%]{background-color:#c8c8c8}.ms-Toggle.is-disabled[_nghost-%COMP%]   .ms-Toggle-field[_ngcontent-%COMP%]:before{background-color:#fff}.ms-Toggle.is-disabled[_nghost-%COMP%]   .ms-Label[_ngcontent-%COMP%]{color:#a6a6a6}.ms-Toggle.ms-Toggle--textLeft[_nghost-%COMP%]{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.ms-Toggle.ms-Toggle--textLeft[_nghost-%COMP%]   .ms-Toggle-field[_ngcontent-%COMP%]{margin-right:24px}.ms-Toggle.ms-Toggle--textLeft[_nghost-%COMP%]   .ms-Toggle-description[_ngcontent-%COMP%]{-webkit-box-flex:1;-webkit-flex:auto;-ms-flex:auto;flex:auto}"], changeDetection: 0 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ToggleComponent, [{
+        type: Component,
+        args: [{
                 selector: 'sx-ngx-fabric-toggle',
-                template: "<span class=\"ms-Toggle-description\"><ng-content></ng-content></span>\r\n<input type=\"checkbox\" [attr.id]=\"inputId\" [checked]=\"checked\" (click)=\"onInputClick($event)\" [disabled]=\"disabled\" class=\"ms-Toggle-input\" />\r\n<label [attr.for]=\"inputId\" class=\"ms-Toggle-field\" [class.is-selected]=\"checked\">\r\n  <span class=\"ms-Label ms-Label--off\">{{ offText }}</span>\r\n  <span class=\"ms-Label ms-Label--on\">{{ onText }}</span>\r\n</label>",
+                templateUrl: './toggle.component.html',
+                styleUrls: ['./toggle.component.scss'],
                 providers: [{
                         provide: NG_VALUE_ACCESSOR,
-                        useExisting: forwardRef((/**
-                         * @return {?}
-                         */
-                        () => ToggleComponent)),
+                        useExisting: forwardRef(() => ToggleComponent),
                         multi: true
                     }],
                 preserveWhitespaces: false,
                 changeDetection: ChangeDetectionStrategy.OnPush,
                 host: {
                     'class': 'ms-Toggle'
-                },
-                styles: [":host.ms-Toggle{font-family:Segoe UI WestEuropean,Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;-webkit-font-smoothing:antialiased;font-size:14px;font-weight:400;box-sizing:border-box;margin:0 0 8px;padding:0;box-shadow:none;position:relative;display:block}.ms-Toggle-description{color:#333;box-sizing:border-box;box-shadow:none;display:block;word-wrap:break-word;overflow-wrap:break-word;margin:0;padding:5px 0}.ms-Toggle-input{display:none}.ms-Toggle-field{position:relative;display:inline-block;width:45px;height:20px;box-sizing:border-box;border:1px solid #a6a6a6;border-radius:20px;cursor:pointer;-webkit-transition:.1s;transition:.1s;outline:0}:host.ms-Toggle .ms-Toggle-field:before{position:absolute;top:4px;width:10px;height:10px;border-radius:10px;content:'';left:4px;background-color:#333;outline:transparent solid 1px;-webkit-transition:.1s;transition:.1s}:host.ms-Toggle .ms-Label{position:relative;padding:0 0 0 50px}:host.ms-Toggle .ms-Toggle-field .ms-Label{color:#000;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}:host.ms-Toggle .ms-Toggle-field .ms-Label--off{display:block}:host.ms-Toggle .ms-Toggle-field.is-selected .ms-Label--off{display:none}:host.ms-Toggle .ms-Toggle-field .ms-Label--on{display:none}:host.ms-Toggle .ms-Toggle-field.is-selected .ms-Label--on{display:block}:host.ms-Toggle .ms-Toggle-field.is-selected{background-color:#0078d4;border-color:#0078d4}:host.ms-Toggle .ms-Toggle-field.is-selected:focus,:host.ms-Toggle .ms-Toggle-field.is-selected:hover{background-color:#106ebe;border-color:#106ebe}:host.ms-Toggle .ms-Toggle-field.is-selected:before{background-color:#fff;left:28px}:host.ms-Toggle.is-disabled .ms-Toggle-field{background-color:#fff;border-color:#c8c8c8;pointer-events:none;cursor:default}:host.ms-Toggle.is-disabled .ms-Toggle-field.is-selected{background-color:#c8c8c8}:host.ms-Toggle.is-disabled .ms-Toggle-field:before{background-color:#fff}:host.ms-Toggle.is-disabled .ms-Label{color:#a6a6a6}:host.ms-Toggle.ms-Toggle--textLeft{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}:host.ms-Toggle.ms-Toggle--textLeft .ms-Toggle-field{margin-right:24px}:host.ms-Toggle.ms-Toggle--textLeft .ms-Toggle-description{-webkit-box-flex:1;-webkit-flex:auto;-ms-flex:auto;flex:auto}"]
-            }] }
-];
-/** @nocollapse */
-ToggleComponent.ctorParameters = () => [
-    { type: ChangeDetectorRef }
-];
-ToggleComponent.propDecorators = {
-    checked: [{ type: Input }],
-    disabled: [{ type: Input }],
-    offText: [{ type: Input }],
-    onText: [{ type: Input }],
-    textLeft: [{ type: Input }],
-    classIsDisabled: [{ type: HostBinding, args: ['class.is-disabled',] }],
-    classTextLeft: [{ type: HostBinding, args: ['class.ms-Toggle--textLeft',] }]
-};
-if (false) {
-    /**
-     * @type {?}
-     * @private
-     */
-    ToggleComponent.prototype._checked;
-    /** @type {?} */
-    ToggleComponent.prototype.disabled;
-    /** @type {?} */
-    ToggleComponent.prototype.offText;
-    /** @type {?} */
-    ToggleComponent.prototype.onText;
-    /** @type {?} */
-    ToggleComponent.prototype.textLeft;
-    /** @type {?} */
-    ToggleComponent.prototype.inputId;
-    /**
-     * @type {?}
-     * @private
-     */
-    ToggleComponent.prototype._onChange;
-    /**
-     * @type {?}
-     * @private
-     */
-    ToggleComponent.prototype._onTouched;
-    /**
-     * @type {?}
-     * @private
-     */
-    ToggleComponent.prototype.changeDetectorRef;
-}
+                }
+            }]
+    }], function () { return [{ type: ChangeDetectorRef }]; }, { checked: [{
+            type: Input
+        }], disabled: [{
+            type: Input
+        }], offText: [{
+            type: Input
+        }], onText: [{
+            type: Input
+        }], textLeft: [{
+            type: Input
+        }], classIsDisabled: [{
+            type: HostBinding,
+            args: ['class.is-disabled']
+        }], classTextLeft: [{
+            type: HostBinding,
+            args: ['class.ms-Toggle--textLeft']
+        }] }); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: lib/toggle/toggle.module.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 class ToggleModule {
 }
-ToggleModule.decorators = [
-    { type: NgModule, args: [{
+ToggleModule.ɵmod = ɵɵdefineNgModule({ type: ToggleModule });
+ToggleModule.ɵinj = ɵɵdefineInjector({ factory: function ToggleModule_Factory(t) { return new (t || ToggleModule)(); }, imports: [[
+            CommonModule
+        ]] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(ToggleModule, { declarations: [ToggleComponent], imports: [CommonModule], exports: [ToggleComponent] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ToggleModule, [{
+        type: NgModule,
+        args: [{
                 imports: [
                     CommonModule
                 ],
@@ -1236,37 +892,49 @@ ToggleModule.decorators = [
                 exports: [
                     ToggleComponent
                 ]
-            },] }
-];
+            }]
+    }], null, null); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: lib/callout/callout.component.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
+const _c0$4 = ["beak"];
+function CalloutComponent_ng_template_0_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "div", 0);
+    ɵɵelementStart(1, "div", 1);
+    ɵɵelementStart(2, "div", 2);
+    ɵɵelementStart(3, "div", 3);
+    ɵɵelementStart(4, "div", 4);
+    ɵɵelementStart(5, "p", 5);
+    ɵɵprojection(6);
+    ɵɵelementEnd();
+    ɵɵelementEnd();
+    ɵɵelementStart(7, "div", 6);
+    ɵɵelementStart(8, "div", 7);
+    ɵɵelementStart(9, "p", 8);
+    ɵɵprojection(10, 1);
+    ɵɵelementEnd();
+    ɵɵelementEnd();
+    ɵɵelementStart(11, "div", 9);
+    ɵɵprojection(12, 2);
+    ɵɵelementEnd();
+    ɵɵelementEnd();
+    ɵɵprojection(13, 3);
+    ɵɵelementEnd();
+    ɵɵelementEnd();
+    ɵɵelementEnd();
+    ɵɵelement(14, "div", 10, 11);
+    ɵɵelementEnd();
+} }
+const _c1$1 = [[["", "sxNgxFabricCalloutHeader", ""]], [["", "sxNgxFabricCalloutContent", ""]], [["", "sxNgxFabricCalloutActions", ""]], "*"];
+const _c2 = ["[sxNgxFabricCalloutHeader]", "[sxNgxFabricCalloutContent]", "[sxNgxFabricCalloutActions]", "*"];
 class CalloutComponent {
-    /**
-     * @param {?} elementRef
-     */
     constructor(elementRef) {
         this.elementRef = elementRef;
         this.closed = new EventEmitter();
     }
-    /**
-     * @return {?}
-     */
     get beakPosition() { return this._beakPosition; }
-    /**
-     * @param {?} val
-     * @return {?}
-     */
     set beakPosition(val) {
         this._beakPosition = val;
         this.updateBeakPosition();
     }
-    /**
-     * @return {?}
-     */
     updateBeakPosition() {
         if (this.beakPosition) {
             this.beak.nativeElement.style.top = this.beakPosition.top;
@@ -1276,58 +944,40 @@ class CalloutComponent {
         }
     }
 }
-CalloutComponent.decorators = [
-    { type: Component, args: [{
+CalloutComponent.ɵfac = function CalloutComponent_Factory(t) { return new (t || CalloutComponent)(ɵɵdirectiveInject(ElementRef)); };
+CalloutComponent.ɵcmp = ɵɵdefineComponent({ type: CalloutComponent, selectors: [["sx-ngx-fabric-callout"]], viewQuery: function CalloutComponent_Query(rf, ctx) { if (rf & 1) {
+        ɵɵstaticViewQuery(TemplateRef, true);
+        ɵɵviewQuery(_c0$4, true);
+    } if (rf & 2) {
+        var _t;
+        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.templateRef = _t.first);
+        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.beak = _t.first);
+    } }, inputs: { xPosition: "xPosition", yPosition: "yPosition" }, outputs: { closed: "closed" }, ngContentSelectors: _c2, decls: 1, vars: 0, consts: [[1, "ms-ContextualHost", "is-positioned", "ms-ContextualHost--arrowLeft"], [1, "ms-ContextualHost-main"], [1, "ms-Callout"], [1, "ms-Callout-main"], [1, "ms-Callout-header"], [1, "ms-Callout-title"], [1, "ms-Callout-inner"], [1, "ms-Callout-content"], [1, "ms-Callout-subText"], [1, "ms-Callout-actions"], [1, "ms-ContextualHost-beak"], ["beak", ""]], template: function CalloutComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵɵprojectionDef(_c1$1);
+        ɵɵtemplate(0, CalloutComponent_ng_template_0_Template, 16, 0, "ng-template");
+    } }, styles: [".ms-ContextualHost[_ngcontent-%COMP%]{font-family:Segoe UI WestEuropean,Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;-webkit-font-smoothing:antialiased;z-index:10;margin:16px auto;position:relative;min-width:10px;background-color:#fff;box-shadow:0 0 5px 0 rgba(0,0,0,.4)}.ms-ContextualHost-main[_ngcontent-%COMP%]{position:relative;background-color:#fff;box-sizing:border-box;outline:transparent solid 1px;z-index:5;min-height:10px}.ms-Callout[_ngcontent-%COMP%]{font-family:Segoe UI WestEuropean,Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;-webkit-font-smoothing:antialiased;width:288px}.ms-Callout-header[_ngcontent-%COMP%]{z-index:105;padding:24px 28px 12px}.ms-Callout-title[_ngcontent-%COMP%]{margin:0;font-weight:300;font-size:21px}.ms-Callout-inner[_ngcontent-%COMP%]{height:100%;padding:0 28px 12px}.ms-Callout-subText[_ngcontent-%COMP%]{margin:0;font-weight:300;color:#333;font-size:12px}.ms-Callout-actions[_ngcontent-%COMP%]{position:relative;margin-top:20px;width:100%;white-space:nowrap}.ms-ContextualHost-beak[_ngcontent-%COMP%]{box-shadow:0 0 15px -5px #3c3c3c;position:absolute;width:28px;height:28px;background:#fff;border:1px solid #eaeaea;box-sizing:border-box;-webkit-transform:rotate(45deg);transform:rotate(45deg);z-index:0;outline:transparent solid 1px}"] });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CalloutComponent, [{
+        type: Component,
+        args: [{
                 selector: 'sx-ngx-fabric-callout',
-                template: "<ng-template>\r\n  <div class=\"ms-ContextualHost is-positioned ms-ContextualHost--arrowLeft\">\r\n    <div class=\"ms-ContextualHost-main\">\r\n      <div class=\"ms-Callout\">\r\n        <div class=\"ms-Callout-main\">\r\n          <div class=\"ms-Callout-header\">\r\n            <p class=\"ms-Callout-title\">\r\n              <ng-content select=\"[sxNgxFabricCalloutHeader]\"></ng-content>\r\n            </p>\r\n          </div>\r\n          <div class=\"ms-Callout-inner\">\r\n            <div class=\"ms-Callout-content\">\r\n              <p class=\"ms-Callout-subText\">\r\n                <ng-content select=\"[sxNgxFabricCalloutContent]\"></ng-content>\r\n              </p>\r\n            </div>\r\n            <div class=\"ms-Callout-actions\">\r\n              <ng-content select=\"[sxNgxFabricCalloutActions]\"></ng-content>\r\n            </div>\r\n          </div>\r\n          <ng-content></ng-content>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div #beak class=\"ms-ContextualHost-beak\"></div>\r\n  </div>\r\n</ng-template>",
-                styles: [".ms-ContextualHost{font-family:Segoe UI WestEuropean,Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;-webkit-font-smoothing:antialiased;z-index:10;margin:16px auto;position:relative;min-width:10px;background-color:#fff;box-shadow:0 0 5px 0 rgba(0,0,0,.4)}.ms-ContextualHost-main{position:relative;background-color:#fff;box-sizing:border-box;outline:transparent solid 1px;z-index:5;min-height:10px}.ms-Callout{font-family:Segoe UI WestEuropean,Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;-webkit-font-smoothing:antialiased;width:288px}.ms-Callout-header{z-index:105;padding:24px 28px 12px}.ms-Callout-title{margin:0;font-weight:300;font-size:21px}.ms-Callout-inner{height:100%;padding:0 28px 12px}.ms-Callout-subText{margin:0;font-weight:300;color:#333;font-size:12px}.ms-Callout-actions{position:relative;margin-top:20px;width:100%;white-space:nowrap}.ms-ContextualHost-beak{box-shadow:0 0 15px -5px #3c3c3c;position:absolute;width:28px;height:28px;background:#fff;border:1px solid #eaeaea;box-sizing:border-box;-webkit-transform:rotate(45deg);transform:rotate(45deg);z-index:0;outline:transparent solid 1px}"]
-            }] }
-];
-/** @nocollapse */
-CalloutComponent.ctorParameters = () => [
-    { type: ElementRef }
-];
-CalloutComponent.propDecorators = {
-    xPosition: [{ type: Input }],
-    yPosition: [{ type: Input }],
-    templateRef: [{ type: ViewChild, args: [TemplateRef, { static: true },] }],
-    beak: [{ type: ViewChild, args: ['beak', { static: false },] }],
-    closed: [{ type: Output }]
-};
-if (false) {
-    /** @type {?} */
-    CalloutComponent.prototype.xPosition;
-    /** @type {?} */
-    CalloutComponent.prototype.yPosition;
-    /** @type {?} */
-    CalloutComponent.prototype.templateRef;
-    /** @type {?} */
-    CalloutComponent.prototype.beak;
-    /** @type {?} */
-    CalloutComponent.prototype.closed;
-    /**
-     * @type {?}
-     * @private
-     */
-    CalloutComponent.prototype._beakPosition;
-    /**
-     * @type {?}
-     * @private
-     */
-    CalloutComponent.prototype.elementRef;
-}
+                templateUrl: './callout.component.html',
+                styleUrls: ['./callout.component.scss']
+            }]
+    }], function () { return [{ type: ElementRef }]; }, { xPosition: [{
+            type: Input
+        }], yPosition: [{
+            type: Input
+        }], templateRef: [{
+            type: ViewChild,
+            args: [TemplateRef, { static: true }]
+        }], beak: [{
+            type: ViewChild,
+            args: ['beak']
+        }], closed: [{
+            type: Output
+        }] }); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: lib/callout/callout-trigger.directive.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 class CalloutTriggerDirective {
-    /**
-     * @param {?} _overlay
-     * @param {?} _element
-     * @param {?} _viewContainerRef
-     */
     constructor(_overlay, _element, _viewContainerRef) {
         this._overlay = _overlay;
         this._element = _element;
@@ -1337,78 +987,42 @@ class CalloutTriggerDirective {
         this._closeSubscription = Subscription.EMPTY;
         this._positionSubscription = Subscription.EMPTY;
     }
-    /**
-     * @return {?}
-     */
     get sxNgxFabricCalloutTrigger() {
         return this.callout;
     }
-    /**
-     * @param {?} val
-     * @return {?}
-     */
     set sxNgxFabricCalloutTrigger(val) {
         this.callout = val;
     }
-    /**
-     * @return {?}
-     */
     ngOnDestroy() {
         this._closeSubscription.unsubscribe();
         this._positionSubscription.unsubscribe();
     }
-    /**
-     * @return {?}
-     */
     openCallout() {
         if (!this._calloutOpen) {
             this._createOverlay().attach(this._portal);
-            setTimeout((/**
-             * @return {?}
-             */
-            () => {
+            setTimeout(() => {
                 this.callout.updateBeakPosition();
-            }));
+            });
         }
     }
-    /**
-     * @return {?}
-     */
     closeMenu() {
         this.callout.closed.emit();
     }
-    /**
-     * @return {?}
-     */
     _handleClick() {
         this.openCallout();
     }
-    /**
-     * @private
-     * @return {?}
-     */
     _createOverlay() {
         if (!this._overlayRef) {
             this._portal = new TemplatePortal(this.callout.templateRef, this._viewContainerRef);
-            /** @type {?} */
             const config = this._getOverlayConfig();
             this._overlayRef = this._overlay.create(config);
-            this._closeSubscription = this._overlayRef.backdropClick().subscribe((/**
-             * @param {?} _
-             * @return {?}
-             */
-            _ => {
+            this._closeSubscription = this._overlayRef.backdropClick().subscribe(_ => {
                 this._overlayRef.detach();
-            }));
+            });
         }
         return this._overlayRef;
     }
-    /**
-     * @private
-     * @return {?}
-     */
     _getOverlayConfig() {
-        /** @type {?} */
         const position = this._getPosition();
         this._subscribeToPositions(position);
         return new OverlayConfig({
@@ -1417,16 +1031,11 @@ class CalloutTriggerDirective {
             scrollStrategy: this._overlay.scrollStrategies.reposition()
         });
     }
-    /**
-     * @private
-     * @return {?}
-     */
     _getPosition() {
         const [originX, originFallbackX] = this.callout.xPosition === 'before' ? ['end', 'start'] : ['start', 'end'];
         const [overlayY, overlayFallbackY] = this.callout.yPosition === 'above' ? ['bottom', 'top'] : ['top', 'bottom'];
         let [originY, originFallbackY] = [overlayY, overlayFallbackY];
         const [overlayX, overlayFallbackX] = [originX, originFallbackX];
-        /** @type {?} */
         const offsetY = 0;
         originY = overlayY === 'top' ? 'bottom' : 'top';
         originFallbackY = overlayFallbackY === 'top' ? 'bottom' : 'top';
@@ -1438,26 +1047,10 @@ class CalloutTriggerDirective {
             .withFallbackPosition({ originX, originY: originFallbackY }, { overlayX, overlayY: overlayFallbackY }, undefined, -offsetY)
             .withFallbackPosition({ originX: originFallbackX, originY: originFallbackY }, { overlayX: overlayFallbackX, overlayY: overlayFallbackY }, undefined, -offsetY);
     }
-    /**
-     * @private
-     * @param {?} position
-     * @return {?}
-     */
     _subscribeToPositions(position) {
-        this._positionSubscription = position.onPositionChange.pipe(distinctUntilChanged(null, (/**
-         * @param {?} x
-         * @return {?}
-         */
-        x => x.connectionPair))).subscribe((/**
-         * @param {?} pos
-         * @return {?}
-         */
-        pos => {
-            /** @type {?} */
+        this._positionSubscription = position.onPositionChange.pipe(distinctUntilChanged(null, x => x.connectionPair)).subscribe(pos => {
             const isCalloutUnderTrigger = pos.connectionPair.overlayY === 'top';
-            /** @type {?} */
             const isCalloutLeftAlignedToTrigger = pos.connectionPair.overlayX === 'start';
-            /** @type {?} */
             const triggerMiddle = this._portal.viewContainerRef.element.nativeElement.offsetWidth / 2 - 14;
             this.callout.beakPosition = {
                 top: isCalloutUnderTrigger ? '-6px' : null,
@@ -1465,82 +1058,39 @@ class CalloutTriggerDirective {
                 left: isCalloutLeftAlignedToTrigger ? triggerMiddle + 'px' : null,
                 right: !isCalloutLeftAlignedToTrigger ? triggerMiddle + 'px' : null
             };
-        }));
+        });
     }
 }
-CalloutTriggerDirective.decorators = [
-    { type: Directive, args: [{
+CalloutTriggerDirective.ɵfac = function CalloutTriggerDirective_Factory(t) { return new (t || CalloutTriggerDirective)(ɵɵdirectiveInject(Overlay), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(ViewContainerRef)); };
+CalloutTriggerDirective.ɵdir = ɵɵdefineDirective({ type: CalloutTriggerDirective, selectors: [["", "sxNgxFabricCalloutTrigger", ""]], hostAttrs: ["aria-haspopup", "true"], hostBindings: function CalloutTriggerDirective_HostBindings(rf, ctx) { if (rf & 1) {
+        ɵɵlistener("click", function CalloutTriggerDirective_click_HostBindingHandler($event) { return ctx._handleClick($event); });
+    } }, inputs: { sxNgxFabricCalloutTrigger: "sxNgxFabricCalloutTrigger" }, exportAs: ["sxNgxFabricCalloutTrigger"] });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CalloutTriggerDirective, [{
+        type: Directive,
+        args: [{
                 selector: '[sxNgxFabricCalloutTrigger]',
                 host: {
                     'aria-haspopup': 'true',
                     '(click)': '_handleClick($event)'
                 },
                 exportAs: 'sxNgxFabricCalloutTrigger'
-            },] }
-];
-/** @nocollapse */
-CalloutTriggerDirective.ctorParameters = () => [
-    { type: Overlay },
-    { type: ElementRef },
-    { type: ViewContainerRef }
-];
-CalloutTriggerDirective.propDecorators = {
-    sxNgxFabricCalloutTrigger: [{ type: Input }]
-};
-if (false) {
-    /**
-     * @type {?}
-     * @private
-     */
-    CalloutTriggerDirective.prototype._portal;
-    /**
-     * @type {?}
-     * @private
-     */
-    CalloutTriggerDirective.prototype._overlayRef;
-    /**
-     * @type {?}
-     * @private
-     */
-    CalloutTriggerDirective.prototype._calloutOpen;
-    /**
-     * @type {?}
-     * @private
-     */
-    CalloutTriggerDirective.prototype._closeSubscription;
-    /**
-     * @type {?}
-     * @private
-     */
-    CalloutTriggerDirective.prototype._positionSubscription;
-    /** @type {?} */
-    CalloutTriggerDirective.prototype.callout;
-    /**
-     * @type {?}
-     * @private
-     */
-    CalloutTriggerDirective.prototype._overlay;
-    /**
-     * @type {?}
-     * @private
-     */
-    CalloutTriggerDirective.prototype._element;
-    /**
-     * @type {?}
-     * @private
-     */
-    CalloutTriggerDirective.prototype._viewContainerRef;
-}
+            }]
+    }], function () { return [{ type: Overlay }, { type: ElementRef }, { type: ViewContainerRef }]; }, { sxNgxFabricCalloutTrigger: [{
+            type: Input
+        }] }); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: lib/callout/callout.module.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 class CalloutModule {
 }
-CalloutModule.decorators = [
-    { type: NgModule, args: [{
+CalloutModule.ɵmod = ɵɵdefineNgModule({ type: CalloutModule });
+CalloutModule.ɵinj = ɵɵdefineInjector({ factory: function CalloutModule_Factory(t) { return new (t || CalloutModule)(); }, imports: [[
+            CommonModule
+        ]] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CalloutModule, { declarations: [CalloutComponent,
+        CalloutTriggerDirective], imports: [CommonModule], exports: [CalloutComponent,
+        CalloutTriggerDirective] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CalloutModule, [{
+        type: NgModule,
+        args: [{
                 imports: [
                     CommonModule
                 ],
@@ -1552,41 +1102,87 @@ CalloutModule.decorators = [
                     CalloutComponent,
                     CalloutTriggerDirective
                 ]
-            },] }
-];
+            }]
+    }], null, null); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: lib/nav/nav.component.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 class NavComponent {
-    constructor() { }
-    /**
-     * @return {?}
-     */
+    constructor() {
+    }
     ngOnInit() {
     }
 }
-NavComponent.decorators = [
-    { type: Component, args: [{
+NavComponent.ɵfac = function NavComponent_Factory(t) { return new (t || NavComponent)(); };
+NavComponent.ɵcmp = ɵɵdefineComponent({ type: NavComponent, selectors: [["sx-ngx-fabric-nav"]], decls: 30, vars: 0, consts: [[1, "ms-Nav-group", "group", "is-expanded", "groupIsExpanded"], [1, "ms-Nav-groupContent", "groupContent"], ["role", "list", 1, "navItems"], ["role", "listitem", 1, "navItem"], ["name", "Home", 1, "ms-Nav-compositeLink", "compositeLink", "is-expanded", "compositeLinkIsExpanded"], ["aria-expanded", "true", "tabindex", "0", 1, "ms-Nav-chevronButton", "ms-Nav-chevronButton--link", "chevronButton", "chevronButtonLink"], ["role", "presentation", "aria-hidden", "true", "data-icon-name", "ChevronDown", 1, "ms-Icon", "ms-Nav-chevron", "chevronIcon"], ["href", "http://example.com", "title", "Home", "tabindex", "-1", 1, "ms-Nav-linkButton", "link", "isOnExpanded", "ms-Button", "ms-Button--action", "ms-Button--command"], [1, "ms-Button-flexContainer"], ["role", "presentation", "aria-hidden", "true", 1, "ms-Icon", "ms-Icon-placeHolder", "ms-Button-icon"], [1, "ms-Button-textContainer"], [1, "ms-Nav-linkText", "linkText"], ["name", "Activity", 1, "ms-Nav-compositeLink", "compositeLink"], ["href", "http://msn.com", "title", "Activity", "data-is-focusable", "true", "tabindex", "-1", 1, "ms-Nav-linkButton", "link", "isOnExpanded", "ms-Button", "ms-Button--action", "ms-Button--command"], ["name", "Documents", 1, "ms-Nav-compositeLink", "compositeLink", "is-expanded", "is-selected", "compositeLinkIsExpanded", "compositeLinkIsSelected"], ["href", "http://example.com", "title", "Documents", "data-is-focusable", "true", "tabindex", "-1", 1, "ms-Nav-linkButton", "link", "isOnExpanded", "ms-Button", "ms-Button--action", "ms-Button--command"], [1, "ms-Nav-linkText"]], template: function NavComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "div", 0);
+        ɵɵelementStart(1, "div", 1);
+        ɵɵelementStart(2, "ul", 2);
+        ɵɵelementStart(3, "li", 3);
+        ɵɵelementStart(4, "div", 4);
+        ɵɵelementStart(5, "button", 5);
+        ɵɵelement(6, "i", 6);
+        ɵɵelementEnd();
+        ɵɵelementStart(7, "a", 7);
+        ɵɵelementStart(8, "div", 8);
+        ɵɵelement(9, "i", 9);
+        ɵɵelement(10, "div", 10);
+        ɵɵelementStart(11, "div", 11);
+        ɵɵtext(12, "Home");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(13, "ul", 2);
+        ɵɵelementStart(14, "li", 3);
+        ɵɵelementStart(15, "div", 12);
+        ɵɵelementStart(16, "a", 13);
+        ɵɵelementStart(17, "div", 8);
+        ɵɵelement(18, "i", 9);
+        ɵɵelement(19, "div", 10);
+        ɵɵelementStart(20, "div", 11);
+        ɵɵtext(21, "Activity");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(22, "li", 3);
+        ɵɵelementStart(23, "div", 14);
+        ɵɵelementStart(24, "a", 15);
+        ɵɵelementStart(25, "div", 8);
+        ɵɵelement(26, "i", 9);
+        ɵɵelement(27, "div", 10);
+        ɵɵelementStart(28, "div", 16);
+        ɵɵtext(29, "Documents");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } }, styles: [""] });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(NavComponent, [{
+        type: Component,
+        args: [{
                 selector: 'sx-ngx-fabric-nav',
-                template: "<div class=\"ms-Nav-group group is-expanded groupIsExpanded\">\r\n  <div class=\"ms-Nav-groupContent groupContent\">\r\n    <ul role=\"list\" class=\"navItems\">\r\n      <li role=\"listitem\" class=\"navItem\">\r\n        <div name=\"Home\" class=\"ms-Nav-compositeLink compositeLink is-expanded compositeLinkIsExpanded\">\r\n          <button class=\"ms-Nav-chevronButton ms-Nav-chevronButton--link chevronButton chevronButtonLink\"\r\n            aria-expanded=\"true\" tabindex=\"0\">\r\n            <i role=\"presentation\" aria-hidden=\"true\" data-icon-name=\"ChevronDown\" class=\"ms-Icon ms-Nav-chevron chevronIcon\"></i>\r\n          </button>\r\n          <a class=\"ms-Nav-linkButton link isOnExpanded ms-Button ms-Button--action ms-Button--command\" href=\"http://example.com\"\r\n            title=\"Home\" tabindex=\"-1\">\r\n            <div class=\"ms-Button-flexContainer\">\r\n              <i role=\"presentation\" aria-hidden=\"true\" class=\"ms-Icon ms-Icon-placeHolder ms-Button-icon\"></i>\r\n              <div class=\"ms-Button-textContainer\"></div>\r\n              <div class=\"ms-Nav-linkText linkText\">Home</div>\r\n            </div>\r\n          </a>\r\n        </div>\r\n        <ul role=\"list\" class=\"navItems\">\r\n          <li role=\"listitem\" class=\"navItem\">\r\n            <div name=\"Activity\" class=\"ms-Nav-compositeLink compositeLink\">\r\n              <a class=\"ms-Nav-linkButton link isOnExpanded ms-Button ms-Button--action ms-Button--command\"\r\n                href=\"http://msn.com\" title=\"Activity\" data-is-focusable=\"true\" tabindex=\"-1\">\r\n                <div class=\"ms-Button-flexContainer\">\r\n                  <i role=\"presentation\" aria-hidden=\"true\" class=\"ms-Icon ms-Icon-placeHolder ms-Button-icon\"></i>\r\n                  <div class=\"ms-Button-textContainer\"></div>\r\n                  <div class=\"ms-Nav-linkText linkText\">Activity</div>\r\n                </div>\r\n              </a>\r\n            </div>\r\n          </li>\r\n        </ul>\r\n      </li>\r\n      <li role=\"listitem\" class=\"navItem\" >\r\n        <div name=\"Documents\" class=\"ms-Nav-compositeLink compositeLink is-expanded is-selected compositeLinkIsExpanded compositeLinkIsSelected\">\r\n          <a class=\"ms-Nav-linkButton link isOnExpanded ms-Button ms-Button--action ms-Button--command\" href=\"http://example.com\"\r\n            title=\"Documents\" data-is-focusable=\"true\"tabindex=\"-1\">\r\n            <div class=\"ms-Button-flexContainer\">\r\n              <i role=\"presentation\" aria-hidden=\"true\" class=\"ms-Icon ms-Icon-placeHolder ms-Button-icon\"></i>\r\n              <div class=\"ms-Button-textContainer\"></div>\r\n              <div class=\"ms-Nav-linkText\">Documents</div>\r\n            </div>\r\n          </a>\r\n        </div>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</div>",
-                styles: [""]
-            }] }
-];
-/** @nocollapse */
-NavComponent.ctorParameters = () => [];
+                templateUrl: './nav.component.html',
+                styleUrls: ['./nav.component.scss']
+            }]
+    }], function () { return []; }, null); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: lib/nav/nav.module.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 class NavModule {
 }
-NavModule.decorators = [
-    { type: NgModule, args: [{
+NavModule.ɵmod = ɵɵdefineNgModule({ type: NavModule });
+NavModule.ɵinj = ɵɵdefineInjector({ factory: function NavModule_Factory(t) { return new (t || NavModule)(); }, imports: [[
+            CommonModule
+        ]] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(NavModule, { declarations: [NavComponent], imports: [CommonModule], exports: [NavComponent] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(NavModule, [{
+        type: NgModule,
+        args: [{
                 imports: [
                     CommonModule
                 ],
@@ -1596,18 +1192,49 @@ NavModule.decorators = [
                 exports: [
                     NavComponent
                 ]
-            },] }
-];
+            }]
+    }], null, null); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: lib/sx-ngx-fabric.module.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 class SxNgxFabricModule {
 }
-SxNgxFabricModule.decorators = [
-    { type: NgModule, args: [{
+SxNgxFabricModule.ɵmod = ɵɵdefineNgModule({ type: SxNgxFabricModule });
+SxNgxFabricModule.ɵinj = ɵɵdefineInjector({ factory: function SxNgxFabricModule_Factory(t) { return new (t || SxNgxFabricModule)(); }, imports: [[
+            CommonModule,
+            CheckboxModule,
+            ButtonModule,
+            TextFieldModule,
+            DialogModule.forRoot(),
+            ToggleModule,
+            BreadcrumbModule,
+            CalloutModule,
+            NavModule
+        ],
+        CheckboxModule,
+        ButtonModule,
+        TextFieldModule,
+        DialogModule,
+        ToggleModule,
+        BreadcrumbModule,
+        CalloutModule,
+        NavModule] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(SxNgxFabricModule, { declarations: [SxNgxFabricComponent], imports: [CommonModule,
+        CheckboxModule,
+        ButtonModule,
+        TextFieldModule, DialogModule, ToggleModule,
+        BreadcrumbModule,
+        CalloutModule,
+        NavModule], exports: [SxNgxFabricComponent,
+        CheckboxModule,
+        ButtonModule,
+        TextFieldModule,
+        DialogModule,
+        ToggleModule,
+        BreadcrumbModule,
+        CalloutModule,
+        NavModule] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SxNgxFabricModule, [{
+        type: NgModule,
+        args: [{
                 imports: [
                     CommonModule,
                     CheckboxModule,
@@ -1631,68 +1258,16 @@ SxNgxFabricModule.decorators = [
                     CalloutModule,
                     NavModule
                 ]
-            },] }
-];
+            }]
+    }], null, null); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: lib/breadcrumb/i-breadcrumb-item.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * @record
- */
-function IBreadcrumbItem() { }
-if (false) {
-    /** @type {?} */
-    IBreadcrumbItem.prototype.text;
-    /** @type {?|undefined} */
-    IBreadcrumbItem.prototype.key;
-    /** @type {?|undefined} */
-    IBreadcrumbItem.prototype.href;
-    /** @type {?|undefined} */
-    IBreadcrumbItem.prototype.isCurrentItem;
-}
-
-/**
- * @fileoverview added by tsickle
- * Generated from: lib/dialog/dialog-config.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * @record
- */
-function SxNgxFabricDialogConfig() { }
-if (false) {
-    /** @type {?|undefined} */
-    SxNgxFabricDialogConfig.prototype.panelClass;
-    /** @type {?|undefined} */
-    SxNgxFabricDialogConfig.prototype.hasBackdrop;
-    /** @type {?|undefined} */
-    SxNgxFabricDialogConfig.prototype.backdropClass;
-    /** @type {?|undefined} */
-    SxNgxFabricDialogConfig.prototype.minWidth;
-    /** @type {?|undefined} */
-    SxNgxFabricDialogConfig.prototype.minHeight;
-    /** @type {?|undefined} */
-    SxNgxFabricDialogConfig.prototype.maxWidth;
-    /** @type {?|undefined} */
-    SxNgxFabricDialogConfig.prototype.maxHeight;
-    /** @type {?|undefined} */
-    SxNgxFabricDialogConfig.prototype.data;
-}
-
-/**
- * @fileoverview added by tsickle
- * Generated from: public_api.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+/*
+ * Public API Surface of sx-ngx-fabric
  */
 
 /**
- * @fileoverview added by tsickle
- * Generated from: sx-ngx-fabric.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * Generated bundle index. Do not edit.
  */
 
-export { BreadcrumbComponent, BreadcrumbModule, SX_NGX_FABRIC_DIALOG_DATA, SxNgxFabricComponent, SxNgxFabricDialogRef, SxNgxFabricDialogService, SxNgxFabricModule, SxNgxFabricService, CheckboxModule as ɵa, CheckboxComponent as ɵb, ButtonModule as ɵc, ButtonComponent as ɵd, TextFieldModule as ɵe, TextFieldComponent as ɵf, DialogModule as ɵg, SxNgxDialogContainerComponent as ɵh, SxNgxFabricDialogClose as ɵi, SxNgxFabricDialogTitle as ɵj, SxNgxFabricDialogContent as ɵk, SxNgxFabricDialogActions as ɵl, ToggleModule as ɵm, ToggleComponent as ɵn, CalloutModule as ɵo, CalloutComponent as ɵp, CalloutTriggerDirective as ɵq, NavModule as ɵr, NavComponent as ɵs };
+export { BreadcrumbComponent, BreadcrumbModule, ButtonComponent, ButtonModule, CalloutComponent, CalloutModule, CalloutTriggerDirective, CheckboxComponent, CheckboxModule, DialogModule, NavComponent, NavModule, SX_NGX_FABRIC_DIALOG_DATA, SxNgxFabricComponent, SxNgxFabricDialogActions, SxNgxFabricDialogClose, SxNgxFabricDialogContent, SxNgxFabricDialogRef, SxNgxFabricDialogService, SxNgxFabricDialogTitle, SxNgxFabricModule, SxNgxFabricService, TextFieldComponent, TextFieldModule, ToggleComponent, ToggleModule };
 //# sourceMappingURL=sx-ngx-fabric.js.map

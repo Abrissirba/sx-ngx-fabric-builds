@@ -3,12 +3,12 @@
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
-    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0",
+    "tslib": "^1.10.0"
   },
   "dependencies": {
     "office-ui-fabric-core": "^9.2.0",
-    "@angular/cdk": "^6.4.7",
-    "tslib": "^1.9.0"
+    "@angular/cdk": "^6.4.7"
   },
   "main": "bundles/sx-ngx-fabric.umd.js",
   "module": "fesm5/sx-ngx-fabric.js",
@@ -18,6 +18,8 @@
   "fesm5": "fesm5/sx-ngx-fabric.js",
   "fesm2015": "fesm2015/sx-ngx-fabric.js",
   "typings": "sx-ngx-fabric.d.ts",
-  "metadata": "sx-ngx-fabric.metadata.json",
-  "sideEffects": false
+  "sideEffects": false,
+  "scripts": {
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy. This is not allowed.\\nPlease delete and rebuild the package, without compiling with Ivy, before attempting to publish.\\n')\" && exit 1"
+  }
 }

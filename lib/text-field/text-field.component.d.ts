@@ -1,4 +1,5 @@
 import { ChangeDetectorRef } from '@angular/core';
+import * as i0 from "@angular/core";
 export declare class TextFieldComponent {
     private changeDetectorRef;
     label: any;
@@ -10,8 +11,8 @@ export declare class TextFieldComponent {
     required: boolean;
     value: any;
     classes: string;
-    readonly classMultiline: boolean;
-    readonly classIsDisabled: boolean;
+    get classMultiline(): boolean;
+    get classIsDisabled(): boolean;
     constructor(changeDetectorRef: ChangeDetectorRef);
     onChange(evt: any): void;
     onTouched(evt: any): void;
@@ -21,4 +22,6 @@ export declare class TextFieldComponent {
     writeValue(val: any): void;
     registerOnChange(fn: (_: any) => void): void;
     registerOnTouched(fn: () => void): void;
+    static ɵfac: i0.ɵɵFactoryDef<TextFieldComponent>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<TextFieldComponent, "sx-ngx-fabric-text-field", never, { "label": "label"; "multiline": "multiline"; "rows": "rows"; "type": "type"; "placeholder": "placeholder"; "disabled": "disabled"; "required": "required"; }, {}, never>;
 }

@@ -1,6 +1,7 @@
 import { BasePortalOutlet, CdkPortalOutlet, ComponentPortal, TemplatePortal } from '@angular/cdk/portal';
 import { ChangeDetectorRef, ComponentRef, ElementRef, EmbeddedViewRef } from '@angular/core';
 import { SxNgxFabricDialogConfig } from './dialog-config';
+import * as i0 from "@angular/core";
 export declare class SxNgxDialogContainerComponent extends BasePortalOutlet {
     private _elementRef;
     private _changeDetectorRef;
@@ -11,4 +12,6 @@ export declare class SxNgxDialogContainerComponent extends BasePortalOutlet {
     constructor(_elementRef: ElementRef, _changeDetectorRef: ChangeDetectorRef, _document: any);
     attachComponentPortal<T>(portal: ComponentPortal<T>): ComponentRef<T>;
     attachTemplatePortal<C>(portal: TemplatePortal<C>): EmbeddedViewRef<C>;
+    static ɵfac: i0.ɵɵFactoryDef<SxNgxDialogContainerComponent>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<SxNgxDialogContainerComponent, "sx-ngx-fabric-dialog-container", never, {}, {}, never>;
 }

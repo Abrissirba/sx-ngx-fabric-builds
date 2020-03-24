@@ -1,4 +1,5 @@
 import { TemplateRef, EventEmitter, ElementRef } from '@angular/core';
+import * as i0 from "@angular/core";
 export declare class CalloutComponent {
     private elementRef;
     xPosition: string;
@@ -7,7 +8,10 @@ export declare class CalloutComponent {
     beak: ElementRef;
     closed: EventEmitter<void | "click" | "keydown">;
     private _beakPosition;
-    beakPosition: any;
+    get beakPosition(): any;
+    set beakPosition(val: any);
     constructor(elementRef: ElementRef);
     updateBeakPosition(): void;
+    static ɵfac: i0.ɵɵFactoryDef<CalloutComponent>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<CalloutComponent, "sx-ngx-fabric-callout", never, { "xPosition": "xPosition"; "yPosition": "yPosition"; }, { "closed": "closed"; }, never>;
 }
