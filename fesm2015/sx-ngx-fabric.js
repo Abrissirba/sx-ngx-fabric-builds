@@ -1,15 +1,15 @@
-import { DOCUMENT } from '@angular/platform-browser';
+import { Injectable, ɵɵdefineInjectable, Component, EventEmitter, Input, Output, NgModule, forwardRef, ChangeDetectionStrategy, ChangeDetectorRef, HostBinding, ElementRef, Optional, Inject, ViewChild, InjectionToken, TemplateRef, Injector, Directive, ViewContainerRef } from '@angular/core';
+import { CommonModule, DOCUMENT } from '@angular/common';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
-import { Overlay, OverlayConfig, OverlayModule } from '@angular/cdk/overlay';
-import { BasePortalOutlet, ComponentPortal, PortalInjector, TemplatePortal, PortalModule } from '@angular/cdk/portal';
+import { BasePortalOutlet, ComponentPortal, TemplatePortal, PortalInjector, PortalModule } from '@angular/cdk/portal';
+import { OverlayConfig, Overlay, OverlayModule } from '@angular/cdk/overlay';
 import { Subject, Subscription } from 'rxjs';
 import { distinctUntilChanged } from 'rxjs/operators';
-import { CommonModule } from '@angular/common';
-import { Injectable, Component, Input, HostBinding, NgModule, ViewChild, TemplateRef, Output, EventEmitter, ElementRef, Optional, Inject, ChangeDetectorRef, forwardRef, ChangeDetectionStrategy, InjectionToken, Directive, ViewContainerRef, defineInjectable, Injector } from '@angular/core';
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/sx-ngx-fabric.service.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 class SxNgxFabricService {
     constructor() { }
@@ -21,11 +21,12 @@ SxNgxFabricService.decorators = [
 ];
 /** @nocollapse */
 SxNgxFabricService.ctorParameters = () => [];
-/** @nocollapse */ SxNgxFabricService.ngInjectableDef = defineInjectable({ factory: function SxNgxFabricService_Factory() { return new SxNgxFabricService(); }, token: SxNgxFabricService, providedIn: "root" });
+/** @nocollapse */ SxNgxFabricService.ngInjectableDef = ɵɵdefineInjectable({ factory: function SxNgxFabricService_Factory() { return new SxNgxFabricService(); }, token: SxNgxFabricService, providedIn: "root" });
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/sx-ngx-fabric.component.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 class SxNgxFabricComponent {
     constructor() { }
@@ -50,7 +51,8 @@ SxNgxFabricComponent.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/breadcrumb/breadcrumb.component.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 class BreadcrumbComponent {
     constructor() {
@@ -77,10 +79,17 @@ BreadcrumbComponent.propDecorators = {
     items: [{ type: Input }],
     itemClick: [{ type: Output }]
 };
+if (false) {
+    /** @type {?} */
+    BreadcrumbComponent.prototype.items;
+    /** @type {?} */
+    BreadcrumbComponent.prototype.itemClick;
+}
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/breadcrumb/breadcrumb.module.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 class BreadcrumbModule {
 }
@@ -100,16 +109,19 @@ BreadcrumbModule.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/utils/guid.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 class Guid {
     /**
      * @return {?}
      */
     static uniqueid() {
+        // always start with a letter (for DOM friendlyness)
         /** @type {?} */
         let idstr = String.fromCharCode(Math.floor((Math.random() * 25) + 65));
         do {
+            // between numbers and characters (48 is 0 and 90 is Z (42-48 = 90)
             /** @type {?} */
             const ascicode = Math.floor((Math.random() * 42) + 48);
             if (ascicode < 58 || ascicode > 64) {
@@ -123,7 +135,8 @@ class Guid {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/checkbox/checkbox.component.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 class CheckboxComponent {
     /**
@@ -134,8 +147,15 @@ class CheckboxComponent {
         this._checked = false;
         this.disabled = false;
         this.inputId = Guid.uniqueid();
-        this._onChange = (_) => { };
-        this._onTouched = () => { };
+        this._onChange = (/**
+         * @param {?} _
+         * @return {?}
+         */
+        (_) => { });
+        this._onTouched = (/**
+         * @return {?}
+         */
+        () => { });
     }
     /**
      * @return {?}
@@ -168,6 +188,7 @@ class CheckboxComponent {
         this.checked = !this.checked;
         this._onChange(this.checked);
     }
+    // ControlValueAccessor implementation
     /**
      * @param {?} isDisabled
      * @return {?}
@@ -200,7 +221,10 @@ CheckboxComponent.decorators = [
                 template: "<input type=\"checkbox\" [attr.id]=\"inputId\" [checked]=\"checked\" (click)=\"onInputClick($event)\" [disabled]=\"disabled\"/>\r\n<label role=\"checkbox\" [attr.for]=\"inputId\" [class.is-checked]=\"checked\" [class.disabled]=\"disabled\">\r\n  <span class=\"ms-label\"><ng-content></ng-content></span>\r\n</label>",
                 providers: [{
                         provide: NG_VALUE_ACCESSOR,
-                        useExisting: forwardRef(() => CheckboxComponent),
+                        useExisting: forwardRef((/**
+                         * @return {?}
+                         */
+                        () => CheckboxComponent)),
                         multi: true
                     }],
                 preserveWhitespaces: false,
@@ -216,10 +240,37 @@ CheckboxComponent.propDecorators = {
     checked: [{ type: Input }],
     disabled: [{ type: Input }]
 };
+if (false) {
+    /**
+     * @type {?}
+     * @private
+     */
+    CheckboxComponent.prototype._checked;
+    /** @type {?} */
+    CheckboxComponent.prototype.disabled;
+    /** @type {?} */
+    CheckboxComponent.prototype.inputId;
+    /**
+     * @type {?}
+     * @private
+     */
+    CheckboxComponent.prototype._onChange;
+    /**
+     * @type {?}
+     * @private
+     */
+    CheckboxComponent.prototype._onTouched;
+    /**
+     * @type {?}
+     * @private
+     */
+    CheckboxComponent.prototype.changeDetectorRef;
+}
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/checkbox/checkbox.module.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 class CheckboxModule {
 }
@@ -239,7 +290,8 @@ CheckboxModule.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/button/button.component.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 class ButtonComponent {
     constructor() {
@@ -270,10 +322,17 @@ ButtonComponent.propDecorators = {
     classes: [{ type: HostBinding, args: ['class.ms-Button',] }],
     classPrimary: [{ type: HostBinding, args: ['class.ms-Button--primary',] }]
 };
+if (false) {
+    /** @type {?} */
+    ButtonComponent.prototype.primary;
+    /** @type {?} */
+    ButtonComponent.prototype.classes;
+}
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/button/button.module.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 class ButtonModule {
 }
@@ -293,7 +352,8 @@ ButtonModule.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/text-field/text-field.component.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 class TextFieldComponent {
     /**
@@ -308,8 +368,15 @@ class TextFieldComponent {
         this.required = false;
         this.value = null;
         this.classes = 'ms-TextField';
-        this._onChange = (_) => { };
-        this._onTouched = () => { };
+        this._onChange = (/**
+         * @param {?} _
+         * @return {?}
+         */
+        (_) => { });
+        this._onTouched = (/**
+         * @return {?}
+         */
+        () => { });
     }
     /**
      * @return {?}
@@ -335,6 +402,7 @@ class TextFieldComponent {
     onTouched(evt) {
         this._onTouched();
     }
+    // ControlValueAccessor implementation
     /**
      * @param {?} isDisabled
      * @return {?}
@@ -368,7 +436,10 @@ TextFieldComponent.decorators = [
                 template: "<label class=\"ms-Label\" [class.is-required]=\"required\">{{label}}</label>\r\n<input class=\"ms-TextField-field\"\r\n  *ngIf=\"!multiline\"\r\n  [attr.type]=\"type\" \r\n  [attr.placeholder]=\"placeholder\" \r\n  [value]=\"value\" \r\n  [disabled]=\"disabled\" \r\n  (blur)=\"onTouched($event)\"\r\n  (change)=\"onChange($event)\" \r\n  (keyup)=\"onChange($event)\"\r\n/>\r\n\r\n<textarea class=\"ms-TextField-field\"\r\n*ngIf=\"multiline\"\r\n[attr.type]=\"type\" \r\n[attr.placeholder]=\"placeholder\" \r\n[value]=\"value\" \r\n[disabled]=\"disabled\"\r\n[attr.rows]=\"rows\"\r\n(blur)=\"onTouched($event)\"\r\n(change)=\"onChange($event)\" \r\n(keyup)=\"onChange($event)\"\r\n></textarea>",
                 providers: [{
                         provide: NG_VALUE_ACCESSOR,
-                        useExisting: forwardRef(() => TextFieldComponent),
+                        useExisting: forwardRef((/**
+                         * @return {?}
+                         */
+                        () => TextFieldComponent)),
                         multi: true
                     }],
                 preserveWhitespaces: false,
@@ -392,10 +463,46 @@ TextFieldComponent.propDecorators = {
     classMultiline: [{ type: HostBinding, args: ['class.ms-TextField--multiline',] }],
     classIsDisabled: [{ type: HostBinding, args: ['class.is-disabled',] }]
 };
+if (false) {
+    /** @type {?} */
+    TextFieldComponent.prototype.label;
+    /** @type {?} */
+    TextFieldComponent.prototype.multiline;
+    /** @type {?} */
+    TextFieldComponent.prototype.rows;
+    /** @type {?} */
+    TextFieldComponent.prototype.type;
+    /** @type {?} */
+    TextFieldComponent.prototype.placeholder;
+    /** @type {?} */
+    TextFieldComponent.prototype.disabled;
+    /** @type {?} */
+    TextFieldComponent.prototype.required;
+    /** @type {?} */
+    TextFieldComponent.prototype.value;
+    /** @type {?} */
+    TextFieldComponent.prototype.classes;
+    /**
+     * @type {?}
+     * @private
+     */
+    TextFieldComponent.prototype._onChange;
+    /**
+     * @type {?}
+     * @private
+     */
+    TextFieldComponent.prototype._onTouched;
+    /**
+     * @type {?}
+     * @private
+     */
+    TextFieldComponent.prototype.changeDetectorRef;
+}
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/text-field/text-field.module.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 class TextFieldModule {
 }
@@ -415,7 +522,8 @@ TextFieldModule.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/dialog/dialog-container.component.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 class SxNgxDialogContainerComponent extends BasePortalOutlet {
     /**
@@ -462,12 +570,37 @@ SxNgxDialogContainerComponent.ctorParameters = () => [
     { type: undefined, decorators: [{ type: Optional }, { type: Inject, args: [DOCUMENT,] }] }
 ];
 SxNgxDialogContainerComponent.propDecorators = {
-    _portalOutlet: [{ type: ViewChild, args: ['portalOutlet',] }]
+    _portalOutlet: [{ type: ViewChild, args: ['portalOutlet', { static: true },] }]
 };
+if (false) {
+    /**
+     * The portal outlet inside of this container into which the dialog content will be loaded.
+     * @type {?}
+     */
+    SxNgxDialogContainerComponent.prototype._portalOutlet;
+    /** @type {?} */
+    SxNgxDialogContainerComponent.prototype._config;
+    /**
+     * @type {?}
+     * @private
+     */
+    SxNgxDialogContainerComponent.prototype._elementRef;
+    /**
+     * @type {?}
+     * @private
+     */
+    SxNgxDialogContainerComponent.prototype._changeDetectorRef;
+    /**
+     * @type {?}
+     * @private
+     */
+    SxNgxDialogContainerComponent.prototype._document;
+}
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/dialog/dialog-ref.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * @template T
@@ -522,17 +655,38 @@ class SxNgxFabricDialogRef {
         return this._beforeClose.asObservable();
     }
 }
+if (false) {
+    /**
+     * @type {?}
+     * @private
+     */
+    SxNgxFabricDialogRef.prototype._beforeClose;
+    /**
+     * @type {?}
+     * @private
+     */
+    SxNgxFabricDialogRef.prototype._afterClosed;
+    /** @type {?} */
+    SxNgxFabricDialogRef.prototype.componentInstance;
+    /**
+     * @type {?}
+     * @private
+     */
+    SxNgxFabricDialogRef.prototype.overlayRef;
+}
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/dialog/dialog-tokens.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const SX_NGX_FABRIC_DIALOG_DATA = new InjectionToken('SX_NGX_FABRIC_DIALOG_DATA');
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/dialog/dialog.service.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const DEFAULT_CONFIG = {
@@ -560,18 +714,26 @@ class SxNgxFabricDialogService {
      * @return {?}
      */
     open(component, config = {}) {
+        // Override default configuration
         /** @type {?} */
         const dialogConfig = Object.assign({}, DEFAULT_CONFIG, config);
+        // Returns an OverlayRef which is a PortalHost
         /** @type {?} */
         const overlayRef = this.createOverlay(dialogConfig);
         /** @type {?} */
         const dialogContainer = this._attachDialogContainer(overlayRef, config);
+        // Instantiate remote control
         /** @type {?} */
         const dialogRef = this._attachDialogContent(component, dialogContainer, overlayRef, config);
-        overlayRef.backdropClick().subscribe(_ => dialogRef.close());
+        overlayRef.backdropClick().subscribe((/**
+         * @param {?} _
+         * @return {?}
+         */
+        _ => dialogRef.close()));
         return dialogRef;
     }
     /**
+     * @private
      * @param {?} config
      * @return {?}
      */
@@ -581,6 +743,7 @@ class SxNgxFabricDialogService {
         return this.overlay.create(overlayConfig);
     }
     /**
+     * @private
      * @param {?} config
      * @return {?}
      */
@@ -606,6 +769,7 @@ class SxNgxFabricDialogService {
         return overlayConfig;
     }
     /**
+     * @private
      * @template T
      * @param {?} component
      * @param {?} overlayRef
@@ -623,6 +787,7 @@ class SxNgxFabricDialogService {
         return containerRef.instance;
     }
     /**
+     * @private
      * @param {?} overlay
      * @param {?} config
      * @return {?}
@@ -636,6 +801,7 @@ class SxNgxFabricDialogService {
         return containerRef.instance;
     }
     /**
+     * @private
      * @template T
      * @param {?} componentOrTemplateRef
      * @param {?} dialogContainer
@@ -644,28 +810,33 @@ class SxNgxFabricDialogService {
      * @return {?}
      */
     _attachDialogContent(componentOrTemplateRef, dialogContainer, overlayRef, config) {
+        // Create a reference to the dialog we're creating in order to give the user a handle
+        // to modify and close it.
         /** @type {?} */
         const dialogRef = new SxNgxFabricDialogRef(overlayRef);
         // When the dialog backdrop is clicked, we want to close it.
         if (config.hasBackdrop) {
-            overlayRef.backdropClick().subscribe(() => {
+            overlayRef.backdropClick().subscribe((/**
+             * @return {?}
+             */
+            () => {
                 // if (!dialogRef.disableClose) {
                 dialogRef.close();
                 // }
-            });
+            }));
         }
         // Close when escape keydown event occurs
         // overlayRef.keydownEvents().pipe(
         //   filter(event => event.keyCode === ESCAPE && !dialogRef.disableClose)
         // ).subscribe(() => dialogRef.close());
         if (componentOrTemplateRef instanceof TemplateRef) {
-            dialogContainer.attachTemplatePortal(new TemplatePortal(componentOrTemplateRef, null, /** @type {?} */ ({ $implicit: config.data, dialogRef })));
+            dialogContainer.attachTemplatePortal(new TemplatePortal(componentOrTemplateRef, null, (/** @type {?} */ ({ $implicit: config.data, dialogRef }))));
         }
         else {
             /** @type {?} */
             const injector = this.createInjector(config, dialogRef);
             /** @type {?} */
-            const contentRef = dialogContainer.attachComponentPortal(new ComponentPortal(/** @type {?} */ (componentOrTemplateRef), undefined, injector));
+            const contentRef = dialogContainer.attachComponentPortal(new ComponentPortal((/** @type {?} */ (componentOrTemplateRef)), undefined, injector));
             dialogRef.componentInstance = contentRef.instance;
         }
         // dialogRef
@@ -674,6 +845,7 @@ class SxNgxFabricDialogService {
         return dialogRef;
     }
     /**
+     * @private
      * @template T
      * @param {?} config
      * @param {?} dialogRef
@@ -695,14 +867,28 @@ SxNgxFabricDialogService.ctorParameters = () => [
     { type: Injector },
     { type: Overlay }
 ];
+if (false) {
+    /**
+     * @type {?}
+     * @private
+     */
+    SxNgxFabricDialogService.prototype.injector;
+    /**
+     * @type {?}
+     * @private
+     */
+    SxNgxFabricDialogService.prototype.overlay;
+}
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/dialog/dialog-content.directive.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
-/** *
+/**
  * Counter used to generate unique IDs for dialog elements.
-  @type {?} */
+ * @type {?}
+ */
 let dialogElementUid = 0;
 /**
  * Button that will close the current dialog.
@@ -724,7 +910,7 @@ class SxNgxFabricDialogClose {
      */
     ngOnChanges(changes) {
         /** @type {?} */
-        const proxiedChange = changes["_sxNgxFabricDialogClose"] || changes["_sxNgxFabricDialogCloseResult"];
+        const proxiedChange = changes._sxNgxFabricDialogClose || changes._sxNgxFabricDialogCloseResult;
         if (proxiedChange) {
             this.dialogResult = proxiedChange.currentValue;
         }
@@ -750,6 +936,22 @@ SxNgxFabricDialogClose.propDecorators = {
     dialogResult: [{ type: Input, args: ['sx-ngx-fabric-dialog-close',] }],
     dialogClose: [{ type: Input, args: ['sxNgxFabricDialogClose',] }]
 };
+if (false) {
+    /**
+     * Screenreader label for the button.
+     * @type {?}
+     */
+    SxNgxFabricDialogClose.prototype.ariaLabel;
+    /**
+     * Dialog close input.
+     * @type {?}
+     */
+    SxNgxFabricDialogClose.prototype.dialogResult;
+    /** @type {?} */
+    SxNgxFabricDialogClose.prototype.dialogClose;
+    /** @type {?} */
+    SxNgxFabricDialogClose.prototype.dialogRef;
+}
 /**
  * Title of a dialog element. Stays fixed to the top of the dialog when scrolling.
  */
@@ -779,6 +981,15 @@ SxNgxFabricDialogTitle.ctorParameters = () => [
 SxNgxFabricDialogTitle.propDecorators = {
     id: [{ type: Input }]
 };
+if (false) {
+    /** @type {?} */
+    SxNgxFabricDialogTitle.prototype.id;
+    /**
+     * @type {?}
+     * @private
+     */
+    SxNgxFabricDialogTitle.prototype._container;
+}
 /**
  * Scrollable content container of a dialog.
  */
@@ -805,7 +1016,8 @@ SxNgxFabricDialogActions.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/dialog/dialog.module.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 class DialogModule {
     /**
@@ -849,7 +1061,8 @@ DialogModule.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/toggle/toggle.component.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 class ToggleComponent {
     /**
@@ -863,8 +1076,15 @@ class ToggleComponent {
         this.onText = 'On';
         this.textLeft = false;
         this.inputId = Guid.uniqueid();
-        this._onChange = (_) => { };
-        this._onTouched = () => { };
+        this._onChange = (/**
+         * @param {?} _
+         * @return {?}
+         */
+        (_) => { });
+        this._onTouched = (/**
+         * @return {?}
+         */
+        () => { });
     }
     /**
      * @return {?}
@@ -905,6 +1125,7 @@ class ToggleComponent {
         this.checked = !this.checked;
         this._onChange(this.checked);
     }
+    // ControlValueAccessor implementation
     /**
      * @param {?} isDisabled
      * @return {?}
@@ -937,7 +1158,10 @@ ToggleComponent.decorators = [
                 template: "<span class=\"ms-Toggle-description\"><ng-content></ng-content></span>\r\n<input type=\"checkbox\" [attr.id]=\"inputId\" [checked]=\"checked\" (click)=\"onInputClick($event)\" [disabled]=\"disabled\" class=\"ms-Toggle-input\" />\r\n<label [attr.for]=\"inputId\" class=\"ms-Toggle-field\" [class.is-selected]=\"checked\">\r\n  <span class=\"ms-Label ms-Label--off\">{{ offText }}</span>\r\n  <span class=\"ms-Label ms-Label--on\">{{ onText }}</span>\r\n</label>",
                 providers: [{
                         provide: NG_VALUE_ACCESSOR,
-                        useExisting: forwardRef(() => ToggleComponent),
+                        useExisting: forwardRef((/**
+                         * @return {?}
+                         */
+                        () => ToggleComponent)),
                         multi: true
                     }],
                 preserveWhitespaces: false,
@@ -961,10 +1185,43 @@ ToggleComponent.propDecorators = {
     classIsDisabled: [{ type: HostBinding, args: ['class.is-disabled',] }],
     classTextLeft: [{ type: HostBinding, args: ['class.ms-Toggle--textLeft',] }]
 };
+if (false) {
+    /**
+     * @type {?}
+     * @private
+     */
+    ToggleComponent.prototype._checked;
+    /** @type {?} */
+    ToggleComponent.prototype.disabled;
+    /** @type {?} */
+    ToggleComponent.prototype.offText;
+    /** @type {?} */
+    ToggleComponent.prototype.onText;
+    /** @type {?} */
+    ToggleComponent.prototype.textLeft;
+    /** @type {?} */
+    ToggleComponent.prototype.inputId;
+    /**
+     * @type {?}
+     * @private
+     */
+    ToggleComponent.prototype._onChange;
+    /**
+     * @type {?}
+     * @private
+     */
+    ToggleComponent.prototype._onTouched;
+    /**
+     * @type {?}
+     * @private
+     */
+    ToggleComponent.prototype.changeDetectorRef;
+}
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/toggle/toggle.module.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 class ToggleModule {
 }
@@ -984,7 +1241,8 @@ ToggleModule.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/callout/callout.component.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 class CalloutComponent {
     /**
@@ -1032,14 +1290,37 @@ CalloutComponent.ctorParameters = () => [
 CalloutComponent.propDecorators = {
     xPosition: [{ type: Input }],
     yPosition: [{ type: Input }],
-    templateRef: [{ type: ViewChild, args: [TemplateRef,] }],
-    beak: [{ type: ViewChild, args: ['beak',] }],
+    templateRef: [{ type: ViewChild, args: [TemplateRef, { static: true },] }],
+    beak: [{ type: ViewChild, args: ['beak', { static: false },] }],
     closed: [{ type: Output }]
 };
+if (false) {
+    /** @type {?} */
+    CalloutComponent.prototype.xPosition;
+    /** @type {?} */
+    CalloutComponent.prototype.yPosition;
+    /** @type {?} */
+    CalloutComponent.prototype.templateRef;
+    /** @type {?} */
+    CalloutComponent.prototype.beak;
+    /** @type {?} */
+    CalloutComponent.prototype.closed;
+    /**
+     * @type {?}
+     * @private
+     */
+    CalloutComponent.prototype._beakPosition;
+    /**
+     * @type {?}
+     * @private
+     */
+    CalloutComponent.prototype.elementRef;
+}
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/callout/callout-trigger.directive.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 class CalloutTriggerDirective {
     /**
@@ -1082,9 +1363,12 @@ class CalloutTriggerDirective {
     openCallout() {
         if (!this._calloutOpen) {
             this._createOverlay().attach(this._portal);
-            setTimeout(() => {
+            setTimeout((/**
+             * @return {?}
+             */
+            () => {
                 this.callout.updateBeakPosition();
-            });
+            }));
         }
     }
     /**
@@ -1100,6 +1384,7 @@ class CalloutTriggerDirective {
         this.openCallout();
     }
     /**
+     * @private
      * @return {?}
      */
     _createOverlay() {
@@ -1108,13 +1393,18 @@ class CalloutTriggerDirective {
             /** @type {?} */
             const config = this._getOverlayConfig();
             this._overlayRef = this._overlay.create(config);
-            this._closeSubscription = this._overlayRef.backdropClick().subscribe(_ => {
+            this._closeSubscription = this._overlayRef.backdropClick().subscribe((/**
+             * @param {?} _
+             * @return {?}
+             */
+            _ => {
                 this._overlayRef.detach();
-            });
+            }));
         }
         return this._overlayRef;
     }
     /**
+     * @private
      * @return {?}
      */
     _getOverlayConfig() {
@@ -1128,6 +1418,7 @@ class CalloutTriggerDirective {
         });
     }
     /**
+     * @private
      * @return {?}
      */
     _getPosition() {
@@ -1148,11 +1439,20 @@ class CalloutTriggerDirective {
             .withFallbackPosition({ originX: originFallbackX, originY: originFallbackY }, { overlayX: overlayFallbackX, overlayY: overlayFallbackY }, undefined, -offsetY);
     }
     /**
+     * @private
      * @param {?} position
      * @return {?}
      */
     _subscribeToPositions(position) {
-        this._positionSubscription = position.onPositionChange.pipe(distinctUntilChanged(null, x => x.connectionPair)).subscribe(pos => {
+        this._positionSubscription = position.onPositionChange.pipe(distinctUntilChanged(null, (/**
+         * @param {?} x
+         * @return {?}
+         */
+        x => x.connectionPair))).subscribe((/**
+         * @param {?} pos
+         * @return {?}
+         */
+        pos => {
             /** @type {?} */
             const isCalloutUnderTrigger = pos.connectionPair.overlayY === 'top';
             /** @type {?} */
@@ -1165,7 +1465,7 @@ class CalloutTriggerDirective {
                 left: isCalloutLeftAlignedToTrigger ? triggerMiddle + 'px' : null,
                 right: !isCalloutLeftAlignedToTrigger ? triggerMiddle + 'px' : null
             };
-        });
+        }));
     }
 }
 CalloutTriggerDirective.decorators = [
@@ -1187,10 +1487,55 @@ CalloutTriggerDirective.ctorParameters = () => [
 CalloutTriggerDirective.propDecorators = {
     sxNgxFabricCalloutTrigger: [{ type: Input }]
 };
+if (false) {
+    /**
+     * @type {?}
+     * @private
+     */
+    CalloutTriggerDirective.prototype._portal;
+    /**
+     * @type {?}
+     * @private
+     */
+    CalloutTriggerDirective.prototype._overlayRef;
+    /**
+     * @type {?}
+     * @private
+     */
+    CalloutTriggerDirective.prototype._calloutOpen;
+    /**
+     * @type {?}
+     * @private
+     */
+    CalloutTriggerDirective.prototype._closeSubscription;
+    /**
+     * @type {?}
+     * @private
+     */
+    CalloutTriggerDirective.prototype._positionSubscription;
+    /** @type {?} */
+    CalloutTriggerDirective.prototype.callout;
+    /**
+     * @type {?}
+     * @private
+     */
+    CalloutTriggerDirective.prototype._overlay;
+    /**
+     * @type {?}
+     * @private
+     */
+    CalloutTriggerDirective.prototype._element;
+    /**
+     * @type {?}
+     * @private
+     */
+    CalloutTriggerDirective.prototype._viewContainerRef;
+}
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/callout/callout.module.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 class CalloutModule {
 }
@@ -1212,7 +1557,8 @@ CalloutModule.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/nav/nav.component.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 class NavComponent {
     constructor() { }
@@ -1234,7 +1580,8 @@ NavComponent.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/nav/nav.module.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 class NavModule {
 }
@@ -1254,7 +1601,8 @@ NavModule.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/sx-ngx-fabric.module.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 class SxNgxFabricModule {
 }
@@ -1288,14 +1636,63 @@ SxNgxFabricModule.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/breadcrumb/i-breadcrumb-item.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
+ * @record
+ */
+function IBreadcrumbItem() { }
+if (false) {
+    /** @type {?} */
+    IBreadcrumbItem.prototype.text;
+    /** @type {?|undefined} */
+    IBreadcrumbItem.prototype.key;
+    /** @type {?|undefined} */
+    IBreadcrumbItem.prototype.href;
+    /** @type {?|undefined} */
+    IBreadcrumbItem.prototype.isCurrentItem;
+}
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: lib/dialog/dialog-config.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
+ * @record
+ */
+function SxNgxFabricDialogConfig() { }
+if (false) {
+    /** @type {?|undefined} */
+    SxNgxFabricDialogConfig.prototype.panelClass;
+    /** @type {?|undefined} */
+    SxNgxFabricDialogConfig.prototype.hasBackdrop;
+    /** @type {?|undefined} */
+    SxNgxFabricDialogConfig.prototype.backdropClass;
+    /** @type {?|undefined} */
+    SxNgxFabricDialogConfig.prototype.minWidth;
+    /** @type {?|undefined} */
+    SxNgxFabricDialogConfig.prototype.minHeight;
+    /** @type {?|undefined} */
+    SxNgxFabricDialogConfig.prototype.maxWidth;
+    /** @type {?|undefined} */
+    SxNgxFabricDialogConfig.prototype.maxHeight;
+    /** @type {?|undefined} */
+    SxNgxFabricDialogConfig.prototype.data;
+}
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: public_api.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: sx-ngx-fabric.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 
-export { SxNgxFabricService, SxNgxFabricComponent, SxNgxFabricModule, BreadcrumbModule, BreadcrumbComponent, SxNgxFabricDialogRef, SX_NGX_FABRIC_DIALOG_DATA, SxNgxFabricDialogService, ButtonComponent as ɵd, ButtonModule as ɵc, CalloutTriggerDirective as ɵq, CalloutComponent as ɵp, CalloutModule as ɵo, CheckboxComponent as ɵb, CheckboxModule as ɵa, SxNgxDialogContainerComponent as ɵh, SxNgxFabricDialogActions as ɵl, SxNgxFabricDialogClose as ɵi, SxNgxFabricDialogContent as ɵk, SxNgxFabricDialogTitle as ɵj, DialogModule as ɵg, NavComponent as ɵs, NavModule as ɵr, TextFieldComponent as ɵf, TextFieldModule as ɵe, ToggleComponent as ɵn, ToggleModule as ɵm };
-
+export { BreadcrumbComponent, BreadcrumbModule, SX_NGX_FABRIC_DIALOG_DATA, SxNgxFabricComponent, SxNgxFabricDialogRef, SxNgxFabricDialogService, SxNgxFabricModule, SxNgxFabricService, CheckboxModule as ɵa, CheckboxComponent as ɵb, ButtonModule as ɵc, ButtonComponent as ɵd, TextFieldModule as ɵe, TextFieldComponent as ɵf, DialogModule as ɵg, SxNgxDialogContainerComponent as ɵh, SxNgxFabricDialogClose as ɵi, SxNgxFabricDialogTitle as ɵj, SxNgxFabricDialogContent as ɵk, SxNgxFabricDialogActions as ɵl, ToggleModule as ɵm, ToggleComponent as ɵn, CalloutModule as ɵo, CalloutComponent as ɵp, CalloutTriggerDirective as ɵq, NavModule as ɵr, NavComponent as ɵs };
 //# sourceMappingURL=sx-ngx-fabric.js.map

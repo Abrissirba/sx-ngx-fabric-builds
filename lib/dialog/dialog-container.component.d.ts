@@ -1,6 +1,5 @@
-import { ComponentRef, EmbeddedViewRef, ChangeDetectorRef, ElementRef } from '@angular/core';
-import { CdkPortalOutlet, BasePortalOutlet, TemplatePortal } from '@angular/cdk/portal';
-import { ComponentPortal } from '@angular/cdk/portal';
+import { BasePortalOutlet, CdkPortalOutlet, ComponentPortal, TemplatePortal } from '@angular/cdk/portal';
+import { ChangeDetectorRef, ComponentRef, ElementRef, EmbeddedViewRef } from '@angular/core';
 import { SxNgxFabricDialogConfig } from './dialog-config';
 export declare class SxNgxDialogContainerComponent extends BasePortalOutlet {
     private _elementRef;

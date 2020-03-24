@@ -1,6 +1,5 @@
 import { Overlay } from '@angular/cdk/overlay';
-import { ElementRef, ViewContainerRef } from '@angular/core';
-import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
+import { ElementRef, ViewContainerRef, OnDestroy } from '@angular/core';
 import { CalloutComponent } from './callout.component';
 export declare class CalloutTriggerDirective implements OnDestroy {
     private _overlay;

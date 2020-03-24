@@ -1,16 +1,16 @@
-import { DOCUMENT } from '@angular/platform-browser';
+import { Injectable, ɵɵdefineInjectable, Component, EventEmitter, Input, Output, NgModule, forwardRef, ChangeDetectionStrategy, ChangeDetectorRef, HostBinding, ElementRef, Optional, Inject, ViewChild, InjectionToken, TemplateRef, Injector, Directive, ViewContainerRef } from '@angular/core';
+import { CommonModule, DOCUMENT } from '@angular/common';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
-import { __extends, __read, __assign } from 'tslib';
-import { Overlay, OverlayConfig, OverlayModule } from '@angular/cdk/overlay';
-import { BasePortalOutlet, ComponentPortal, PortalInjector, TemplatePortal, PortalModule } from '@angular/cdk/portal';
+import { BasePortalOutlet, ComponentPortal, TemplatePortal, PortalInjector, PortalModule } from '@angular/cdk/portal';
+import { __extends, __assign, __read } from 'tslib';
+import { OverlayConfig, Overlay, OverlayModule } from '@angular/cdk/overlay';
 import { Subject, Subscription } from 'rxjs';
 import { distinctUntilChanged } from 'rxjs/operators';
-import { CommonModule } from '@angular/common';
-import { Injectable, NgModule, Component, Input, HostBinding, ViewChild, TemplateRef, Output, EventEmitter, ElementRef, forwardRef, ChangeDetectionStrategy, ChangeDetectorRef, InjectionToken, Optional, Inject, Directive, ViewContainerRef, defineInjectable, Injector } from '@angular/core';
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/sx-ngx-fabric.service.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 var SxNgxFabricService = /** @class */ (function () {
     function SxNgxFabricService() {
@@ -22,13 +22,14 @@ var SxNgxFabricService = /** @class */ (function () {
     ];
     /** @nocollapse */
     SxNgxFabricService.ctorParameters = function () { return []; };
-    /** @nocollapse */ SxNgxFabricService.ngInjectableDef = defineInjectable({ factory: function SxNgxFabricService_Factory() { return new SxNgxFabricService(); }, token: SxNgxFabricService, providedIn: "root" });
+    /** @nocollapse */ SxNgxFabricService.ngInjectableDef = ɵɵdefineInjectable({ factory: function SxNgxFabricService_Factory() { return new SxNgxFabricService(); }, token: SxNgxFabricService, providedIn: "root" });
     return SxNgxFabricService;
 }());
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/sx-ngx-fabric.component.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 var SxNgxFabricComponent = /** @class */ (function () {
     function SxNgxFabricComponent() {
@@ -54,7 +55,8 @@ var SxNgxFabricComponent = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/breadcrumb/breadcrumb.component.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 var BreadcrumbComponent = /** @class */ (function () {
     function BreadcrumbComponent() {
@@ -86,10 +88,17 @@ var BreadcrumbComponent = /** @class */ (function () {
     };
     return BreadcrumbComponent;
 }());
+if (false) {
+    /** @type {?} */
+    BreadcrumbComponent.prototype.items;
+    /** @type {?} */
+    BreadcrumbComponent.prototype.itemClick;
+}
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/breadcrumb/breadcrumb.module.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 var BreadcrumbModule = /** @class */ (function () {
     function BreadcrumbModule() {
@@ -112,7 +121,8 @@ var BreadcrumbModule = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/utils/guid.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 var Guid = /** @class */ (function () {
     function Guid() {
@@ -124,9 +134,11 @@ var Guid = /** @class */ (function () {
      * @return {?}
      */
     function () {
+        // always start with a letter (for DOM friendlyness)
         /** @type {?} */
         var idstr = String.fromCharCode(Math.floor((Math.random() * 25) + 65));
         do {
+            // between numbers and characters (48 is 0 and 90 is Z (42-48 = 90)
             /** @type {?} */
             var ascicode = Math.floor((Math.random() * 42) + 48);
             if (ascicode < 58 || ascicode > 64) {
@@ -141,7 +153,8 @@ var Guid = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/checkbox/checkbox.component.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 var CheckboxComponent = /** @class */ (function () {
     function CheckboxComponent(changeDetectorRef) {
@@ -149,8 +162,15 @@ var CheckboxComponent = /** @class */ (function () {
         this._checked = false;
         this.disabled = false;
         this.inputId = Guid.uniqueid();
-        this._onChange = function (_) { };
-        this._onTouched = function () { };
+        this._onChange = (/**
+         * @param {?} _
+         * @return {?}
+         */
+        function (_) { });
+        this._onTouched = (/**
+         * @return {?}
+         */
+        function () { });
     }
     Object.defineProperty(CheckboxComponent.prototype, "checked", {
         get: /**
@@ -195,11 +215,14 @@ var CheckboxComponent = /** @class */ (function () {
         this._onChange(this.checked);
     };
     // ControlValueAccessor implementation
+    // ControlValueAccessor implementation
     /**
      * @param {?} isDisabled
      * @return {?}
      */
-    CheckboxComponent.prototype.setDisabledState = /**
+    CheckboxComponent.prototype.setDisabledState = 
+    // ControlValueAccessor implementation
+    /**
      * @param {?} isDisabled
      * @return {?}
      */
@@ -242,7 +265,10 @@ var CheckboxComponent = /** @class */ (function () {
                     template: "<input type=\"checkbox\" [attr.id]=\"inputId\" [checked]=\"checked\" (click)=\"onInputClick($event)\" [disabled]=\"disabled\"/>\r\n<label role=\"checkbox\" [attr.for]=\"inputId\" [class.is-checked]=\"checked\" [class.disabled]=\"disabled\">\r\n  <span class=\"ms-label\"><ng-content></ng-content></span>\r\n</label>",
                     providers: [{
                             provide: NG_VALUE_ACCESSOR,
-                            useExisting: forwardRef(function () { return CheckboxComponent; }),
+                            useExisting: forwardRef((/**
+                             * @return {?}
+                             */
+                            function () { return CheckboxComponent; })),
                             multi: true
                         }],
                     preserveWhitespaces: false,
@@ -260,10 +286,37 @@ var CheckboxComponent = /** @class */ (function () {
     };
     return CheckboxComponent;
 }());
+if (false) {
+    /**
+     * @type {?}
+     * @private
+     */
+    CheckboxComponent.prototype._checked;
+    /** @type {?} */
+    CheckboxComponent.prototype.disabled;
+    /** @type {?} */
+    CheckboxComponent.prototype.inputId;
+    /**
+     * @type {?}
+     * @private
+     */
+    CheckboxComponent.prototype._onChange;
+    /**
+     * @type {?}
+     * @private
+     */
+    CheckboxComponent.prototype._onTouched;
+    /**
+     * @type {?}
+     * @private
+     */
+    CheckboxComponent.prototype.changeDetectorRef;
+}
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/checkbox/checkbox.module.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 var CheckboxModule = /** @class */ (function () {
     function CheckboxModule() {
@@ -286,7 +339,8 @@ var CheckboxModule = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/button/button.component.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 var ButtonComponent = /** @class */ (function () {
     function ButtonComponent() {
@@ -325,10 +379,17 @@ var ButtonComponent = /** @class */ (function () {
     };
     return ButtonComponent;
 }());
+if (false) {
+    /** @type {?} */
+    ButtonComponent.prototype.primary;
+    /** @type {?} */
+    ButtonComponent.prototype.classes;
+}
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/button/button.module.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 var ButtonModule = /** @class */ (function () {
     function ButtonModule() {
@@ -351,7 +412,8 @@ var ButtonModule = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/text-field/text-field.component.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 var TextFieldComponent = /** @class */ (function () {
     function TextFieldComponent(changeDetectorRef) {
@@ -363,8 +425,15 @@ var TextFieldComponent = /** @class */ (function () {
         this.required = false;
         this.value = null;
         this.classes = 'ms-TextField';
-        this._onChange = function (_) { };
-        this._onTouched = function () { };
+        this._onChange = (/**
+         * @param {?} _
+         * @return {?}
+         */
+        function (_) { });
+        this._onTouched = (/**
+         * @return {?}
+         */
+        function () { });
     }
     Object.defineProperty(TextFieldComponent.prototype, "classMultiline", {
         get: /**
@@ -407,11 +476,14 @@ var TextFieldComponent = /** @class */ (function () {
         this._onTouched();
     };
     // ControlValueAccessor implementation
+    // ControlValueAccessor implementation
     /**
      * @param {?} isDisabled
      * @return {?}
      */
-    TextFieldComponent.prototype.setDisabledState = /**
+    TextFieldComponent.prototype.setDisabledState = 
+    // ControlValueAccessor implementation
+    /**
      * @param {?} isDisabled
      * @return {?}
      */
@@ -455,7 +527,10 @@ var TextFieldComponent = /** @class */ (function () {
                     template: "<label class=\"ms-Label\" [class.is-required]=\"required\">{{label}}</label>\r\n<input class=\"ms-TextField-field\"\r\n  *ngIf=\"!multiline\"\r\n  [attr.type]=\"type\" \r\n  [attr.placeholder]=\"placeholder\" \r\n  [value]=\"value\" \r\n  [disabled]=\"disabled\" \r\n  (blur)=\"onTouched($event)\"\r\n  (change)=\"onChange($event)\" \r\n  (keyup)=\"onChange($event)\"\r\n/>\r\n\r\n<textarea class=\"ms-TextField-field\"\r\n*ngIf=\"multiline\"\r\n[attr.type]=\"type\" \r\n[attr.placeholder]=\"placeholder\" \r\n[value]=\"value\" \r\n[disabled]=\"disabled\"\r\n[attr.rows]=\"rows\"\r\n(blur)=\"onTouched($event)\"\r\n(change)=\"onChange($event)\" \r\n(keyup)=\"onChange($event)\"\r\n></textarea>",
                     providers: [{
                             provide: NG_VALUE_ACCESSOR,
-                            useExisting: forwardRef(function () { return TextFieldComponent; }),
+                            useExisting: forwardRef((/**
+                             * @return {?}
+                             */
+                            function () { return TextFieldComponent; })),
                             multi: true
                         }],
                     preserveWhitespaces: false,
@@ -481,10 +556,46 @@ var TextFieldComponent = /** @class */ (function () {
     };
     return TextFieldComponent;
 }());
+if (false) {
+    /** @type {?} */
+    TextFieldComponent.prototype.label;
+    /** @type {?} */
+    TextFieldComponent.prototype.multiline;
+    /** @type {?} */
+    TextFieldComponent.prototype.rows;
+    /** @type {?} */
+    TextFieldComponent.prototype.type;
+    /** @type {?} */
+    TextFieldComponent.prototype.placeholder;
+    /** @type {?} */
+    TextFieldComponent.prototype.disabled;
+    /** @type {?} */
+    TextFieldComponent.prototype.required;
+    /** @type {?} */
+    TextFieldComponent.prototype.value;
+    /** @type {?} */
+    TextFieldComponent.prototype.classes;
+    /**
+     * @type {?}
+     * @private
+     */
+    TextFieldComponent.prototype._onChange;
+    /**
+     * @type {?}
+     * @private
+     */
+    TextFieldComponent.prototype._onTouched;
+    /**
+     * @type {?}
+     * @private
+     */
+    TextFieldComponent.prototype.changeDetectorRef;
+}
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/text-field/text-field.module.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 var TextFieldModule = /** @class */ (function () {
     function TextFieldModule() {
@@ -507,7 +618,8 @@ var TextFieldModule = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/dialog/dialog-container.component.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 var SxNgxDialogContainerComponent = /** @class */ (function (_super) {
     __extends(SxNgxDialogContainerComponent, _super);
@@ -560,14 +672,39 @@ var SxNgxDialogContainerComponent = /** @class */ (function (_super) {
         { type: undefined, decorators: [{ type: Optional }, { type: Inject, args: [DOCUMENT,] }] }
     ]; };
     SxNgxDialogContainerComponent.propDecorators = {
-        _portalOutlet: [{ type: ViewChild, args: ['portalOutlet',] }]
+        _portalOutlet: [{ type: ViewChild, args: ['portalOutlet', { static: true },] }]
     };
     return SxNgxDialogContainerComponent;
 }(BasePortalOutlet));
+if (false) {
+    /**
+     * The portal outlet inside of this container into which the dialog content will be loaded.
+     * @type {?}
+     */
+    SxNgxDialogContainerComponent.prototype._portalOutlet;
+    /** @type {?} */
+    SxNgxDialogContainerComponent.prototype._config;
+    /**
+     * @type {?}
+     * @private
+     */
+    SxNgxDialogContainerComponent.prototype._elementRef;
+    /**
+     * @type {?}
+     * @private
+     */
+    SxNgxDialogContainerComponent.prototype._changeDetectorRef;
+    /**
+     * @type {?}
+     * @private
+     */
+    SxNgxDialogContainerComponent.prototype._document;
+}
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/dialog/dialog-ref.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * @template T
@@ -633,17 +770,38 @@ SxNgxFabricDialogRef = /** @class */ (function () {
     };
     return SxNgxFabricDialogRef;
 }());
+if (false) {
+    /**
+     * @type {?}
+     * @private
+     */
+    SxNgxFabricDialogRef.prototype._beforeClose;
+    /**
+     * @type {?}
+     * @private
+     */
+    SxNgxFabricDialogRef.prototype._afterClosed;
+    /** @type {?} */
+    SxNgxFabricDialogRef.prototype.componentInstance;
+    /**
+     * @type {?}
+     * @private
+     */
+    SxNgxFabricDialogRef.prototype.overlayRef;
+}
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/dialog/dialog-tokens.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 var SX_NGX_FABRIC_DIALOG_DATA = new InjectionToken('SX_NGX_FABRIC_DIALOG_DATA');
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/dialog/dialog.service.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 var DEFAULT_CONFIG = {
@@ -674,22 +832,31 @@ var SxNgxFabricDialogService = /** @class */ (function () {
      */
     function (component, config) {
         if (config === void 0) { config = {}; }
+        // Override default configuration
         /** @type {?} */
         var dialogConfig = __assign({}, DEFAULT_CONFIG, config);
+        // Returns an OverlayRef which is a PortalHost
         /** @type {?} */
         var overlayRef = this.createOverlay(dialogConfig);
         /** @type {?} */
         var dialogContainer = this._attachDialogContainer(overlayRef, config);
+        // Instantiate remote control
         /** @type {?} */
         var dialogRef = this._attachDialogContent(component, dialogContainer, overlayRef, config);
-        overlayRef.backdropClick().subscribe(function (_) { return dialogRef.close(); });
+        overlayRef.backdropClick().subscribe((/**
+         * @param {?} _
+         * @return {?}
+         */
+        function (_) { return dialogRef.close(); }));
         return dialogRef;
     };
     /**
+     * @private
      * @param {?} config
      * @return {?}
      */
     SxNgxFabricDialogService.prototype.createOverlay = /**
+     * @private
      * @param {?} config
      * @return {?}
      */
@@ -699,10 +866,12 @@ var SxNgxFabricDialogService = /** @class */ (function () {
         return this.overlay.create(overlayConfig);
     };
     /**
+     * @private
      * @param {?} config
      * @return {?}
      */
     SxNgxFabricDialogService.prototype.getOverlayConfig = /**
+     * @private
      * @param {?} config
      * @return {?}
      */
@@ -728,6 +897,7 @@ var SxNgxFabricDialogService = /** @class */ (function () {
         return overlayConfig;
     };
     /**
+     * @private
      * @template T
      * @param {?} component
      * @param {?} overlayRef
@@ -736,6 +906,7 @@ var SxNgxFabricDialogService = /** @class */ (function () {
      * @return {?}
      */
     SxNgxFabricDialogService.prototype.attachDialogContainer = /**
+     * @private
      * @template T
      * @param {?} component
      * @param {?} overlayRef
@@ -753,11 +924,13 @@ var SxNgxFabricDialogService = /** @class */ (function () {
         return containerRef.instance;
     };
     /**
+     * @private
      * @param {?} overlay
      * @param {?} config
      * @return {?}
      */
     SxNgxFabricDialogService.prototype._attachDialogContainer = /**
+     * @private
      * @param {?} overlay
      * @param {?} config
      * @return {?}
@@ -771,6 +944,7 @@ var SxNgxFabricDialogService = /** @class */ (function () {
         return containerRef.instance;
     };
     /**
+     * @private
      * @template T
      * @param {?} componentOrTemplateRef
      * @param {?} dialogContainer
@@ -779,6 +953,7 @@ var SxNgxFabricDialogService = /** @class */ (function () {
      * @return {?}
      */
     SxNgxFabricDialogService.prototype._attachDialogContent = /**
+     * @private
      * @template T
      * @param {?} componentOrTemplateRef
      * @param {?} dialogContainer
@@ -787,28 +962,33 @@ var SxNgxFabricDialogService = /** @class */ (function () {
      * @return {?}
      */
     function (componentOrTemplateRef, dialogContainer, overlayRef, config) {
+        // Create a reference to the dialog we're creating in order to give the user a handle
+        // to modify and close it.
         /** @type {?} */
         var dialogRef = new SxNgxFabricDialogRef(overlayRef);
         // When the dialog backdrop is clicked, we want to close it.
         if (config.hasBackdrop) {
-            overlayRef.backdropClick().subscribe(function () {
+            overlayRef.backdropClick().subscribe((/**
+             * @return {?}
+             */
+            function () {
                 // if (!dialogRef.disableClose) {
                 dialogRef.close();
                 // }
-            });
+            }));
         }
         // Close when escape keydown event occurs
         // overlayRef.keydownEvents().pipe(
         //   filter(event => event.keyCode === ESCAPE && !dialogRef.disableClose)
         // ).subscribe(() => dialogRef.close());
         if (componentOrTemplateRef instanceof TemplateRef) {
-            dialogContainer.attachTemplatePortal(new TemplatePortal(componentOrTemplateRef, null, /** @type {?} */ ({ $implicit: config.data, dialogRef: dialogRef })));
+            dialogContainer.attachTemplatePortal(new TemplatePortal(componentOrTemplateRef, null, (/** @type {?} */ ({ $implicit: config.data, dialogRef: dialogRef }))));
         }
         else {
             /** @type {?} */
             var injector = this.createInjector(config, dialogRef);
             /** @type {?} */
-            var contentRef = dialogContainer.attachComponentPortal(new ComponentPortal(/** @type {?} */ (componentOrTemplateRef), undefined, injector));
+            var contentRef = dialogContainer.attachComponentPortal(new ComponentPortal((/** @type {?} */ (componentOrTemplateRef)), undefined, injector));
             dialogRef.componentInstance = contentRef.instance;
         }
         // dialogRef
@@ -817,12 +997,14 @@ var SxNgxFabricDialogService = /** @class */ (function () {
         return dialogRef;
     };
     /**
+     * @private
      * @template T
      * @param {?} config
      * @param {?} dialogRef
      * @return {?}
      */
     SxNgxFabricDialogService.prototype.createInjector = /**
+     * @private
      * @template T
      * @param {?} config
      * @param {?} dialogRef
@@ -845,14 +1027,28 @@ var SxNgxFabricDialogService = /** @class */ (function () {
     ]; };
     return SxNgxFabricDialogService;
 }());
+if (false) {
+    /**
+     * @type {?}
+     * @private
+     */
+    SxNgxFabricDialogService.prototype.injector;
+    /**
+     * @type {?}
+     * @private
+     */
+    SxNgxFabricDialogService.prototype.overlay;
+}
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/dialog/dialog-content.directive.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
-/** *
+/**
  * Counter used to generate unique IDs for dialog elements.
-  @type {?} */
+ * @type {?}
+ */
 var dialogElementUid = 0;
 /**
  * Button that will close the current dialog.
@@ -875,7 +1071,7 @@ var SxNgxFabricDialogClose = /** @class */ (function () {
      */
     function (changes) {
         /** @type {?} */
-        var proxiedChange = changes["_sxNgxFabricDialogClose"] || changes["_sxNgxFabricDialogCloseResult"];
+        var proxiedChange = changes._sxNgxFabricDialogClose || changes._sxNgxFabricDialogCloseResult;
         if (proxiedChange) {
             this.dialogResult = proxiedChange.currentValue;
         }
@@ -902,6 +1098,22 @@ var SxNgxFabricDialogClose = /** @class */ (function () {
     };
     return SxNgxFabricDialogClose;
 }());
+if (false) {
+    /**
+     * Screenreader label for the button.
+     * @type {?}
+     */
+    SxNgxFabricDialogClose.prototype.ariaLabel;
+    /**
+     * Dialog close input.
+     * @type {?}
+     */
+    SxNgxFabricDialogClose.prototype.dialogResult;
+    /** @type {?} */
+    SxNgxFabricDialogClose.prototype.dialogClose;
+    /** @type {?} */
+    SxNgxFabricDialogClose.prototype.dialogRef;
+}
 /**
  * Title of a dialog element. Stays fixed to the top of the dialog when scrolling.
  */
@@ -929,6 +1141,15 @@ var SxNgxFabricDialogTitle = /** @class */ (function () {
     };
     return SxNgxFabricDialogTitle;
 }());
+if (false) {
+    /** @type {?} */
+    SxNgxFabricDialogTitle.prototype.id;
+    /**
+     * @type {?}
+     * @private
+     */
+    SxNgxFabricDialogTitle.prototype._container;
+}
 /**
  * Scrollable content container of a dialog.
  */
@@ -961,7 +1182,8 @@ var SxNgxFabricDialogActions = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/dialog/dialog.module.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 var DialogModule = /** @class */ (function () {
     function DialogModule() {
@@ -1011,7 +1233,8 @@ var DialogModule = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/toggle/toggle.component.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 var ToggleComponent = /** @class */ (function () {
     function ToggleComponent(changeDetectorRef) {
@@ -1022,8 +1245,15 @@ var ToggleComponent = /** @class */ (function () {
         this.onText = 'On';
         this.textLeft = false;
         this.inputId = Guid.uniqueid();
-        this._onChange = function (_) { };
-        this._onTouched = function () { };
+        this._onChange = (/**
+         * @param {?} _
+         * @return {?}
+         */
+        function (_) { });
+        this._onTouched = (/**
+         * @return {?}
+         */
+        function () { });
     }
     Object.defineProperty(ToggleComponent.prototype, "checked", {
         get: /**
@@ -1084,11 +1314,14 @@ var ToggleComponent = /** @class */ (function () {
         this._onChange(this.checked);
     };
     // ControlValueAccessor implementation
+    // ControlValueAccessor implementation
     /**
      * @param {?} isDisabled
      * @return {?}
      */
-    ToggleComponent.prototype.setDisabledState = /**
+    ToggleComponent.prototype.setDisabledState = 
+    // ControlValueAccessor implementation
+    /**
      * @param {?} isDisabled
      * @return {?}
      */
@@ -1131,7 +1364,10 @@ var ToggleComponent = /** @class */ (function () {
                     template: "<span class=\"ms-Toggle-description\"><ng-content></ng-content></span>\r\n<input type=\"checkbox\" [attr.id]=\"inputId\" [checked]=\"checked\" (click)=\"onInputClick($event)\" [disabled]=\"disabled\" class=\"ms-Toggle-input\" />\r\n<label [attr.for]=\"inputId\" class=\"ms-Toggle-field\" [class.is-selected]=\"checked\">\r\n  <span class=\"ms-Label ms-Label--off\">{{ offText }}</span>\r\n  <span class=\"ms-Label ms-Label--on\">{{ onText }}</span>\r\n</label>",
                     providers: [{
                             provide: NG_VALUE_ACCESSOR,
-                            useExisting: forwardRef(function () { return ToggleComponent; }),
+                            useExisting: forwardRef((/**
+                             * @return {?}
+                             */
+                            function () { return ToggleComponent; })),
                             multi: true
                         }],
                     preserveWhitespaces: false,
@@ -1157,10 +1393,43 @@ var ToggleComponent = /** @class */ (function () {
     };
     return ToggleComponent;
 }());
+if (false) {
+    /**
+     * @type {?}
+     * @private
+     */
+    ToggleComponent.prototype._checked;
+    /** @type {?} */
+    ToggleComponent.prototype.disabled;
+    /** @type {?} */
+    ToggleComponent.prototype.offText;
+    /** @type {?} */
+    ToggleComponent.prototype.onText;
+    /** @type {?} */
+    ToggleComponent.prototype.textLeft;
+    /** @type {?} */
+    ToggleComponent.prototype.inputId;
+    /**
+     * @type {?}
+     * @private
+     */
+    ToggleComponent.prototype._onChange;
+    /**
+     * @type {?}
+     * @private
+     */
+    ToggleComponent.prototype._onTouched;
+    /**
+     * @type {?}
+     * @private
+     */
+    ToggleComponent.prototype.changeDetectorRef;
+}
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/toggle/toggle.module.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 var ToggleModule = /** @class */ (function () {
     function ToggleModule() {
@@ -1183,7 +1452,8 @@ var ToggleModule = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/callout/callout.component.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 var CalloutComponent = /** @class */ (function () {
     function CalloutComponent(elementRef) {
@@ -1234,16 +1504,39 @@ var CalloutComponent = /** @class */ (function () {
     CalloutComponent.propDecorators = {
         xPosition: [{ type: Input }],
         yPosition: [{ type: Input }],
-        templateRef: [{ type: ViewChild, args: [TemplateRef,] }],
-        beak: [{ type: ViewChild, args: ['beak',] }],
+        templateRef: [{ type: ViewChild, args: [TemplateRef, { static: true },] }],
+        beak: [{ type: ViewChild, args: ['beak', { static: false },] }],
         closed: [{ type: Output }]
     };
     return CalloutComponent;
 }());
+if (false) {
+    /** @type {?} */
+    CalloutComponent.prototype.xPosition;
+    /** @type {?} */
+    CalloutComponent.prototype.yPosition;
+    /** @type {?} */
+    CalloutComponent.prototype.templateRef;
+    /** @type {?} */
+    CalloutComponent.prototype.beak;
+    /** @type {?} */
+    CalloutComponent.prototype.closed;
+    /**
+     * @type {?}
+     * @private
+     */
+    CalloutComponent.prototype._beakPosition;
+    /**
+     * @type {?}
+     * @private
+     */
+    CalloutComponent.prototype.elementRef;
+}
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/callout/callout-trigger.directive.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 var CalloutTriggerDirective = /** @class */ (function () {
     function CalloutTriggerDirective(_overlay, _element, _viewContainerRef) {
@@ -1292,9 +1585,12 @@ var CalloutTriggerDirective = /** @class */ (function () {
         var _this = this;
         if (!this._calloutOpen) {
             this._createOverlay().attach(this._portal);
-            setTimeout(function () {
+            setTimeout((/**
+             * @return {?}
+             */
+            function () {
                 _this.callout.updateBeakPosition();
-            });
+            }));
         }
     };
     /**
@@ -1316,9 +1612,11 @@ var CalloutTriggerDirective = /** @class */ (function () {
         this.openCallout();
     };
     /**
+     * @private
      * @return {?}
      */
     CalloutTriggerDirective.prototype._createOverlay = /**
+     * @private
      * @return {?}
      */
     function () {
@@ -1328,16 +1626,22 @@ var CalloutTriggerDirective = /** @class */ (function () {
             /** @type {?} */
             var config = this._getOverlayConfig();
             this._overlayRef = this._overlay.create(config);
-            this._closeSubscription = this._overlayRef.backdropClick().subscribe(function (_) {
+            this._closeSubscription = this._overlayRef.backdropClick().subscribe((/**
+             * @param {?} _
+             * @return {?}
+             */
+            function (_) {
                 _this._overlayRef.detach();
-            });
+            }));
         }
         return this._overlayRef;
     };
     /**
+     * @private
      * @return {?}
      */
     CalloutTriggerDirective.prototype._getOverlayConfig = /**
+     * @private
      * @return {?}
      */
     function () {
@@ -1351,9 +1655,11 @@ var CalloutTriggerDirective = /** @class */ (function () {
         });
     };
     /**
+     * @private
      * @return {?}
      */
     CalloutTriggerDirective.prototype._getPosition = /**
+     * @private
      * @return {?}
      */
     function () {
@@ -1374,16 +1680,26 @@ var CalloutTriggerDirective = /** @class */ (function () {
             .withFallbackPosition({ originX: originFallbackX, originY: originFallbackY }, { overlayX: overlayFallbackX, overlayY: overlayFallbackY }, undefined, -offsetY);
     };
     /**
+     * @private
      * @param {?} position
      * @return {?}
      */
     CalloutTriggerDirective.prototype._subscribeToPositions = /**
+     * @private
      * @param {?} position
      * @return {?}
      */
     function (position) {
         var _this = this;
-        this._positionSubscription = position.onPositionChange.pipe(distinctUntilChanged(null, function (x) { return x.connectionPair; })).subscribe(function (pos) {
+        this._positionSubscription = position.onPositionChange.pipe(distinctUntilChanged(null, (/**
+         * @param {?} x
+         * @return {?}
+         */
+        function (x) { return x.connectionPair; }))).subscribe((/**
+         * @param {?} pos
+         * @return {?}
+         */
+        function (pos) {
             /** @type {?} */
             var isCalloutUnderTrigger = pos.connectionPair.overlayY === 'top';
             /** @type {?} */
@@ -1396,7 +1712,7 @@ var CalloutTriggerDirective = /** @class */ (function () {
                 left: isCalloutLeftAlignedToTrigger ? triggerMiddle + 'px' : null,
                 right: !isCalloutLeftAlignedToTrigger ? triggerMiddle + 'px' : null
             };
-        });
+        }));
     };
     CalloutTriggerDirective.decorators = [
         { type: Directive, args: [{
@@ -1419,10 +1735,55 @@ var CalloutTriggerDirective = /** @class */ (function () {
     };
     return CalloutTriggerDirective;
 }());
+if (false) {
+    /**
+     * @type {?}
+     * @private
+     */
+    CalloutTriggerDirective.prototype._portal;
+    /**
+     * @type {?}
+     * @private
+     */
+    CalloutTriggerDirective.prototype._overlayRef;
+    /**
+     * @type {?}
+     * @private
+     */
+    CalloutTriggerDirective.prototype._calloutOpen;
+    /**
+     * @type {?}
+     * @private
+     */
+    CalloutTriggerDirective.prototype._closeSubscription;
+    /**
+     * @type {?}
+     * @private
+     */
+    CalloutTriggerDirective.prototype._positionSubscription;
+    /** @type {?} */
+    CalloutTriggerDirective.prototype.callout;
+    /**
+     * @type {?}
+     * @private
+     */
+    CalloutTriggerDirective.prototype._overlay;
+    /**
+     * @type {?}
+     * @private
+     */
+    CalloutTriggerDirective.prototype._element;
+    /**
+     * @type {?}
+     * @private
+     */
+    CalloutTriggerDirective.prototype._viewContainerRef;
+}
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/callout/callout.module.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 var CalloutModule = /** @class */ (function () {
     function CalloutModule() {
@@ -1447,7 +1808,8 @@ var CalloutModule = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/nav/nav.component.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 var NavComponent = /** @class */ (function () {
     function NavComponent() {
@@ -1474,7 +1836,8 @@ var NavComponent = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/nav/nav.module.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 var NavModule = /** @class */ (function () {
     function NavModule() {
@@ -1497,7 +1860,8 @@ var NavModule = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/sx-ngx-fabric.module.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 var SxNgxFabricModule = /** @class */ (function () {
     function SxNgxFabricModule() {
@@ -1534,14 +1898,63 @@ var SxNgxFabricModule = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: lib/breadcrumb/i-breadcrumb-item.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
+ * @record
+ */
+function IBreadcrumbItem() { }
+if (false) {
+    /** @type {?} */
+    IBreadcrumbItem.prototype.text;
+    /** @type {?|undefined} */
+    IBreadcrumbItem.prototype.key;
+    /** @type {?|undefined} */
+    IBreadcrumbItem.prototype.href;
+    /** @type {?|undefined} */
+    IBreadcrumbItem.prototype.isCurrentItem;
+}
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: lib/dialog/dialog-config.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
+ * @record
+ */
+function SxNgxFabricDialogConfig() { }
+if (false) {
+    /** @type {?|undefined} */
+    SxNgxFabricDialogConfig.prototype.panelClass;
+    /** @type {?|undefined} */
+    SxNgxFabricDialogConfig.prototype.hasBackdrop;
+    /** @type {?|undefined} */
+    SxNgxFabricDialogConfig.prototype.backdropClass;
+    /** @type {?|undefined} */
+    SxNgxFabricDialogConfig.prototype.minWidth;
+    /** @type {?|undefined} */
+    SxNgxFabricDialogConfig.prototype.minHeight;
+    /** @type {?|undefined} */
+    SxNgxFabricDialogConfig.prototype.maxWidth;
+    /** @type {?|undefined} */
+    SxNgxFabricDialogConfig.prototype.maxHeight;
+    /** @type {?|undefined} */
+    SxNgxFabricDialogConfig.prototype.data;
+}
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: public_api.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * Generated from: sx-ngx-fabric.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 
-export { SxNgxFabricService, SxNgxFabricComponent, SxNgxFabricModule, BreadcrumbModule, BreadcrumbComponent, SxNgxFabricDialogRef, SX_NGX_FABRIC_DIALOG_DATA, SxNgxFabricDialogService, ButtonComponent as ɵd, ButtonModule as ɵc, CalloutTriggerDirective as ɵq, CalloutComponent as ɵp, CalloutModule as ɵo, CheckboxComponent as ɵb, CheckboxModule as ɵa, SxNgxDialogContainerComponent as ɵh, SxNgxFabricDialogActions as ɵl, SxNgxFabricDialogClose as ɵi, SxNgxFabricDialogContent as ɵk, SxNgxFabricDialogTitle as ɵj, DialogModule as ɵg, NavComponent as ɵs, NavModule as ɵr, TextFieldComponent as ɵf, TextFieldModule as ɵe, ToggleComponent as ɵn, ToggleModule as ɵm };
-
+export { BreadcrumbComponent, BreadcrumbModule, SX_NGX_FABRIC_DIALOG_DATA, SxNgxFabricComponent, SxNgxFabricDialogRef, SxNgxFabricDialogService, SxNgxFabricModule, SxNgxFabricService, CheckboxModule as ɵa, CheckboxComponent as ɵb, ButtonModule as ɵc, ButtonComponent as ɵd, TextFieldModule as ɵe, TextFieldComponent as ɵf, DialogModule as ɵg, SxNgxDialogContainerComponent as ɵh, SxNgxFabricDialogClose as ɵi, SxNgxFabricDialogTitle as ɵj, SxNgxFabricDialogContent as ɵk, SxNgxFabricDialogActions as ɵl, ToggleModule as ɵm, ToggleComponent as ɵn, CalloutModule as ɵo, CalloutComponent as ɵp, CalloutTriggerDirective as ɵq, NavModule as ɵr, NavComponent as ɵs };
 //# sourceMappingURL=sx-ngx-fabric.js.map
