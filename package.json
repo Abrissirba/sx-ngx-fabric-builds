@@ -1,1 +1,23 @@
-{"name":"sx-ngx-fabric","version":"0.0.0","license":"MIT","scripts":{"ng":"ng","start":"ng serve","build":"ng build","test":"ng test","lint":"ng lint","e2e":"ng e2e","dev":"ng serve --port=4800","packagr":"ng-packagr -p ng-package.json","bundle-styles":"scss-bundle -c scss-bundle.config.json","build-lib":"npm run packagr && npm run bundle-styles"},"private":true,"dependencies":{"@angular/animations":"^5.0.0","@angular/cdk":"^5.0.0-rc0","@angular/common":"^5.0.0","@angular/compiler":"^5.0.0","@angular/core":"^5.0.0","@angular/forms":"^5.0.0","@angular/http":"^5.0.0","@angular/platform-browser":"^5.0.0","@angular/platform-browser-dynamic":"^5.0.0","@angular/router":"^5.0.0","core-js":"^2.4.1","office-ui-fabric-core":"^9.2.0","rxjs":"^5.5.2","zone.js":"^0.8.14"},"devDependencies":{"@angular/cli":"1.5.2","@angular/compiler-cli":"^5.0.0","@angular/language-service":"^5.0.0","@types/jasmine":"~2.5.53","@types/jasminewd2":"~2.0.2","@types/node":"~6.0.60","codelyzer":"~3.2.0","jasmine-core":"~2.6.2","jasmine-spec-reporter":"~4.1.0","karma":"~1.7.0","karma-chrome-launcher":"~2.1.1","karma-cli":"~1.0.1","karma-coverage-istanbul-reporter":"^1.2.1","karma-jasmine":"~1.1.0","karma-jasmine-html-reporter":"^0.2.2","ng-packagr":"^1.6.0","protractor":"~5.1.2","ts-node":"~3.2.0","tslint":"~5.7.0","typescript":"~2.4.2"},"main":"bundles/sx-ngx-fabric.umd.js","module":"sx-ngx-fabric.es5.js","es2015":"sx-ngx-fabric.js","typings":"sx-ngx-fabric.d.ts","metadata":"sx-ngx-fabric.metadata.json"}
+{
+  "name": "sx-ngx-fabric",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+  },
+  "dependencies": {
+    "office-ui-fabric-core": "^9.2.0",
+    "@angular/cdk": "^6.4.7",
+    "tslib": "^1.9.0"
+  },
+  "main": "bundles/sx-ngx-fabric.umd.js",
+  "module": "fesm5/sx-ngx-fabric.js",
+  "es2015": "fesm2015/sx-ngx-fabric.js",
+  "esm5": "esm5/sx-ngx-fabric.js",
+  "esm2015": "esm2015/sx-ngx-fabric.js",
+  "fesm5": "fesm5/sx-ngx-fabric.js",
+  "fesm2015": "fesm2015/sx-ngx-fabric.js",
+  "typings": "sx-ngx-fabric.d.ts",
+  "metadata": "sx-ngx-fabric.metadata.json",
+  "sideEffects": false
+}
