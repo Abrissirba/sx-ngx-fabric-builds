@@ -5,7 +5,7 @@ import { BasePortalOutlet, ComponentPortal, PortalInjector, TemplatePortal, Port
 import { Subject, Subscription } from 'rxjs';
 import { distinctUntilChanged } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
-import { Injectable, NgModule, Component, Input, HostBinding, ViewChild, TemplateRef, Output, EventEmitter, ElementRef, Optional, Inject, ChangeDetectorRef, forwardRef, ChangeDetectionStrategy, InjectionToken, Directive, ViewContainerRef, defineInjectable, Injector } from '@angular/core';
+import { Injectable, Component, Input, HostBinding, NgModule, ViewChild, TemplateRef, Output, EventEmitter, ElementRef, Optional, Inject, ChangeDetectorRef, forwardRef, ChangeDetectionStrategy, InjectionToken, Directive, ViewContainerRef, defineInjectable, Injector } from '@angular/core';
 
 /**
  * @fileoverview added by tsickle
